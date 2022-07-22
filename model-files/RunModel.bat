@@ -21,16 +21,16 @@
 call CTRAMP\runtime\SetPath.bat
 
 :: Start the cube cluster
-Cluster "%COMMPATH%\CTRAMP" 1-48 Starthide Exit
+::Cluster "%COMMPATH%\CTRAMP" 1-22 Starthide Exit
 
 ::  Set the IP address of the host machine which sends tasks to the client machines 
-if %computername%==MODEL2-A            set HOST_IP_ADDRESS=192.168.1.206
 if %computername%==MODEL2-B            set HOST_IP_ADDRESS=192.168.1.207
 if %computername%==MODEL2-C            set HOST_IP_ADDRESS=192.168.1.208
 if %computername%==MODEL2-D            set HOST_IP_ADDRESS=192.168.1.209
 if %computername%==PORMDLPPW01         set HOST_IP_ADDRESS=172.24.0.101
 if %computername%==PORMDLPPW02         set HOST_IP_ADDRESS=172.24.0.102
 if %computername%==WIN-FK0E96C8BNI     set HOST_IP_ADDRESS=10.0.0.154
+if %computername%==DENCWS01            set HOST_IP_ADDRESS=10.13.1.135
 rem if %computername%==WIN-A4SJP19GCV5     set HOST_IP_ADDRESS=10.0.0.70
 rem for aws machines, HOST_IP_ADDRESS is set in SetUpModel.bat
 
@@ -49,7 +49,7 @@ set PROJECT_DIR2=%PROJECT_DIR:~0,-1%
 :: get the base dir only
 for %%f in (%PROJECT_DIR2%) do set myfolder=%%~nxf
 :: the first four characters are model year
-set MODEL_YEAR=%myfolder:~0,4%
+set MODEL_YEAR=2015
 
 :: MODEL YEAR ------------------------- make sure it's numeric --------------------------------
 set /a MODEL_YEAR_NUM=%MODEL_YEAR% 2>nul
@@ -104,9 +104,9 @@ if %FUTURE%==X (
 echo on
 echo turn echo back on
 
-python "CTRAMP\scripts\notify_slack.py" "Starting *%MODEL_DIR%*"
+::python "CTRAMP\scripts\notify_slack.py" "Starting *%MODEL_DIR%*"
 
-set MAXITERATIONS=3
+set MAXITERATIONS=1
 :: --------TrnAssignment Setup -- Standard Configuration
 :: CHAMP has dwell  configured for buses (local and premium)
 :: CHAMP has access configured for for everything
@@ -165,24 +165,24 @@ python CTRAMP\scripts\preprocess\RuntimeConfiguration.py
 if ERRORLEVEL 1 goto done
 
 :: Set the prices in the roadway network (convert csv to dbf first)
-python CTRAMP\scripts\preprocess\csvToDbf.py hwy\tolls.csv hwy\tolls.dbf
-IF ERRORLEVEL 1 goto done
+:: python CTRAMP\scripts\preprocess\csvToDbf.py hwy\tolls.csv hwy\tolls.dbf
+:: IF ERRORLEVEL 1 goto done
 
 :: Set the prices in the roadway network
-runtpp CTRAMP\scripts\preprocess\SetTolls.job
-if ERRORLEVEL 2 goto done
+:: runtpp CTRAMP\scripts\preprocess\SetTolls.job
+:: if ERRORLEVEL 2 goto done
 
 :: Set a penalty to dummy links connecting HOV/HOT lanes and general purpose lanes
-runtpp CTRAMP\scripts\preprocess\SetHovXferPenalties.job
-if ERRORLEVEL 2 goto done
+:: runtpp CTRAMP\scripts\preprocess\SetHovXferPenalties.job
+:: if ERRORLEVEL 2 goto done
 
 :: Create time-of-day-specific 
-runtpp CTRAMP\scripts\preprocess\CreateFiveHighwayNetworks.job
-if ERRORLEVEL 2 goto done
+:: runtpp CTRAMP\scripts\preprocess\CreateFiveHighwayNetworks.job
+:: if ERRORLEVEL 2 goto done
 
 :: Create HSR trip tables to/from Bay Area stations
-runtpp CTRAMP\scripts\preprocess\HsrTripGeneration.job
-if ERRORLEVEL 2 goto done
+:: runtpp CTRAMP\scripts\preprocess\HsrTripGeneration.job
+:: if ERRORLEVEL 2 goto done
 
 :: ------------------------------------------------------------------------------------------------------
 ::
@@ -193,17 +193,17 @@ if ERRORLEVEL 2 goto done
 : Non-Motorized Skims
 
 :: Translate the roadway network into a non-motorized network
-runtpp CTRAMP\scripts\skims\CreateNonMotorizedNetwork.job
-if ERRORLEVEL 2 goto done
+:: runtpp CTRAMP\scripts\skims\CreateNonMotorizedNetwork.job
+:: if ERRORLEVEL 2 goto done
 
 :: Build the skim tables
-runtpp CTRAMP\scripts\skims\NonMotorizedSkims.job
-if ERRORLEVEL 2 goto done
+:: runtpp CTRAMP\scripts\skims\NonMotorizedSkims.job
+:: if ERRORLEVEL 2 goto done
 
 :: Step 4.5: Build initial transit files
-set PYTHONPATH=%USERPROFILE%\Documents\GitHub\NetworkWrangler;%USERPROFILE%\Documents\GitHub\NetworkWrangler\_static
-python CTRAMP\scripts\skims\transitDwellAccess.py NORMAL NoExtraDelay Simple complexDwell %COMPLEXMODES_DWELL% complexAccess %COMPLEXMODES_ACCESS%
-if ERRORLEVEL 2 goto done
+:: set PYTHONPATH=%USERPROFILE%\Documents\GitHub\NetworkWrangler;%USERPROFILE%\Documents\GitHub\NetworkWrangler\_static
+:: python CTRAMP\scripts\skims\transitDwellAccess.py NORMAL NoExtraDelay Simple complexDwell %COMPLEXMODES_DWELL% complexAccess %COMPLEXMODES_ACCESS%
+:: if ERRORLEVEL 2 goto done
 
 
 :: ------------------------------------------------------------------------------------------------------
@@ -227,8 +227,8 @@ set PREV_WGT=0.00
 ::
 :: ------------------------------------------------------------------------------------------------------
 
-call CTRAMP\RunIteration.bat
-if ERRORLEVEL 2 goto done
+:: call CTRAMP\RunIteration.bat
+:: if ERRORLEVEL 2 goto done
 
 :: Runtime configuration: setup initial telecommute constants
 python CTRAMP\scripts\preprocess\updateTelecommuteConstants.py
@@ -250,7 +250,7 @@ set ITER=1
 set PREV_ITER=1
 set WGT=1.0
 set PREV_WGT=0.00
-set SAMPLESHARE=0.15
+set SAMPLESHARE=0.50
 set SEED=0
 
 :: Runtime configuration: set the workplace shadow pricing parameters
@@ -273,166 +273,166 @@ copy /Y main\telecommute_constants_0%ITER%.csv main\telecommute_constants.csv
 ::
 :: ------------------------------------------------------------------------------------------------------
 
-: iter2
+REM : iter2
 
-:: Set the iteration parameters
-set ITER=2
-set PREV_ITER=1
-set WGT=0.50
-set PREV_WGT=0.50
-set SAMPLESHARE=0.30
-set SEED=0
+REM :: Set the iteration parameters
+REM set ITER=2
+REM set PREV_ITER=1
+REM set WGT=0.50
+REM set PREV_WGT=0.50
+REM set SAMPLESHARE=0.50
+REM set SEED=0
 
-:: Runtime configuration: set the workplace shadow pricing parameters
-python CTRAMP\scripts\preprocess\RuntimeConfiguration.py --iter %ITER%
-if ERRORLEVEL 1 goto done
+REM :: Runtime configuration: set the workplace shadow pricing parameters
+REM python CTRAMP\scripts\preprocess\RuntimeConfiguration.py --iter %ITER%
+REM if ERRORLEVEL 1 goto done
 
-:: Call RunIteration batch file
-call CTRAMP\RunIteration.bat
-if ERRORLEVEL 2 goto done
+REM :: Call RunIteration batch file
+REM call CTRAMP\RunIteration.bat
+REM if ERRORLEVEL 2 goto done
 
-:: Runtime configuration: update telecommute constants using iter2 results
-python CTRAMP\scripts\preprocess\updateTelecommuteConstants.py
-if ERRORLEVEL 1 goto done
-:: copy over result for use
-copy /Y main\telecommute_constants_0%ITER%.csv main\telecommute_constants.csv
+REM :: Runtime configuration: update telecommute constants using iter2 results
+REM python CTRAMP\scripts\preprocess\updateTelecommuteConstants.py
+REM if ERRORLEVEL 1 goto done
+REM :: copy over result for use
+REM copy /Y main\telecommute_constants_0%ITER%.csv main\telecommute_constants.csv
 
-:: ------------------------------------------------------------------------------------------------------
-::
-:: Step 9:  Prepare for iteration 3 and execute RunIteration batch file
-::
-:: ------------------------------------------------------------------------------------------------------
+REM :: ------------------------------------------------------------------------------------------------------
+REM ::
+REM :: Step 9:  Prepare for iteration 3 and execute RunIteration batch file
+REM ::
+REM :: ------------------------------------------------------------------------------------------------------
 
-: iter3
+REM : iter3
 
-:: Set the iteration parameters
-set ITER=3
-set PREV_ITER=2
-set WGT=0.33
-set PREV_WGT=0.67
-set SAMPLESHARE=0.50
-set SEED=0
+REM :: Set the iteration parameters
+REM set ITER=3
+REM set PREV_ITER=2
+REM set WGT=0.33
+REM set PREV_WGT=0.67
+REM set SAMPLESHARE=0.50
+REM set SEED=0
 
-:: Runtime configuration: set the workplace shadow pricing parameters
-python CTRAMP\scripts\preprocess\RuntimeConfiguration.py --iter %ITER%
-if ERRORLEVEL 1 goto done
+REM :: Runtime configuration: set the workplace shadow pricing parameters
+REM python CTRAMP\scripts\preprocess\RuntimeConfiguration.py --iter %ITER%
+REM if ERRORLEVEL 1 goto done
 
-:: Call RunIteration batch file
-call CTRAMP\RunIteration.bat
-if ERRORLEVEL 2 goto done
+REM :: Call RunIteration batch file
+REM call CTRAMP\RunIteration.bat
+REM if ERRORLEVEL 2 goto done
 
-:: Shut down java
-C:\Windows\SysWOW64\taskkill /f /im "java.exe"
-
-
-:: update telecommute constants one more time just to evaluate the situation
-python CTRAMP\scripts\preprocess\updateTelecommuteConstants.py
-
-:: ------------------------------------------------------------------------------------------------------
-::
-:: Step 11:  Build simplified skim databases
-::
-:: ------------------------------------------------------------------------------------------------------
-
-: database
-
-runtpp CTRAMP\scripts\database\SkimsDatabase.job
-if ERRORLEVEL 2 goto done
+REM :: Shut down java
+REM C:\Windows\SysWOW64\taskkill /f /im "java.exe"
 
 
-:: ------------------------------------------------------------------------------------------------------
-::
-:: Step 12:  Prepare inputs for EMFAC
-::
-:: ------------------------------------------------------------------------------------------------------
+REM :: update telecommute constants one more time just to evaluate the situation
+REM python CTRAMP\scripts\preprocess\updateTelecommuteConstants.py
 
-if not exist hwy\iter%ITER%\avgload5period_vehclasses.csv (
-  rem Export network to csv version (with vehicle class volumn columns intact)
-  rem Input : hwy\iter%ITER%\avgload5period.net
-  rem Output: hwy\iter%ITER%\avgload5period_vehclasses.csv
-  runtpp "CTRAMP\scripts\metrics\net2csv_avgload5period.job"
-  IF ERRORLEVEL 2 goto error
-)
+REM :: ------------------------------------------------------------------------------------------------------
+REM ::
+REM :: Step 11:  Build simplified skim databases
+REM ::
+REM :: ------------------------------------------------------------------------------------------------------
 
-:: Run Prepare EMFAC
-call RunPrepareEmfac.bat SB375 WithFreight
+REM : database
 
-:: ------------------------------------------------------------------------------------------------------
-::
-:: Step 13:  Build destination choice logsums
-::
-:: ------------------------------------------------------------------------------------------------------
-
-: logsums
-
-:: call RunAccessibility
-:: if ERRORLEVEL 2 goto done
-
-call RunLogsums
-if ERRORLEVEL 2 goto done
-
-:: ------------------------------------------------------------------------------------------------------
-::
-:: Step 14:  Core summaries
-::
-:: ------------------------------------------------------------------------------------------------------
-
-: core_summaries
-
-call RunCoreSummaries
-if ERRORLEVEL 2 goto done
-
-:: ------------------------------------------------------------------------------------------------------
-::
-:: Step 15:  Cobra Metrics
-::
-:: ------------------------------------------------------------------------------------------------------
-
-call RunMetrics
-if ERRORLEVEL 2 goto done
-
-:: ------------------------------------------------------------------------------------------------------
-::
-:: Step 16:  Scenario Metrics
-::
-:: ------------------------------------------------------------------------------------------------------
-
-call RunScenarioMetrics
-if ERRORLEVEL 2 goto done
-
-:: ------------------------------------------------------------------------------------------------------
-::
-:: Step 17:  Directory clean up
-::
-:: ------------------------------------------------------------------------------------------------------
+REM :: runtpp CTRAMP\scripts\database\SkimsDatabase.job
+REM :: if ERRORLEVEL 2 goto done
 
 
-:: Extract key files
-call extractkeyfiles
-c:\windows\system32\Robocopy.exe /E extractor "%M_DIR%\OUTPUT"
+REM :: ------------------------------------------------------------------------------------------------------
+REM ::
+REM :: Step 12:  Prepare inputs for EMFAC
+REM ::
+REM :: ------------------------------------------------------------------------------------------------------
+
+REM :: if not exist hwy\iter%ITER%\avgload5period_vehclasses.csv (
+REM ::   rem Export network to csv version (with vehicle class volumn columns intact)
+REM ::   rem Input : hwy\iter%ITER%\avgload5period.net
+REM ::   rem Output: hwy\iter%ITER%\avgload5period_vehclasses.csv
+REM ::   runtpp "CTRAMP\scripts\metrics\net2csv_avgload5period.job"
+REM ::   IF ERRORLEVEL 2 goto error
+REM :: )
+
+REM :: Run Prepare EMFAC
+REM :: call RunPrepareEmfac.bat SB375 WithFreight
+
+REM :: ------------------------------------------------------------------------------------------------------
+REM ::
+REM :: Step 13:  Build destination choice logsums
+REM ::
+REM :: ------------------------------------------------------------------------------------------------------
+
+REM : logsums
+
+REM :: call RunAccessibility
+REM :: if ERRORLEVEL 2 goto done
+
+REM :: call RunLogsums
+REM :: if ERRORLEVEL 2 goto done
+
+REM :: ------------------------------------------------------------------------------------------------------
+REM ::
+REM :: Step 14:  Core summaries
+REM ::
+REM :: ------------------------------------------------------------------------------------------------------
+
+REM : core_summaries
+
+REM :: call RunCoreSummaries
+REM :: if ERRORLEVEL 2 goto done
+
+REM :: ------------------------------------------------------------------------------------------------------
+REM ::
+REM :: Step 15:  Cobra Metrics
+REM ::
+REM :: ------------------------------------------------------------------------------------------------------
+
+REM :: call RunMetrics
+REM :: if ERRORLEVEL 2 goto done
+
+REM :: ------------------------------------------------------------------------------------------------------
+REM ::
+REM :: Step 16:  Scenario Metrics
+REM ::
+REM :: ------------------------------------------------------------------------------------------------------
+
+REM :: call RunScenarioMetrics
+REM :: if ERRORLEVEL 2 goto done
+
+REM :: ------------------------------------------------------------------------------------------------------
+REM ::
+REM :: Step 17:  Directory clean up
+REM ::
+REM :: ------------------------------------------------------------------------------------------------------
 
 
-: cleanup
+REM :: Extract key files
+REM :: call extractkeyfiles
+REM :: c:\windows\system32\Robocopy.exe /E extractor "%M_DIR%\OUTPUT"
 
-:: Move all the TP+ printouts to the \logs folder
-copy *.prn logs\*.prn
 
-:: Close the cube cluster
-Cluster "%COMMPATH%\CTRAMP" 1-48 Close Exit
+REM : cleanup
 
-:: Delete all the temporary TP+ printouts and cluster files
-del *.prn
-del *.script.*
-del *.script
+REM :: Move all the TP+ printouts to the \logs folder
+REM copy *.prn logs\*.prn
+
+REM :: Close the cube cluster
+REM :: Cluster "%COMMPATH%\CTRAMP" 1-48 Close Exit
+
+REM :: Delete all the temporary TP+ printouts and cluster files
+REM del *.prn
+REM del *.script.*
+REM del *.script
 
 :: run QA/QC for PBA50
-call Run_QAQC
+::call Run_QAQC
 
 :: Success target and message
 :success
 ECHO FINISHED SUCCESSFULLY!
 
-python "CTRAMP\scripts\notify_slack.py" "Finished *%MODEL_DIR%*"
+::python "CTRAMP\scripts\notify_slack.py" "Finished *%MODEL_DIR%*"
 
 if "%COMPUTER_PREFIX%" == "WIN-" (
   
@@ -442,7 +442,7 @@ if "%COMPUTER_PREFIX%" == "WIN-" (
   cd %myfolder%
 
   rem shutdown
-  python "CTRAMP\scripts\notify_slack.py" "Finished *%MODEL_DIR%* - shutting down"
+  ::python "CTRAMP\scripts\notify_slack.py" "Finished *%MODEL_DIR%* - shutting down"
   C:\Windows\System32\shutdown.exe /s
 )
 
@@ -451,9 +451,9 @@ goto donedone
 
 :: this is the done for errors
 :done
-ECHO FINISHED.  
+ECHO FINISHED WITH ERROR.  
 
 :: if we got here and didn't shutdown -- assume something went wrong
-python "CTRAMP\scripts\notify_slack.py" ":exclamation: Error in *%MODEL_DIR%*"
+::python "CTRAMP\scripts\notify_slack.py" ":exclamation: Error in *%MODEL_DIR%*"
 
 :donedone
