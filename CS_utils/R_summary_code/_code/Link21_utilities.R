@@ -552,3 +552,14 @@ Trip_TOD_Choice <- function(wbname){
   }
 }
 
+Dest_Choice_BigData <- function(wbname){
+  if (!skip_l) {
+    cat('Processing tables on the left...\n')
+    BigData_once(TRUE,wbname, 'LeftData', delimiter, scenario,  name_model_l, main_dir, zoneMPO_l, PersonData_l, HouseholdData_l, ToursData_l, TripsData_l)
+    cat('Processing tables on the right...\n')
+    BigData_once(FALSE,wbname, 'RightData', delimiter, scenario, name_model_r, main_dir, zoneMPO_r, PersonData_r, HouseholdData_r, ToursData_r, TripsData_r)
+  } else {
+    cat('Processing tables on the right...\n')
+    BigData_once(TRUE,wbname, 'RightData', delimiter, scenario, name_model_r, main_dir, zoneMPO_r,  PersonData_r, HouseholdData_r, ToursData_r, TripsData_r)
+  }
+}

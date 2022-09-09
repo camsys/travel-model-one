@@ -56,6 +56,7 @@ source('_code//Link21_stop_freq.R')
 source('_code//Link21_stop_dest_choice.R')
 source('_code//Link21_trip_mode_choice.R')
 source('_code//Link21_trip_tod_choice.R')
+source('_code//Link21_dest_choice_bigdata.R')
 
 #############################################################
 
@@ -182,4 +183,5 @@ Trip_Mode_Choice('9 - Trip_Mode_Choice')
 # Run Trip_TOD_Choice
 Trip_TOD_Choice('10 - Trip_TOD_Choice')
 
-
+# Run Dest_Choice_BigData
+Dest_Choice_BigData('99 - Dest_Choice_BigData')
