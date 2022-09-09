@@ -25,7 +25,7 @@ stopfreq_wt <- function(go_down,dt_stops, dt_tours, scenario, nm_set, nm_model, 
   out_seq <- dt_stops[,.(stops=sum(WT,na.rm=T)),.(StopSeq, Outbound)]
   
   if (go_down) {
-    setwd("Template")
+    setwd("Survey_Populated")
     wb <- loadWorkbook(origname)
     setwd('..')
   }else{

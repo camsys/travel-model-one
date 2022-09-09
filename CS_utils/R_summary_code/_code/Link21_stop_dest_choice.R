@@ -39,7 +39,7 @@ StopDest_wt <- function(go_down, dt_t, scenario, nm_set, nm_model, wbname, sheet
                    .(type,HHINC,Z_TYPE_D,tour_purp,HT)]
     
     if (go_down) {
-      setwd("Template")
+      setwd("Survey_Populated")
       wb <- loadWorkbook(origname)
       setwd('..')
     }else{

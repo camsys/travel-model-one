@@ -25,7 +25,7 @@ VehAvl_wt <- function(go_down, dt, scenario, nm_set, nm_model, wbname, sheetname
   output_fp =dt[,.(TOTAL=sum(WT,na.rm = TRUE)), .(fp_choice, type, HHINC, CNTY_W)]
   
   if (go_down) {
-    setwd("Template")
+    setwd("Survey_Populated")
     wb <- loadWorkbook(origname)
     setwd('..')
   }else{

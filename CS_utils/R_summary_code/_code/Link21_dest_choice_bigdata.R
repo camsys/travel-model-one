@@ -24,7 +24,7 @@ BigData_wt <- function(go_down,dt_trips, dt_tours, scenario, nm_set, nm_model, w
   
     
   if (go_down) {
-    setwd("Template")
+    setwd("Survey_Populated")
     wb <- loadWorkbook(origname)
     setwd('..')
   }else{
