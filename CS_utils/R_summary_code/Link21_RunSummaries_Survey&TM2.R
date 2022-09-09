@@ -90,22 +90,21 @@ name_model_r = 'Link21'
 model_version_r = 'TM2'
 model_run_weight_r = 100
 
-input_dir_r = 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//_pre_processed//'
+input_dir_r = file.path(model_data_dir, '_pre_processed')
 in_person_r = 'in_person.csv'
 in_hh_r = 'in_hh.csv'
 in_MPO_r = 'in_taz.csv'
 
-output_dir_r = 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//_pre_processed//'
+output_dir_r = file.path(model_data_dir, '_pre_processed')
 out_person_r = 'out_person_data.csv'
 out_hh_r     = "out_hh_data.csv"
 out_tours_r  = 'out_tour_data.csv'
 out_stops_r  = 'out_trip_data.csv'
 
-skim_dir_r = 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//_pre_processed//'
-skim_am_time_r = 'TimeSkimsDatabaseAM.csv'
-skim_am_dist_r = 'DistanceSkimsDatabaseAM.csv'
-skim_op_time_r = 'TimeSkimsDatabaseEA.csv'
-skim_op_dist_r = 'DistanceSkimsDatabaseEA.csv'
+skim_dir_r = file.path(model_data_dir, 'skims')
+skim_am_r = 'HWYSKMAM.OMX'
+skim_op_r = 'HWYSKMEA.OMX'
+
 #############################################################
 ########## ##################################################
 ########   ##################################################
@@ -114,6 +113,7 @@ skim_op_dist_r = 'DistanceSkimsDatabaseEA.csv'
 ########## ##################################################
 #############################################################
 survey_l = T
+skim_left = "csv"
 
 # These correspond to the inputs of tables on the left These fields should be filled when skip_l = FALSE.
 name_model_l = 'CHTS'
@@ -122,7 +122,14 @@ out_person_l = 'Person.csv'
 out_hh_l = 'household.csv'
 out_tours_l = 'tours.csv'
 out_stops_l = 'trips.csv'
+zone_MPO_l = 'in_taz.csv'
 
+# survey was processed by MTC using TM1.5 TAZ system so skims are different.
+skim_dir_l = 'C://MTC_tmpy//TM2//Survey Data//Skims//'
+skim_am_time_l = 'TimeSkimsDatabaseAM.csv'
+skim_am_dist_l = 'DistanceSkimsDatabaseAM.csv'
+skim_op_time_l = 'TimeSkimsDatabaseEA.csv'
+skim_op_dist_l = 'DistanceSkimsDatabaseEA.csv'
 
 #############################################################
 ######################## READ ###############################

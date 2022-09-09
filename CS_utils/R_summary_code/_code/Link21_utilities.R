@@ -10,6 +10,7 @@ library(rhdf5)
 library(openxlsx)
 library(zoo)
 library(reshape2)
+library(omxr)
 
 survey_process <- function(PersonData_l, HouseholdData_l, zoneMPO_l, ToursData_l, TripsData_l) {
 
@@ -315,7 +316,20 @@ model_process <- function(model_version_r, model_run_weight_r, persons_r, househ
   return(list(persons_r, households_r, zoneMPO_r, PersonData_r, HouseholdData_r, ToursData_r,TripsData_r))
 }
 
-skim_process <- function(Dist_AM, Time_AM, Dist_OP, Time_OP){
+skim_process_omx <- function(Dist_AM, Time_AM, Dist_OP, Time_OP){
+  rownames(Time_AM)=1:nrow(Time_AM); colnames(Time_AM)=1:ncol(Time_AM); Time_AM <- as.data.table(as.table(Time_AM));colnames(Time_AM)=c("orig","dest","SOV_TIME__AM")
+  rownames(Dist_AM)=1:nrow(Dist_AM); colnames(Dist_AM)=1:ncol(Dist_AM); Dist_AM <- as.data.table(as.table(Dist_AM));colnames(Dist_AM)=c("orig","dest","SOV_DIST__AM")
+  rownames(Time_OP)=1:nrow(Time_OP); colnames(Time_OP)=1:ncol(Time_OP); Time_OP <- as.data.table(as.table(Time_OP));colnames(Time_OP)=c("orig","dest","SOV_TIME__OP")
+  rownames(Dist_OP)=1:nrow(Dist_OP); colnames(Dist_OP)=1:ncol(Dist_OP); Dist_OP <- as.data.table(as.table(Dist_OP));colnames(Dist_OP)=c("orig","dest","SOV_DIST__OP")
+  Time_AM$orig=as.integer(Time_AM$orig); Time_AM$dest=as.integer(Time_AM$dest)
+  Dist_AM$orig=as.integer(Dist_AM$orig); Dist_AM$dest=as.integer(Dist_AM$dest)
+  Time_OP$orig=as.integer(Time_OP$orig); Time_OP$dest=as.integer(Time_OP$dest)
+  Dist_OP$orig=as.integer(Dist_OP$orig); Dist_OP$dest=as.integer(Dist_OP$dest)
+  
+  return(list(Dist_AM, Time_AM, Dist_OP, Time_OP))
+}
+
+skim_process_csv <- function(Dist_AM, Time_AM, Dist_OP, Time_OP){
   Dist_AM=Dist_AM[,.(orig,dest,da)]; setnames(Dist_AM, old='da', new='SOV_DIST__AM')
   Time_AM=Time_AM[,.(orig,dest,da)]; setnames(Time_AM, old='da', new='SOV_TIME__AM')
   Dist_OP=Dist_OP[,.(orig,dest,da)]; setnames(Dist_OP, old='da', new='SOV_DIST__OP')
@@ -328,11 +342,11 @@ read_files <- function() {
   # always read right data - will not be survey data
   # right side skim
   setwd(skim_dir_r)
-  Dist_AM_r <- fread(skim_am_dist_r)
-  Time_AM_r <- fread(skim_am_time_r)
-  Dist_OP_r <- fread(skim_op_dist_r)
-  Time_OP_r <- fread(skim_op_time_r)
-  temp_rt = skim_process(Dist_AM_r, Time_AM_r, Dist_OP_r, Time_OP_r)
+  Dist_AM_r <- read_omx(skim_am_r, name ='DISTDA')
+  Time_AM_r <- read_omx(skim_am_r, name ='TIMEDA')
+  Dist_OP_r <- read_omx(skim_op_r, name ='DISTDA')
+  Time_OP_r <- read_omx(skim_op_r, name ='TIMEDA')
+  temp_rt = skim_process_omx(Dist_AM_r, Time_AM_r, Dist_OP_r, Time_OP_r)
   Dist_AM_r <<- as.data.table(temp_rt[1])
   Time_AM_r <<- as.data.table(temp_rt[2])
   Dist_OP_r <<- as.data.table(temp_rt[3])
@@ -363,43 +377,48 @@ read_files <- function() {
   
   # read left data if !skip_l
   if (!skip_l) {
-    if (survey_l){
-      # if left side is survey data
-      Dist_AM_l <<-Dist_AM_r
-      Time_AM_l <<-Time_AM_r
-      Dist_OP_l <<-Dist_OP_r
-      Time_OP_l <<-Time_OP_r
-      zoneMPO_l <<- zoneMPO_r      
-      temp_rt = skim_process(Dist_AM_r, Time_AM_r, Dist_OP_r, Time_OP_r)
+    # first process skim - place holder for csv vs. omx format of skims processing, could be removed later if TM1.5 omx is available
+    # left side skims size may be different from the right side    
+  	setwd(skim_dir_l)
+	  if (skim_left=="omx"){
+	    Dist_AM_l <- read_omx(skim_am_r, name ='DISTDA')
+      Time_AM_l <- read_omx(skim_am_r, name ='TIMEDA')
+      Dist_OP_l <- read_omx(skim_op_r, name ='DISTDA')
+      Time_OP_l <- read_omx(skim_op_r, name ='TIMEDA')
+      temp_rt = skim_process_omx(Dist_AM_l, Time_AM_l, Dist_OP_l, Time_OP_l)
+      Dist_AM_r <<- as.data.table(temp_rt[1])
+      Time_AM_r <<- as.data.table(temp_rt[2])
+      Dist_OP_r <<- as.data.table(temp_rt[3])
+      Time_OP_r <<- as.data.table(temp_rt[4])
+	  }else{
+      Dist_AM_l <- fread(skim_am_dist_l)
+      Time_AM_l <- fread(skim_am_time_l)
+      Dist_OP_l <- fread(skim_op_dist_l)
+      Time_OP_l <- fread(skim_op_time_l)
+      temp_rt = skim_process_csv(Dist_AM_l, Time_AM_l, Dist_OP_l, Time_OP_l)
       Dist_AM_l <<- as.data.table(temp_rt[1])
       Time_AM_l <<- as.data.table(temp_rt[2])
       Dist_OP_l <<- as.data.table(temp_rt[3])
-      Time_OP_l <<- as.data.table(temp_rt[4])
-
+      Time_OP_l <<- as.data.table(temp_rt[4])      
+	  }
+	
+	  # then read in input and output files
+    if (survey_l){
+      # if left side is survey data
       setwd(output_dir_l)
       PersonData_l <<- fread(out_person_l)
       HouseholdData_l <<- fread(out_hh_l)
       ToursData_l  <<- fread(out_tours_l)
       TripsData_l  <<- fread(out_stops_l)
+      zoneMPO_l <<- fread(zone_MPO_l)
       temp_rt = survey_process(PersonData_l, HouseholdData_l, zoneMPO_l, ToursData_l, TripsData_l)
       PersonData_l <<- as.data.table(temp_rt[1])
       HouseholdData_l <<- as.data.table(temp_rt[2])
       zoneMPO_l <<-as.data.table(temp_rt[3])
       ToursData_l <<- as.data.table(temp_rt[4])
       TripsData_l <<- as.data.table(temp_rt[5])
-    } else{
-      # if left side is not survey data
-      setwd(skim_dir_l)
-      Dist_AM_l <- fread(skim_am_dist_l)
-      Time_AM_l <- fread(skim_am_time_l)
-      Dist_OP_l <- fread(skim_op_dist_l)
-      Time_OP_l <- fread(skim_op_time_l)
-      temp_rt = skim_process(Dist_AM_l, Time_AM_l, Dist_OP_l, Time_OP_l)
-      Dist_AM_l <<- as.data.table(temp_rt[1])
-      Time_AM_l <<- as.data.table(temp_rt[2])
-      Dist_OP_l <<- as.data.table(temp_rt[3])
-      Time_OP_l <<- as.data.table(temp_rt[4])
-      
+    }else{
+	  # if left side is model data
       setwd(input_dir_l)
       persons_l    <- fread(in_person_l)
       households_l <- fread(in_hh_l)
@@ -420,7 +439,7 @@ read_files <- function() {
       ToursData_l <<- as.data.table(temp_rt[6])
       TripsData_l <<- as.data.table(temp_rt[7])
     }
-  } else {
+  }else{
   }
   
 }

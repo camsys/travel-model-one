@@ -16,16 +16,17 @@ in_taz <- fread("landuse/tazData.csv")
 
 # read in output files
 ### person and households
-in_pdata <- fread("main/PersonData_3.csv")
-in_hdata <- fread("main/hOuseholdData_3.csv")
+in_pdata <- fread(paste("main/PersonData_",output_iteration,".csv",sep=''))
+in_hdata <- fread(paste("main/hOuseholdData_",output_iteration,".csv",sep=''))
 ### work/school location and auto ownership
-in_wsloc <- fread("main/wsLocResults_3.csv")
+in_wsloc <- fread(paste("main/wsLocResults_",output_iteration,".csv",sep=''))
 in_ao <- fread("main/aoResults.csv")
+# in_cdap <-fread("main/CDAPResults.csv")
 ### tour and trip
-ind_tour <- fread("main/indivTourData_3.csv")
-jot_tour <- fread("main/jointTourData_3.csv")
-ind_trip <- fread("main/indivTripData_3.csv")
-jot_trip <- fread("main/jointTripData_3.csv")
+ind_tour <- fread(paste("main/indivTourData_",output_iteration,".csv",sep=''))
+jot_tour <- fread(paste("main/jointTourData_",output_iteration,".csv",sep=''))
+ind_trip <- fread(paste("main/indivTripData_",output_iteration,".csv",sep=''))
+jot_trip <- fread(paste("main/jointTripData_",output_iteration,".csv",sep=''))
 
 # rename a few input/output field names to be consistent with the ActivitySim model convention
 names(in_person)[1:4] <- c("household_id", "person_id", "age", "sex")
@@ -111,5 +112,5 @@ fwrite(out_pdata, "out_person_data.csv")
 fwrite(out_hdata, "out_hh_data.csv")
 fwrite(out_tourdata,"out_tour_data.csv")
 fwrite(out_tripdata,"out_trip_data.csv")
-save.image("java_pre_processed.rdata")
+# save.image("java_pre_processed.rdata")
 
