@@ -23,7 +23,7 @@ TourMode_wt <- function(go_down, dt_t, scenario, nm_set, nm_model, wbname, sheet
     output_z <- dcast(output_z,Z_TYPE_O+Z_TYPE_D+tour_mode_cat~TourType, value.var = 'count')
 
     if (go_down) {
-      setwd("Template")
+      setwd("Survey_Populated")
       wb <- loadWorkbook(origname)
       setwd('..')
     }else{

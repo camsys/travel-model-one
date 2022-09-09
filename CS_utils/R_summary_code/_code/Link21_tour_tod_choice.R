@@ -31,7 +31,7 @@ tod_wt <- function(go_down, dt_t, scenario, nm_set, nm_model, wbname, sheetname)
     output_tour = dt[,.(count = sum(WT, na.rm = T),time=sum(duration*WT,na.rm = T)), .(dep_tod, arr_tod, tour_stop,TourType)]
 
     if (go_down) {
-      setwd("Template")
+      setwd("Survey_Populated")
       wb <- loadWorkbook(origname)
       setwd('..')
     }else{

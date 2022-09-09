@@ -39,7 +39,7 @@ TripMode_wt <- function(go_down, dt_t, scenario, nm_set, nm_model, wbname, sheet
     output_dir <-dt[,.(count=sum(WT,na.rm = TRUE)),.(trip_mode_cat,HT,TourType)]
 
     if (go_down) {
-      setwd("Template")
+      setwd("Survey_Populated")
       wb <- loadWorkbook(origname)
       setwd('..')
     }else{

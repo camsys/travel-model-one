@@ -34,7 +34,7 @@ triptod_wt <- function(go_down, dt_t, scenario, nm_set, nm_model, wbname, sheetn
     output_purp = dt[,.(count = sum(WT,na.rm = TRUE),time=sum(duration*WT,na.rm = T)), .(arr_tod, dep_tod, trip_purp, trip_mode_cat)]
     
     if (go_down) {
-      setwd("Template")
+      setwd("Survey_Populated")
       wb <- loadWorkbook(origname)
       setwd('..')
     }else{

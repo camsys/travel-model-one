@@ -11,7 +11,7 @@ CDAP_wt <- function(go_down, dt, scenario, nm_set, nm_model, wbname, sheetname){
   outname = paste(paste(wbname, nm_set, scenario, sep='_'),'xlsx', sep = '.')
 
   if (go_down) {
-    setwd("Template")
+    setwd("Survey_Populated")
     wb <- loadWorkbook(origname)
     setwd('..')
   }else{

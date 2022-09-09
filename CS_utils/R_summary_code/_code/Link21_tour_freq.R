@@ -10,7 +10,7 @@ TourFreq_wt <- function(go_down, dt_h, dt_p, scenario, nm_set, nm_model, wbname,
   outname = paste(paste(wbname, nm_set, scenario, sep='_'),'xlsx', sep = '.')
   
   if (go_down) {
-    setwd("Template")
+    setwd("Survey_Populated")
     wb <- loadWorkbook(origname)
     setwd('..')
   }else{

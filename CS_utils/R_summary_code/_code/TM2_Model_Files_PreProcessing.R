@@ -13,24 +13,25 @@ in_hh <- fread("popsyn/hhFile.2015.csv")
 ### landuse/tazData
 in_taz <- fread("landuse/tazData.csv")
 ### skims
-in_am_time <-read_omx("skims/HWYSKMAM.OMX", name ='TIMEDA')
-in_am_dist <-read_omx("skims/HWYSKMAM.OMX", name ='DISTDA')
-in_op_time <-read_omx("skims/HWYSKMEA.OMX", name ='TIMEDA')
-in_op_dist <-read_omx("skims/HWYSKMEA.OMX", name ='DISTDA')
+# in_am_time <-read_omx("skims/HWYSKMAM.OMX", name ='TIMEDA')
+# in_am_dist <-read_omx("skims/HWYSKMAM.OMX", name ='DISTDA')
+# in_op_time <-read_omx("skims/HWYSKMEA.OMX", name ='TIMEDA')
+# in_op_dist <-read_omx("skims/HWYSKMEA.OMX", name ='DISTDA')
 
 # read in output files
 ### person and households
-in_pdata <- fread(paste0("main/PersonData_",output_iteration,".csv"))
-in_hdata <- fread(paste0("main/householdData_",output_iteration,".csv"))
+
+in_pdata <- fread(paste("main/PersonData_",output_iteration,".csv",sep=''))
+in_hdata <- fread(paste("main/HouseholdData_",output_iteration,".csv",sep=''))
 ### work/school location and auto ownership
-in_wsloc <- fread(paste0("main/wsLocResults_",output_iteration,".csv"))
+in_wsloc <- fread(paste("main/wsLocResults_",output_iteration,".csv",sep=''))
 in_ao <- fread("main/aoResults.csv")
 # in_cdap <-fread("main/CDAPResults.csv")
 ### tour and trip
-ind_tour <- fread(paste0("main/indivTourData_",output_iteration,".csv"))
-jot_tour <- fread(paste0("main/jointTourData_",output_iteration,".csv"))
-ind_trip <- fread(paste0("main/indivTripData_",output_iteration,".csv"))
-jot_trip <- fread(paste0("main/jointTripData_",output_iteration,".csv"))
+ind_tour <- fread(paste("main/indivTourData_",output_iteration,".csv",sep=''))
+jot_tour <- fread(paste("main/jointTourData_",output_iteration,".csv",sep=''))
+ind_trip <- fread(paste("main/indivTripData_",output_iteration,".csv",sep=''))
+jot_trip <- fread(paste("main/jointTripData_",output_iteration,".csv",sep=''))
 
 # rename a few input/output field names to be consistent with the ActivitySim model convention
 names(in_person)[1:4] <- c("household_id", "person_id", "age", "sex")
@@ -60,10 +61,10 @@ names(out_wsloc) = c("hh_id","person_id","home_zone_id","workplace_zone_id", "sc
 out_pdata = merge(in_pdata,out_wsloc, by=c("hh_id","person_id"),all.x=T)
 
 # skims data processing
-rownames(in_am_time)=c(1:3631); colnames(in_am_time)=c(1:3631); out_am_time <- as.data.table(as.table(in_am_time));colnames(out_am_time)=c("orig","dest","da")
-rownames(in_am_dist)=c(1:3631); colnames(in_am_dist)=c(1:3631); out_am_dist <- as.data.table(as.table(in_am_dist));colnames(out_am_dist)=c("orig","dest","da")
-rownames(in_op_time)=c(1:3631); colnames(in_op_time)=c(1:3631); out_op_time <- as.data.table(as.table(in_op_time));colnames(out_op_time)=c("orig","dest","da")
-rownames(in_op_dist)=c(1:3631); colnames(in_op_dist)=c(1:3631); out_op_dist <- as.data.table(as.table(in_op_dist));colnames(out_op_dist)=c("orig","dest","da")
+# rownames(in_am_time)=1:nrow(in_am_time); colnames(in_am_time)=1:ncol(in_am_time); out_am_time <- as.data.table(as.table(in_am_time));colnames(out_am_time)=c("orig","dest","da")
+# rownames(in_am_dist)=1:nrow(in_am_dist); colnames(in_am_dist)=1:ncol(in_am_dist); out_am_dist <- as.data.table(as.table(in_am_dist));colnames(out_am_dist)=c("orig","dest","da")
+# rownames(in_op_time)=1:nrow(in_op_time); colnames(in_op_time)=1:ncol(in_op_time); out_op_time <- as.data.table(as.table(in_op_time));colnames(out_op_time)=c("orig","dest","da")
+# rownames(in_op_dist)=1:nrow(in_op_dist); colnames(in_op_dist)=1:ncol(in_op_dist); out_op_dist <- as.data.table(as.table(in_op_dist));colnames(out_op_dist)=c("orig","dest","da")
 
 # tour file processing
 # create a joint tour file that has one row for each participant
@@ -124,9 +125,9 @@ fwrite(out_pdata, "out_person_data.csv")
 fwrite(out_hdata, "out_hh_data.csv")
 fwrite(out_tourdata,"out_tour_data.csv")
 fwrite(out_tripdata,"out_trip_data.csv")
-fwrite(out_am_time, "TimeSkimsDatabaseAM.csv")
-fwrite(out_am_dist, "DistanceSkimsDatabaseAM.csv")
-fwrite(out_op_time, "TimeSkimsDatabaseEA.csv")
-fwrite(out_op_dist, "DistanceSkimsDatabaseEA.csv")
+# fwrite(out_am_time, "TimeSkimsDatabaseAM.csv")
+# fwrite(out_am_dist, "DistanceSkimsDatabaseAM.csv")
+# fwrite(out_op_time, "TimeSkimsDatabaseEA.csv")
+# fwrite(out_op_dist, "DistanceSkimsDatabaseEA.csv")
 #save.image("run_20220722_012100.rdata")
 

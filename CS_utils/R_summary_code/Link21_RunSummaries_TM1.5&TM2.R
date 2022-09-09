@@ -56,6 +56,7 @@ source('_code//Link21_stop_freq.R')
 source('_code//Link21_stop_dest_choice.R')
 source('_code//Link21_trip_mode_choice.R')
 source('_code//Link21_trip_tod_choice.R')
+source('_code//Link21_dest_choice_bigdata.R')
 
 #############################################################
 
@@ -77,7 +78,7 @@ source('_code//Link21_trip_tod_choice.R')
 if (preprocess_l) {
   model_data_dir='C://MTC_tmpy//TM2//2015_BaseY_PYT2015//'
   setwd(paste(main_dir, '..', sep = delimiter))
-  source('_code//TM2_Model_Files_PreProcessing.R')
+  source('_code//TM1.5_Model_Files_PreProcessing.R')
 }
 
 if (preprocess_r) {
@@ -96,22 +97,20 @@ survey_r =FALSE
 model_version_r = 'TM2'
 model_run_weight_r = 100
 
-input_dir_r = 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//_pre_processed//'
+input_dir_r = file.path(model_data_dir, '_pre_processed')
 in_person_r = 'in_person.csv'
 in_hh_r = 'in_hh.csv'
 in_MPO_r = 'in_taz.csv'
 
-output_dir_r = 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//_pre_processed//'
+output_dir_r = file.path(model_data_dir, '_pre_processed')
 out_person_r = 'out_person_data.csv'
 out_hh_r     = "out_hh_data.csv"
 out_tours_r  = 'out_tour_data.csv'
 out_stops_r  = 'out_trip_data.csv'
 
-skim_dir_r = 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//_pre_processed//'
-skim_am_time_r = 'TimeSkimsDatabaseAM.csv'
-skim_am_dist_r = 'DistanceSkimsDatabaseAM.csv'
-skim_op_time_r = 'TimeSkimsDatabaseEA.csv'
-skim_op_dist_r = 'DistanceSkimsDatabaseEA.csv'
+skim_dir_r = file.path(model_data_dir, 'skims')
+skim_am_r = 'HWYSKMAM.OMX'
+skim_op_r = 'HWYSKMEA.OMX'
 #############################################################
 ########## ##################################################
 ########   ##################################################
@@ -119,8 +118,9 @@ skim_op_dist_r = 'DistanceSkimsDatabaseEA.csv'
 ########   ##################################################
 ########## ##################################################
 #############################################################
-name_model_l = '2015_TM1.5'
 survey_l = FALSE
+skim_left = "csv"
+name_model_l = '2015_TM1.5'
 model_version_l = 'TM1.5'
 model_run_weight_l = 2
 
@@ -182,4 +182,5 @@ Trip_Mode_Choice('9 - Trip_Mode_Choice')
 # Run Trip_TOD_Choice
 Trip_TOD_Choice('10 - Trip_TOD_Choice')
 
-
+# Run Dest_Choice_BigData
+Dest_Choice_BigData('99 - Dest_Choice_BigData')
