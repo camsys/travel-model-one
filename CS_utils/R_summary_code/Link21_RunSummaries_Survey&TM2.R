@@ -87,7 +87,8 @@ name_model_r = 'Link21'
 # That means all observations have a weight of 2.
 # This is used in the utilities script and need to be set to match the model run.
 model_version_r = 'TM2'
-model_run_weight_r = 100
+
+# model_run_weight_r = 100
 
 input_dir_r = 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//_pre_processed//'
 in_person_r = 'in_person.csv'
@@ -105,6 +106,8 @@ skim_am_time_r = 'TimeSkimsDatabaseAM.csv'
 skim_am_dist_r = 'DistanceSkimsDatabaseAM.csv'
 skim_op_time_r = 'TimeSkimsDatabaseEA.csv'
 skim_op_dist_r = 'DistanceSkimsDatabaseEA.csv'
+
+model_run_weight_r = get_model_weight(output_dir_r, out_stops_r)
 #############################################################
 ########## ##################################################
 ########   ##################################################
@@ -122,6 +125,12 @@ out_hh_l = 'household.csv'
 out_tours_l = 'tours.csv'
 out_stops_l = 'trips.csv'
 
+# Skims - use TM1.5 skims for now
+skim_dir_l = 'C://MTC_tmpy//TM2//Link21_Reports//TM1.5_results//_pre_processed//'
+skim_am_time_l = 'TimeSkimsDatabaseAM.csv'
+skim_am_dist_l = 'DistanceSkimsDatabaseAM.csv'
+skim_op_time_l = 'TimeSkimsDatabaseEA.csv'
+skim_op_dist_l = 'DistanceSkimsDatabaseEA.csv'
 
 #############################################################
 ######################## READ ###############################

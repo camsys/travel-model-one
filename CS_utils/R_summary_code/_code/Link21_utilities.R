@@ -323,6 +323,12 @@ skim_process <- function(Dist_AM, Time_AM, Dist_OP, Time_OP){
   return(list(Dist_AM, Time_AM, Dist_OP, Time_OP))
 }
 
+get_model_weight <- function(output_dir, out_stops){
+  setwd(output_dir)
+  trip_first_row  <- fread(out_stops, nrows=1)
+  return(1/trip_first_row$sample_rate)
+}
+
 read_files <- function() {
 
   # always read right data - will not be survey data
@@ -365,17 +371,19 @@ read_files <- function() {
   if (!skip_l) {
     if (survey_l){
       # if left side is survey data
-      Dist_AM_l <<-Dist_AM_r
-      Time_AM_l <<-Time_AM_r
-      Dist_OP_l <<-Dist_OP_r
-      Time_OP_l <<-Time_OP_r
-      zoneMPO_l <<- zoneMPO_r      
-      temp_rt = skim_process(Dist_AM_r, Time_AM_r, Dist_OP_r, Time_OP_r)
+      setwd(skim_dir_l)
+      Dist_AM_l <- fread(skim_am_dist_l)
+      Time_AM_l <- fread(skim_am_time_l)
+      Dist_OP_l <- fread(skim_op_dist_l)
+      Time_OP_l <- fread(skim_op_time_l)
+      temp_rt = skim_process(Dist_AM_l, Time_AM_l, Dist_OP_l, Time_OP_l)
       Dist_AM_l <<- as.data.table(temp_rt[1])
       Time_AM_l <<- as.data.table(temp_rt[2])
       Dist_OP_l <<- as.data.table(temp_rt[3])
       Time_OP_l <<- as.data.table(temp_rt[4])
-
+      
+     
+      zoneMPO_l <<- zoneMPO_r
       setwd(output_dir_l)
       PersonData_l <<- fread(out_person_l)
       HouseholdData_l <<- fread(out_hh_l)

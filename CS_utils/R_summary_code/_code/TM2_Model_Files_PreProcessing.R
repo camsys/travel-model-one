@@ -20,17 +20,17 @@ in_op_dist <-read_omx("skims/HWYSKMEA.OMX", name ='DISTDA')
 
 # read in output files
 ### person and households
-in_pdata <- fread("main/PersonData_1.csv")
-in_hdata <- fread("main/hOuseholdData_1.csv")
+in_pdata <- fread(paste0("main/PersonData_",output_iteration,".csv"))
+in_hdata <- fread(paste0("main/householdData_",output_iteration,".csv"))
 ### work/school location and auto ownership
-in_wsloc <- fread("main/wsLocResults_1.csv")
+in_wsloc <- fread(paste0("main/wsLocResults_",output_iteration,".csv"))
 in_ao <- fread("main/aoResults.csv")
 # in_cdap <-fread("main/CDAPResults.csv")
 ### tour and trip
-ind_tour <- fread("main/indivTourData_1.csv")
-jot_tour <- fread("main/jointTourData_1.csv")
-ind_trip <- fread("main/indivTripData_1.csv")
-jot_trip <- fread("main/jointTripData_1.csv")
+ind_tour <- fread(paste0("main/indivTourData_",output_iteration,".csv"))
+jot_tour <- fread(paste0("main/jointTourData_",output_iteration,".csv"))
+ind_trip <- fread(paste0("main/indivTripData_",output_iteration,".csv"))
+jot_trip <- fread(paste0("main/jointTripData_",output_iteration,".csv"))
 
 # rename a few input/output field names to be consistent with the ActivitySim model convention
 names(in_person)[1:4] <- c("household_id", "person_id", "age", "sex")
