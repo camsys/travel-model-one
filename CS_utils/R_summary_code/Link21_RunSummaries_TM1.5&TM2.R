@@ -11,7 +11,8 @@ main_dir = 'C://MTC_tmpy//TM2//Link21_Reports'
 
 # Set preprocessing parameters
 preprocess_l = F
-preprocess_r = T
+preprocess_r = F
+output_iteration = 1
 
 # If you are doing model validation against survey data, please
 # set skip_l = TRUE, otherwise, set it to FALSE.
@@ -40,11 +41,11 @@ MTC = TRUE
 ALL = TRUE
 
 # Name of the scenario will appear in summary spreadsheets as suffix.
-scenario = 'TM1.5vsLink21_09-07-2022'
+scenario = 'TM1.5vsLink21_09-09-2022'
 
 ############################################################
-
-setwd(paste(main_dir, '..', sep = delimiter))
+# R Studio only: get current work folder
+setwd(dirname(getSourceEditorContext()$path))
 source('_code//Link21_utilities.R')
 source('_code//Link21_vehicle_avail.R')
 source('_code//Link21_CDAP.R')
@@ -57,6 +58,7 @@ source('_code//Link21_stop_dest_choice.R')
 source('_code//Link21_trip_mode_choice.R')
 source('_code//Link21_trip_tod_choice.R')
 source('_code//Link21_dest_choice_bigdata.R')
+setwd(paste(main_dir, '..', sep = delimiter))
 
 #############################################################
 
@@ -95,7 +97,7 @@ survey_r =FALSE
 # That means all observations have a weight of 100.
 # This is used in the utilities script and need to be set to match the model run.
 model_version_r = 'TM2'
-model_run_weight_r = 100
+model_data_dir='C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//'
 
 input_dir_r = file.path(model_data_dir, '_pre_processed')
 in_person_r = 'in_person.csv'
@@ -107,6 +109,8 @@ out_person_r = 'out_person_data.csv'
 out_hh_r     = "out_hh_data.csv"
 out_tours_r  = 'out_tour_data.csv'
 out_stops_r  = 'out_trip_data.csv'
+
+model_run_weight_r = get_model_weight(output_dir_r, out_stops_r)
 
 skim_dir_r = file.path(model_data_dir, 'skims')
 skim_am_r = 'HWYSKMAM.OMX'
@@ -122,7 +126,6 @@ survey_l = FALSE
 skim_left = "csv"
 name_model_l = '2015_TM1.5'
 model_version_l = 'TM1.5'
-model_run_weight_l = 2
 
 input_dir_l = 'C://MTC_tmpy//TM2//Link21_Reports//TM1.5_results//_pre_processed//'
 in_person_l = 'in_person.csv'
@@ -134,6 +137,8 @@ out_person_l = 'out_person_data.csv'
 out_hh_l     = "out_hh_data.csv"
 out_tours_l  = 'out_tour_data.csv'
 out_stops_l  = 'out_trip_data.csv'
+
+model_run_weight_l = get_model_weight(output_dir_l, out_stops_l)
 
 skim_dir_l = 'C://MTC_tmpy//TM2//Link21_Reports//TM1.5_results//_pre_processed//'
 skim_am_time_l = 'TimeSkimsDatabaseAM.csv'

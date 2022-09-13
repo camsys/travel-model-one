@@ -10,7 +10,7 @@ delimiter = '//'
 main_dir = 'C://MTC_tmpy//TM2//Link21_Reports'
 
 # Set preprocessing parameters
-preprocess_r = F
+preprocess_r = T
 output_iteration = 1
 
 # If you are doing model validation against survey data, please
@@ -40,11 +40,11 @@ MTC = TRUE
 ALL = TRUE
 
 # Name of the scenario will appear in summary spreadsheets as suffix.
-scenario = 'CHTSvsLink21_09-07-2022'
+scenario = 'CHTSvsLink21_09-09-2022'
 
 ############################################################
-
-setwd(paste(main_dir, '..', sep = delimiter))
+# R Studio only: get current work folder
+setwd(dirname(getSourceEditorContext()$path))
 source('_code//Link21_utilities.R')
 source('_code//Link21_vehicle_avail.R')
 source('_code//Link21_CDAP.R')
@@ -58,6 +58,7 @@ source('_code//Link21_trip_mode_choice.R')
 source('_code//Link21_trip_tod_choice.R')
 source('_code//Link21_dest_choice_bigdata.R')
 
+setwd(paste(main_dir, '..', sep = delimiter))
 #############################################################
 
 #############################################################
