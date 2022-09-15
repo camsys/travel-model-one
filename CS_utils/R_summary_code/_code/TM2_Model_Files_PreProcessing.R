@@ -20,8 +20,9 @@ in_taz <- fread("landuse/tazData.csv")
 
 # read in output files
 ### person and households
+
 in_pdata <- fread(paste("main/PersonData_",output_iteration,".csv",sep=''))
-in_hdata <- fread(paste("main/hOuseholdData_",output_iteration,".csv",sep=''))
+in_hdata <- fread(paste("main/HouseholdData_",output_iteration,".csv",sep=''))
 ### work/school location and auto ownership
 in_wsloc <- fread(paste("main/wsLocResults_",output_iteration,".csv",sep=''))
 in_ao <- fread("main/aoResults.csv")

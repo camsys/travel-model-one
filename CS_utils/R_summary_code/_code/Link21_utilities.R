@@ -337,6 +337,12 @@ skim_process_csv <- function(Dist_AM, Time_AM, Dist_OP, Time_OP){
   return(list(Dist_AM, Time_AM, Dist_OP, Time_OP))
 }
 
+get_model_weight <- function(output_dir, out_stops){
+  setwd(output_dir)
+  trip_first_row  <- fread(out_stops, nrows=1)
+  return(1/trip_first_row$sample_rate)
+}
+
 read_files <- function() {
 
   # always read right data - will not be survey data
