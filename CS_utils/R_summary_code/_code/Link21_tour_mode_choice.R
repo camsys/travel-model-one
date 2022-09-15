@@ -32,6 +32,7 @@ TourMode_wt <- function(go_down, dt_t, scenario, nm_set, nm_model, wbname, sheet
 
     writeData(wb, sheet = sheetname, nm_model,startRow = 1, startCol = 1, colNames = T)
     writeData(wb, sheet = sheetname, nm_set,startRow = 1, startCol = 2, colNames = T)
+    writeData(wb, sheet = sheetname, names_tours[i], startRow = 1, startCol = 3, colNames = T)
     writeData(wb, sheet = sheetname, output_hh,startRow = 2, startCol = 1, colNames = T)
     writeData(wb, sheet = sheetname, output_pp,startRow = 2, startCol = 8, colNames = T)
     writeData(wb, sheet = sheetname, output_z,startRow = 2, startCol = 15, colNames = T)

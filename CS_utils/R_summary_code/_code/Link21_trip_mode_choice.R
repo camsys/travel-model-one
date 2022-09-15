@@ -37,6 +37,8 @@ TripMode_wt <- function(go_down, dt_t, scenario, nm_set, nm_model, wbname, sheet
     
     output_mode <- dt[,.(count=sum(WT,na.rm = TRUE)),.(trip_mode_cat,tour_mode_cat,TourType)]
     output_dir <-dt[,.(count=sum(WT,na.rm = TRUE)),.(trip_mode_cat,HT,TourType)]
+    
+    output_per <- dt[,.(count=sum(WT,na.rm = TRUE)),.(trip_mode_cat,dep_tod,TourType)]
 
     if (go_down) {
       setwd("Survey_Populated")
@@ -55,6 +57,7 @@ TripMode_wt <- function(go_down, dt_t, scenario, nm_set, nm_model, wbname, sheet
     writeData(wb, sheet = sheetname, output_z,startRow = 2, startCol = 21, colNames = T)
     writeData(wb, sheet = sheetname, output_mode,startRow = 2, startCol = 28, colNames = T)
     writeData(wb, sheet = sheetname, output_dir,startRow = 2, startCol = 33, colNames = T)
+    writeData(wb, sheet = sheetname, output_per,startRow = 2, startCol = 38, colNames = T)
     
     saveWorkbook(wb,outname,overwrite = T)
     
@@ -92,7 +95,8 @@ TripMode_once <- function(go_down, wbname, write2sheet, delimiter, scenario, nam
   dt_trip$DIST=floor(dt_trip$SOV_DIST__AM)
   dt_trip$SOV_TIME__AM=NULL
   dt_trip$SOV_DIST__AM=NULL
-  
+  #period
+  dt_trip$dep_tod = cut(dt_trip$depart_hour, breaks = c(0,5,9,14,18,23), labels = c('EA','AM','MD','PM','EV'))
   # Match zones to MPOs:
   dt_trip = merge(dt_trip, zoneMPO, by.x = 'TAZ', by.y='TAZ', all.x=T)
   dt_trip = merge(dt_trip, zoneMPO, by.x = 'trip_orig_taz', by.y = 'TAZ', all.x = TRUE, all.y = FALSE, suffixes = c('','_O'))
