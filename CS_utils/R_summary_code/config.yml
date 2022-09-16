@@ -11,7 +11,7 @@ default:
         main_dir: 'C://MTC_tmpy//TM2//Link21_Reports'
         preprocess_r: T # preprocess the right hand side, TM2
         model_data_dir: 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//'
-        skip_l: F # If you are doing model validation against survey data, please set skip_l = TRUE, otherwise, set it to FALSE.
+        skip_l: F
         scenario: 'CHTSvsLink21_09-15-2022'
         # left side: survey parameters
         left:
@@ -28,7 +28,7 @@ default:
         main_dir: 'C://MTC_tmpy//TM2//Link21_Reports'
         preprocess_l: F # preprocess the left hand side, TM1.5
         preprocess_r: F # preprocess the right hand side, TM2
-        skip_l: F # If you are doing model validation against survey data, please set skip_l = TRUE, otherwise, set it to FALSE.
+        skip_l: F
         scenario: 'TM1.5vsLink21_09-15-2022'
         # left side: TM1.5 parameters
         left:
