@@ -4,10 +4,12 @@ default:
         inputD: 'C://Users//xchang//Downloads//templates'
         outputRootD: 'C://MTC_tmpy//TM2//Link21_Reports'
 
+    preprocess_suffix: 'GHG' # useful to save out results of different run versions
+    
     survey_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up
         main_dir: 'C://MTC_tmpy//TM2//Link21_Reports'
-        preprocess_r: F # preprocess the right hand side, TM2
+        preprocess_r: T # preprocess the right hand side, TM2
         model_data_dir: 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//'
         skip_l: F # If you are doing model validation against survey data, please set skip_l = TRUE, otherwise, set it to FALSE.
         scenario: 'CHTSvsLink21_09-15-2022'

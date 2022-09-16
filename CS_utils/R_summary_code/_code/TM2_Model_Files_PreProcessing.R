@@ -2,8 +2,12 @@ library(plyr)
 library(data.table)
 library(omxr)
 # define input and output file directory
-# model_data_dir
-output_rdata_dir = file.path(model_data_dir, '_pre_processed')
+if (length(preprocess_suffix)==0) {
+  output_rdata_dir = file.path(model_data_dir, '_pre_processed')
+} else {
+  output_rdata_dir = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
+}
+
 setwd(model_data_dir)
 
 # read in input files
@@ -12,11 +16,6 @@ in_person <- fread("popsyn/personFile.2015.csv")
 in_hh <- fread("popsyn/hhFile.2015.csv")
 ### landuse/tazData
 in_taz <- fread("landuse/tazData.csv")
-### skims
-# in_am_time <-read_omx("skims/HWYSKMAM.OMX", name ='TIMEDA')
-# in_am_dist <-read_omx("skims/HWYSKMAM.OMX", name ='DISTDA')
-# in_op_time <-read_omx("skims/HWYSKMEA.OMX", name ='TIMEDA')
-# in_op_dist <-read_omx("skims/HWYSKMEA.OMX", name ='DISTDA')
 
 # read in output files
 ### person and households
@@ -59,12 +58,6 @@ out_hdata = merge(in_hdata, in_ao, all.x=T)
 out_wsloc = in_wsloc[,c("HHID","PersonID","HomeTAZ","WorkLocation","SchoolLocation")]
 names(out_wsloc) = c("hh_id","person_id","home_zone_id","workplace_zone_id", "school_zone_id")
 out_pdata = merge(in_pdata,out_wsloc, by=c("hh_id","person_id"),all.x=T)
-
-# skims data processing
-# rownames(in_am_time)=1:nrow(in_am_time); colnames(in_am_time)=1:ncol(in_am_time); out_am_time <- as.data.table(as.table(in_am_time));colnames(out_am_time)=c("orig","dest","da")
-# rownames(in_am_dist)=1:nrow(in_am_dist); colnames(in_am_dist)=1:ncol(in_am_dist); out_am_dist <- as.data.table(as.table(in_am_dist));colnames(out_am_dist)=c("orig","dest","da")
-# rownames(in_op_time)=1:nrow(in_op_time); colnames(in_op_time)=1:ncol(in_op_time); out_op_time <- as.data.table(as.table(in_op_time));colnames(out_op_time)=c("orig","dest","da")
-# rownames(in_op_dist)=1:nrow(in_op_dist); colnames(in_op_dist)=1:ncol(in_op_dist); out_op_dist <- as.data.table(as.table(in_op_dist));colnames(out_op_dist)=c("orig","dest","da")
 
 # tour file processing
 # create a joint tour file that has one row for each participant
@@ -125,9 +118,3 @@ fwrite(out_pdata, "out_person_data.csv")
 fwrite(out_hdata, "out_hh_data.csv")
 fwrite(out_tourdata,"out_tour_data.csv")
 fwrite(out_tripdata,"out_trip_data.csv")
-# fwrite(out_am_time, "TimeSkimsDatabaseAM.csv")
-# fwrite(out_am_dist, "DistanceSkimsDatabaseAM.csv")
-# fwrite(out_op_time, "TimeSkimsDatabaseEA.csv")
-# fwrite(out_op_dist, "DistanceSkimsDatabaseEA.csv")
-#save.image("run_20220722_012100.rdata")
-
