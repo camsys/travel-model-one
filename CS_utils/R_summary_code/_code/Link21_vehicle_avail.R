@@ -11,7 +11,7 @@ VehAvl_wt <- function(go_down, dt, scenario, nm_set, nm_model, wbname, sheetname
 
   dt_hh = dt[!duplicated(dt$hh_id),]
   dt_hh$WT = dt_hh$WT_HH
-  dt_ex = dt[dt$RegularWorkExists == 'True' &  !dt$Work.Home,]
+  dt_ex = dt[dt$RegularWorkExists == 'True',]
   
   output_grp = dt_hh[,.(TOTAL=sum(WT,na.rm = TRUE)), .(HHINC,HHSIZE_AV,DRIVERS,WORKERS,Auto.Ownership,Z_TYPE)]
   output_grp$TOT_CAR = output_grp$Auto.Ownership * output_grp$TOTAL

@@ -47,14 +47,14 @@ survey_process <- function(PersonData_l, HouseholdData_l, zoneMPO_l, ToursData_l
   PersonData_l$school_zone_id[is.na(PersonData_l$school_zone_id)] = 0
   #2.1 type, RegularWorkExists, Work.Home, Home.School,fp_choice
   PersonData_l$type = factor(PersonData_l$PERSONTYPE, levels = 1:8, label=names_cat0)
-  PersonData_l$Work.Home = (PersonData_l$home_zone_id == PersonData_l$workplace_zone_id & PersonData_l$workplace_zone_id!= 0)
+  #PersonData_l$Work.Home = (PersonData_l$home_zone_id == PersonData_l$workplace_zone_id & PersonData_l$workplace_zone_id!= 0)
   PersonData_l$RegularWorkExists = ifelse(PersonData_l$workplace_zone_id!=0,'True', 'False')
-  PersonData_l$Home.School = ifelse(PersonData_l$home_zone_id==PersonData_l$school_zone_id & PersonData_l$school_zone_id!= 0,'True', 'False')
+  #PersonData_l$Home.School = ifelse(PersonData_l$home_zone_id==PersonData_l$school_zone_id & PersonData_l$school_zone_id!= 0,'True', 'False')
   ### No data available yet - set fp_choice = 0
   PersonData_l$fp_choice = 0
   #2.2 DRIVERS, WORKERS, AUTO_WORK
   PersonData_l=PersonData_l[,.(hh_id,person_id,age,sex,type,fp_choice,workplace_zone_id,school_zone_id,
-                               RegularWorkExists, Work.Home, Home.School, WT)]#activity_pattern,Exact.Number.of.tours
+                               RegularWorkExists, WT)]#activity_pattern,Exact.Number.of.tours, Work.Home, Home.School
   df_person = data.table(PersonData_l[,.(hh_id, person_id, type, age)])
   df_person = df_person[,nWorkers := sum(type %in% c('Full-time worker','Part-time worker')), by = hh_id]
   df_person = df_person[,nDrivers := sum(age>=16), by = hh_id]
@@ -200,13 +200,13 @@ model_process <- function(model_version_r, model_run_weight_r, persons_r, househ
   PersonData_r$WT = model_run_weight_r
   PersonData_r=merge(PersonData_r, persons_r[,.(person_id,sex)], by='person_id',all.x=T)
   #2.1 RegularWorkExists, Work.Home, Home.School, and Exact.Number.of.tours
-  PersonData_r$Work.Home = (PersonData_r$home_zone_id == PersonData_r$workplace_zone_id & PersonData_r$workplace_zone_id!= 0)
+  #PersonData_r$Work.Home = (PersonData_r$home_zone_id == PersonData_r$workplace_zone_id & PersonData_r$workplace_zone_id!= 0)
   PersonData_r$RegularWorkExists = ifelse(PersonData_r$workplace_zone_id!=0,'True', 'False')
-  PersonData_r$Home.School = ifelse(PersonData_r$home_zone_id==PersonData_r$school_zone_id & PersonData_r$school_zone_id!= 0,'True', 'False')
+  #PersonData_r$Home.School = ifelse(PersonData_r$home_zone_id==PersonData_r$school_zone_id & PersonData_r$school_zone_id!= 0,'True', 'False')
   ### Exact.Number.of.tours is calculated in the pro-process utilities for the JAVA model  
   #2.2 DRIVERS, WORKERS, AUTO_WORK
   PersonData_r=PersonData_r[,.(hh_id,person_id,age,sex,type,fp_choice,activity_pattern,workplace_zone_id,school_zone_id,
-                               RegularWorkExists, Work.Home, Home.School, Exact.Number.of.tours, WT)]
+                               RegularWorkExists, Exact.Number.of.tours, WT)] #Work.Home, Home.School, 
   df_person = data.table(PersonData_r[,.(hh_id, person_id, type, age)])
   df_person = df_person[,nWorkers := sum(type %in% c('Full-time worker','Part-time worker')), by = hh_id]
   df_person = df_person[,nDrivers := sum(age>=16), by = hh_id]

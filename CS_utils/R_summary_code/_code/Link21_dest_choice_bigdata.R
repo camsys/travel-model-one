@@ -65,7 +65,7 @@ BigData_once <- function(go_down, wbname, write2sheet, delimiter, scenario, name
   # survey data has records with no home TAZ in MTC, fill that in
   dt_tours$MPO[is.na(dt_tours$MPO)] = 'MTC'
   # indicator for Workplacelocation
-  dt_tours$worker = ifelse(dt_tours$workplace_zone_id>0 & dt_tours$Work.Home ==0, 1, 0)
+  dt_tours$worker = ifelse(dt_tours$workplace_zone_id>0, 1, 0)
   # indicator for work tours
   dt_tours$worktour=ifelse(dt_tours$tour_purp=='Work', 1, 0)
   
