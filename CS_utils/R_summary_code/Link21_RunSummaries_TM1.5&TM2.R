@@ -1,8 +1,11 @@
 #############################################################
 ##### PARAMETERS AND DIRECTORIES ############################
 #############################################################
+# R Studio only: get current work folder
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 rm(list=ls())
+config <- config::get()$TM1.5_comp
 
 delimiter = '//'
 
@@ -10,14 +13,14 @@ delimiter = '//'
 main_dir = 'C://MTC_tmpy//TM2//Link21_Reports'
 
 # Set preprocessing parameters
-preprocess_l = F
-preprocess_r = F
-output_iteration = 1
+preprocess_l = as.logical(config$preprocess_l)
+preprocess_r = as.logical(config$preprocess_r)
+output_iteration = config$output_iteration
 
 # If you are doing model validation against survey data, please
 # set skip_l = TRUE, otherwise, set it to FALSE.
 # When skip_l == TRUE, fill out section RIGHT; otherwise fill both.
-skip_l = F
+skip_l = as.logical(config$skip_l)
 
 # set the following switch to TRUE to include GQ households in summaries
 # Should be set to FALSE for validation (GQs are not included in hh surveys)
@@ -41,11 +44,9 @@ MTC = TRUE
 ALL = TRUE
 
 # Name of the scenario will appear in summary spreadsheets as suffix.
-scenario = 'TM1.5vsLink21_09-09-2022'
+scenario = config$scenario
 
 ############################################################
-# R Studio only: get current work folder
-setwd(dirname(getSourceEditorContext()$path))
 source('_code//Link21_utilities.R')
 source('_code//Link21_vehicle_avail.R')
 source('_code//Link21_CDAP.R')
@@ -78,26 +79,26 @@ setwd(paste(main_dir, '..', sep = delimiter))
 
 #### Only (manually) run once! ####
 if (preprocess_l) {
-  model_data_dir='C://MTC_tmpy//TM2//2015_BaseY_PYT2015//'
+  model_data_dir= config$left$model_data_dir
   setwd(paste(main_dir, '..', sep = delimiter))
   source('_code//TM1.5_Model_Files_PreProcessing.R')
 }
 
 if (preprocess_r) {
-  model_data_dir='C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//'
+  model_data_dir=config$right$model_data_dir
   setwd(paste(main_dir, '..', sep = delimiter))
   source('_code//TM2_Model_Files_PreProcessing.R')
 }
 ##############################################################################################################################
 
 # These correspond to the inputs of tables on the right. These fields should always be filled.
-name_model_r = 'Link21_09-07-2022'
+name_model_r = config$right$name_model
 survey_r =FALSE
 # The Java version of the model have a sampling factor that is currently set to 0.01.
 # That means all observations have a weight of 100.
 # This is used in the utilities script and need to be set to match the model run.
-model_version_r = 'TM2'
-model_data_dir='C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//'
+model_version_r = config$right$model_version
+model_data_dir= config$right$model_data_dir
 
 input_dir_r = file.path(model_data_dir, '_pre_processed')
 in_person_r = 'in_person.csv'
@@ -124,15 +125,15 @@ skim_op_r = 'HWYSKMEA.OMX'
 #############################################################
 survey_l = FALSE
 skim_left = "csv"
-name_model_l = '2015_TM1.5'
-model_version_l = 'TM1.5'
+name_model_l = config$left$name_model
+model_version_l = config$left$model_version
 
-input_dir_l = 'C://MTC_tmpy//TM2//Link21_Reports//TM1.5_results//_pre_processed//'
+input_dir_l = file.path(config$left$model_data_dir, '_pre_processed')
 in_person_l = 'in_person.csv'
 in_hh_l = 'in_hh.csv'
 in_MPO_l = 'in_taz.csv'
 
-output_dir_l = 'C://MTC_tmpy//TM2//Link21_Reports//TM1.5_results//_pre_processed//'
+output_dir_l = file.path(config$left$model_data_dir, '_pre_processed')
 out_person_l = 'out_person_data.csv'
 out_hh_l     = "out_hh_data.csv"
 out_tours_l  = 'out_tour_data.csv'
@@ -140,7 +141,7 @@ out_stops_l  = 'out_trip_data.csv'
 
 model_run_weight_l = get_model_weight(output_dir_l, out_stops_l)
 
-skim_dir_l = 'C://MTC_tmpy//TM2//Link21_Reports//TM1.5_results//_pre_processed//'
+skim_dir_l = file.path(config$left$model_data_dir, '_pre_processed')
 skim_am_time_l = 'TimeSkimsDatabaseAM.csv'
 skim_am_dist_l = 'DistanceSkimsDatabaseAM.csv'
 skim_op_time_l = 'TimeSkimsDatabaseEA.csv'

@@ -26,3 +26,7 @@ library(reshape2)
 
 install.packages('Rcpp')
 library('Rcpp')
+
+
+install.packages("config")
+library(config)

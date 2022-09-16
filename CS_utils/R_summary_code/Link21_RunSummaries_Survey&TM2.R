@@ -2,21 +2,25 @@
 ##### PARAMETERS AND DIRECTORIES ############################
 #############################################################
 
+# R Studio only: get current work folder
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+
 rm(list=ls())
+config <- config::get()$survey_comp
 
 delimiter = '//'
 
 # This is the directory where the reports are stored:
-main_dir = 'C://MTC_tmpy//TM2//Link21_Reports'
+main_dir = config$main_dir
 
 # Set preprocessing parameters
-preprocess_r = T
-output_iteration = 1
+preprocess_r = as.logical(config$preprocess_r)
+output_iteration = config$output_iteration
 
 # If you are doing model validation against survey data, please
 # set skip_l = TRUE, otherwise, set it to FALSE.
 # When skip_l == TRUE, fill out section RIGHT; otherwise fill both.
-skip_l = F
+skip_l = as.logical(config$skip_l)
 
 # set the following switch to TRUE to include GQ households in summaries
 # Should be set to FALSE for validation (GQs are not included in hh surveys)
@@ -40,11 +44,9 @@ MTC = TRUE
 ALL = TRUE
 
 # Name of the scenario will appear in summary spreadsheets as suffix.
-scenario = 'CHTSvsLink21_09-09-2022'
+scenario = config$scenario
 
 ############################################################
-# R Studio only: get current work folder
-setwd(dirname(getSourceEditorContext()$path))
 source('_code//Link21_utilities.R')
 source('_code//Link21_vehicle_avail.R')
 source('_code//Link21_CDAP.R')
@@ -74,7 +76,7 @@ setwd(paste(main_dir, '..', sep = delimiter))
 # To address this, a new separate script were written to process a combined trip and tour file.
 # Note that for each scenario this only needs to be done once!
 
-model_data_dir='C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//'
+model_data_dir= config$model_data_dir
 
 #### Only (manually) run once! ####
 if (preprocess_r) {
@@ -83,14 +85,12 @@ if (preprocess_r) {
 }##############################################################################################################################
 
 # These correspond to the inputs of tables on the right. These fields should always be filled.
-name_model_r = 'Link21'
+name_model_r = config$right$name_model
 
 # The Java version of the model have a sampling factor that is currently set to 0.5.
 # That means all observations have a weight of 2.
 # This is used in the utilities script and need to be set to match the model run.
-model_version_r = 'TM2'
-
-# model_run_weight_r = 100
+model_version_r = config$right$model_version
 
 input_dir_r = file.path(model_data_dir, '_pre_processed')
 in_person_r = 'in_person.csv'
@@ -120,8 +120,8 @@ survey_l = T
 skim_left = "csv"
 
 # These correspond to the inputs of tables on the left These fields should be filled when skip_l = FALSE.
-name_model_l = 'CHTS'
-output_dir_l = 'C://MTC_tmpy//TM2//Survey Data//'
+name_model_l = config$left$name_model
+output_dir_l = config$left$output_dir
 out_person_l = 'Person.csv'
 out_hh_l = 'household.csv'
 out_tours_l = 'tours.csv'
@@ -131,7 +131,7 @@ zone_MPO_l = 'in_taz.csv'
 
 # Skims - use TM1.5 skims for now
 # survey was processed by MTC using TM1.5 TAZ system so skims are different.
-skim_dir_l = 'C://MTC_tmpy//TM2//Survey Data//Skims//'
+skim_dir_l = config$left$skim_dir
 
 skim_am_time_l = 'TimeSkimsDatabaseAM.csv'
 skim_am_dist_l = 'DistanceSkimsDatabaseAM.csv'

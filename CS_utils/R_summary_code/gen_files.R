@@ -1,8 +1,13 @@
 library(openxlsx)
 
+# If running in R Studio:
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+config <- config::get()$gen_files
+inputD <- config$inputD
+outputRootD <- config$outputRootD
+
 gen <- function(nm) {
-  inputD = 'E://_projects//Link21//templates//'
-  outputD = paste('E://_projects//Link21//Link21_Reports',nm,'Survey_Populated', sep = '//')
+  outputD = paste(outputRootD,nm,'Survey_Populated', sep = '//')
   
   in_name = paste(nm, 'xlsx', sep = '.')
   out_name = nm
