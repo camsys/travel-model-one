@@ -3,8 +3,7 @@
 #############################################################
 rm(list=ls())
 
-# R Studio only: get current work folder
-code_base_dir = dirname(rstudioapi::getSourceEditorContext()$path)
+code_base_dir = config::get()$code_base_dir
 setwd(code_base_dir)
 
 
@@ -14,7 +13,7 @@ preprocess_suffix <- config::get()$preprocess_suffix
 delimiter = '//'
 
 # This is the directory where the reports are stored:
-main_dir = 'C://MTC_tmpy//TM2//Link21_Reports'
+main_dir = config::get()$main_dir
 
 # Set preprocessing parameters
 preprocess_l = as.logical(run_config$preprocess_l)
@@ -89,7 +88,7 @@ if (preprocess_l) {
 }
 
 if (preprocess_r) {
-  model_data_dir=run_config$right$model_data_dir
+  model_data_dir=config::get()$TM2_data_dir
   setwd(code_base_dir)
   source('_code//TM2_Model_Files_PreProcessing.R')
 }
@@ -98,20 +97,14 @@ if (preprocess_r) {
 # These correspond to the inputs of tables on the right. These fields should always be filled.
 name_model_r = run_config$right$name_model
 survey_r =FALSE
-# The Java version of the model have a sampling factor that is currently set to 0.01.
-# That means all observations have a weight of 100.
-# This is used in the utilities script and need to be set to match the model run.
+
 model_version_r = run_config$right$model_version
-model_data_dir= run_config$right$model_data_dir
+model_data_dir= config::get()$TM2_data_dir
 
 
-if (length(preprocess_suffix)==0) {
-  input_dir_r = file.path(model_data_dir, '_pre_processed')
-  output_dir_r = file.path(model_data_dir, '_pre_processed')
-} else {
-  input_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
-  output_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep = '_'))
-}
+input_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
+output_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep = '_'))
+
 
 in_person_r = 'in_person.csv'
 in_hh_r = 'in_hh.csv'

@@ -3,8 +3,7 @@
 #############################################################
 rm(list=ls())
 
-# R Studio only: get current work folder
-code_base_dir <- dirname(rstudioapi::getSourceEditorContext()$path)
+code_base_dir = config::get()$code_base_dir
 setwd(code_base_dir)
 
 run_config <- config::get()$survey_comp
@@ -13,7 +12,7 @@ preprocess_suffix <- config::get()$preprocess_suffix
 delimiter = '//'
 
 # This is the directory where the reports are stored:
-main_dir = run_config$main_dir
+main_dir = config::get()$main_dir
 
 # Set preprocessing parameters
 preprocess_r = as.logical(run_config$preprocess_r)
@@ -78,7 +77,7 @@ setwd(paste(main_dir, '..', sep = delimiter))
 # To address this, a new separate script were written to process a combined trip and tour file.
 # Note that for each scenario this only needs to be done once!
 
-model_data_dir= run_config$model_data_dir
+model_data_dir= config::get()$TM2_data_dir
 
 #### Only (manually) run once! ####
 if (preprocess_r) {
@@ -89,18 +88,13 @@ if (preprocess_r) {
 # These correspond to the inputs of tables on the right. These fields should always be filled.
 name_model_r = run_config$right$name_model
 
-# The Java version of the model have a sampling factor that is currently set to 0.5.
-# That means all observations have a weight of 2.
-# This is used in the utilities script and need to be set to match the model run.
+
 model_version_r = run_config$right$model_version
 
-if (length(preprocess_suffix)==0) {
-  input_dir_r = file.path(model_data_dir, '_pre_processed')
-  output_dir_r = file.path(model_data_dir, '_pre_processed')
-} else {
-  input_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
-  output_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep = '_'))
-}
+
+input_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
+output_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep = '_'))
+
 
 in_person_r = 'in_person.csv'
 in_hh_r = 'in_hh.csv'

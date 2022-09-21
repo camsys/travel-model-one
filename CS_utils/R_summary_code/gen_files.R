@@ -1,10 +1,9 @@
 library(openxlsx)
 
-# If running in R Studio:
-setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-run_config <- config::get()$gen_files
-inputD <- run_config$inputD
-outputRootD <- run_config$outputRootD
+code_base_dir = config::get()$code_base_dir
+setwd(code_base_dir)
+inputD <- config::get()$gen_files$inputD
+outputRootD <- config::get()$main_dir
 
 gen <- function(nm) {
   outputD = paste(outputRootD,nm,'Survey_Populated', sep = '//')

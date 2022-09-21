@@ -2,11 +2,8 @@ library(plyr)
 library(data.table)
 library(omxr)
 # define input and output file directory
-if (length(preprocess_suffix)==0) {
-  output_rdata_dir = file.path(model_data_dir, '_pre_processed')
-} else {
-  output_rdata_dir = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
-}
+output_rdata_dir = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
+
 
 setwd(model_data_dir)
 
