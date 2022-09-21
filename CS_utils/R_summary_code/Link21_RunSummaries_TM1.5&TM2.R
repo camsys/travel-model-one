@@ -3,17 +3,17 @@
 #############################################################
 rm(list=ls())
 
-code_base_dir = config::get()$code_base_dir
+code_base_dir = dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(code_base_dir)
 
-
-run_config <- config::get()$TM1.5_comp
-preprocess_suffix <- config::get()$preprocess_suffix
+main_config <- config::get()
+run_config <- main_config$TM1.5_comp
+preprocess_suffix <- main_config$preprocess_suffix
 
 delimiter = '//'
 
 # This is the directory where the reports are stored:
-main_dir = config::get()$main_dir
+main_dir = main_config$main_dir
 
 # Set preprocessing parameters
 preprocess_l = as.logical(run_config$preprocess_l)
@@ -88,7 +88,7 @@ if (preprocess_l) {
 }
 
 if (preprocess_r) {
-  model_data_dir=config::get()$TM2_data_dir
+  model_data_dir=main_config$TM2_data_dir
   setwd(code_base_dir)
   source('_code//TM2_Model_Files_PreProcessing.R')
 }
@@ -99,7 +99,7 @@ name_model_r = run_config$right$name_model
 survey_r =FALSE
 
 model_version_r = run_config$right$model_version
-model_data_dir= config::get()$TM2_data_dir
+model_data_dir= main_config$TM2_data_dir
 
 
 input_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))

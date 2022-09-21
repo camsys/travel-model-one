@@ -3,16 +3,17 @@
 #############################################################
 rm(list=ls())
 
-code_base_dir = config::get()$code_base_dir
+code_base_dir = dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(code_base_dir)
 
-run_config <- config::get()$survey_comp
-preprocess_suffix <- config::get()$preprocess_suffix
+main_config <- config::get()
+run_config <- main_config$survey_comp
+preprocess_suffix <- main_config$preprocess_suffix
 
 delimiter = '//'
 
 # This is the directory where the reports are stored:
-main_dir = config::get()$main_dir
+main_dir = main_config$main_dir
 
 # Set preprocessing parameters
 preprocess_r = as.logical(run_config$preprocess_r)
@@ -77,7 +78,7 @@ setwd(paste(main_dir, '..', sep = delimiter))
 # To address this, a new separate script were written to process a combined trip and tour file.
 # Note that for each scenario this only needs to be done once!
 
-model_data_dir= config::get()$TM2_data_dir
+model_data_dir= main_config$TM2_data_dir
 
 #### Only (manually) run once! ####
 if (preprocess_r) {

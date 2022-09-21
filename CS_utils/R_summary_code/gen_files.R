@@ -1,6 +1,6 @@
 library(openxlsx)
 
-code_base_dir = config::get()$code_base_dir
+code_base_dir = dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(code_base_dir)
 inputD <- config::get()$gen_files$inputD
 outputRootD <- config::get()$main_dir
