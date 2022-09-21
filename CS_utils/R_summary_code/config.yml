@@ -9,7 +9,7 @@ default:
 
     survey_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up
-        preprocess_r: F # preprocess the right hand side, TM2
+        preprocess_r: T # preprocess the right hand side, TM2
         skip_l: F
         scenario: 'CHTSvsLink21'
         # left side: survey parameters
@@ -24,8 +24,7 @@ default:
     
     TM1.5_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up
-        preprocess_l: F # preprocess the left hand side, TM1.5
-        preprocess_r: F # preprocess the right hand side, TM2
+        preprocess_r: T # preprocess the right hand side, TM2
         skip_l: F
         scenario: 'TM1.5vsLink21'
         # left side: TM1.5 parameters
@@ -35,7 +34,6 @@ default:
             model_version: 'TM1.5'
         # right side: TM2 parameters
         right:
-            model_data_dir: 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//'
             name_model: 'Link21'
             model_version: 'TM2'
 

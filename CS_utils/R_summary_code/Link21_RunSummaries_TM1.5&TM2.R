@@ -16,7 +16,6 @@ delimiter = '//'
 main_dir = main_config$main_dir
 
 # Set preprocessing parameters
-preprocess_l = as.logical(run_config$preprocess_l)
 preprocess_r = as.logical(run_config$preprocess_r)
 output_iteration = run_config$output_iteration
 
@@ -81,12 +80,6 @@ setwd(paste(main_dir, '..', sep = delimiter))
 
 
 #### Only (manually) run once! ####
-if (preprocess_l) {
-  model_data_dir= run_config$left$model_data_dir
-  setwd(code_base_dir)
-  source('_code//TM1.5_Model_Files_PreProcessing.R')
-}
-
 if (preprocess_r) {
   model_data_dir=main_config$TM2_data_dir
   setwd(code_base_dir)
