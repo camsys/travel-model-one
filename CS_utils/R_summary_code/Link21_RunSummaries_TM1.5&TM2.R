@@ -16,6 +16,7 @@ delimiter = '//'
 main_dir = main_config$main_dir
 
 # Set preprocessing parameters
+preprocess_l = as.logical(run_config$preprocess_l)
 preprocess_r = as.logical(run_config$preprocess_r)
 output_iteration = run_config$output_iteration
 
@@ -80,10 +81,16 @@ setwd(paste(main_dir, '..', sep = delimiter))
 
 
 #### Only (manually) run once! ####
+if (preprocess_l) {
+  model_data_dir=run_config$left$model_data_dir
+  setwd(code_base_dir)
+  source('_code//TM_Model_Files_PreProcessing.R')
+}
+
 if (preprocess_r) {
   model_data_dir=main_config$TM2_data_dir
   setwd(code_base_dir)
-  source('_code//TM2_Model_Files_PreProcessing.R')
+  source('_code//TM_Model_Files_PreProcessing.R')
 }
 ##############################################################################################################################
 
@@ -125,12 +132,19 @@ skim_left = "csv"
 name_model_l = run_config$left$name_model
 model_version_l = run_config$left$model_version
 
-input_dir_l = file.path(run_config$left$model_data_dir, '_pre_processed')
+if (preprocess_l) {
+  input_dir_l = file.path(run_config$left$model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
+  output_dir_l = file.path(run_config$left$model_data_dir,paste('_pre_processed', preprocess_suffix, sep='_'))
+} else {
+  input_dir_l = file.path(run_config$left$model_data_dir, '_pre_processed')
+  output_dir_l = file.path(run_config$left$model_data_dir, '_pre_processed')
+}
+
+
 in_person_l = 'in_person.csv'
 in_hh_l = 'in_hh.csv'
 in_MPO_l = 'in_taz.csv'
 
-output_dir_l = file.path(run_config$left$model_data_dir, '_pre_processed')
 out_person_l = 'out_person_data.csv'
 out_hh_l     = "out_hh_data.csv"
 out_tours_l  = 'out_tour_data.csv'

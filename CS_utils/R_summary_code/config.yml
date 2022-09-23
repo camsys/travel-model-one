@@ -2,7 +2,7 @@
 default:
     main_dir: 'C://MTC_tmpy//TM2//Link21_Reports' # output folder of reports; also where gen_file populates templates
     TM2_data_dir: 'C://MTC_tmpy//TM2//2015_BaseY_P3Y2015//'
-    preprocess_suffix: '' # useful in case one wants to save out results of different run versions under the same project run folder
+    preprocess_suffix: 'TM1.5_test' # useful in case one wants to save out results of different run versions under the same project run folder
         
     gen_file:
         inputD: 'C://Users//xchang//Downloads//templates'
@@ -24,9 +24,10 @@ default:
     
     TM1.5_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up
-        preprocess_r: T # preprocess the right hand side, TM2
+        preprocess_l: T # preprocess the left hand side, TM1.5
+        preprocess_r: T # preprocess the right hand side, TM2 (or TM1.5 if needed)
         skip_l: F
-        scenario: 'TM1.5vsLink21'
+        scenario: 'TM1.5_test'
         # left side: TM1.5 parameters
         left:
             model_data_dir: 'C://MTC_tmpy//TM2//Link21_Reports//TM1.5_results'
