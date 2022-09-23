@@ -16,11 +16,11 @@ import pandas
 
 
 # input files
-TAZDATA_FILE  = os.path.join('INPUT', 'landuse', 'tazData.csv')
+TAZDATA_FILE  = os.path.join('landuse', 'tazData.csv')
 TOUR_FILE     = os.path.join('main','indivTourData_{}.csv')
 WSLOC_FILE    = os.path.join('main','wsLocResults_{}.csv')
 # todo: add to input if run during model
-TELERATE_FILE = os.path.join('INPUT','landuse','telecommute_max_rate_county.csv')
+TELERATE_FILE = os.path.join('landuse','telecommute_max_rate_county.csv')
 
 PARAMS_FILENAME = os.path.join('INPUT','params.properties')
 

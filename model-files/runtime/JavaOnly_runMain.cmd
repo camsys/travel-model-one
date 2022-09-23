@@ -6,7 +6,7 @@ rem ############  PARAMETERS  ############
 :: Set the path
 call CTRAMP\runtime\SetPath.bat
 
-set HOST_IP=10.13.1.135
+set HOST_IP=10.0.143.35
 
 rem ############  JPPF DRIVER  ############
 start "JPPF Server" java -server -Xmx16m -Dlog4j.configuration=log4j-driver.properties -Djppf.config=jppf-driver.properties org.jppf.server.DriverLauncher
