@@ -74,7 +74,8 @@ survey_process <- function(PersonData_l, HouseholdData_l, zoneMPO_l, ToursData_l
   setnames(ToursData_l, old=c('HH_ID','PER_ID','TOUR_ID','ANCHOR_DEPART_HOUR','ANCHOR_ARRIVE_HOUR','TAZ','TAZ_D'),
                         new=c('hh_id','person_id','tour_id','start_hour','end_hour','orig_taz','dest_taz'))
   # Start_hour and end_hour
-  ToursData_l = ToursData_l[,`:=`(start_hour=start_hour -1, end_hour =end_hour-1)]
+  ToursData_l$start_hour = ifelse(ToursData_l$start_hour==24,ToursData_l$start_hour-1,ToursData_l$start_hour)
+  ToursData_l$end_hour = ifelse(ToursData_l$end_hour==24,ToursData_l$end_hour-1,ToursData_l$end_hour)
   # tour purpose
   ToursData_l$tour_purp = 'Other'
   ToursData_l$tour_purp[which(ToursData_l$TOURPURP %in%c(1,10))] = 'Work'
@@ -125,7 +126,8 @@ survey_process <- function(PersonData_l, HouseholdData_l, zoneMPO_l, ToursData_l
   setnames(TripsData_l, old=c('HH_ID','PER_ID','TOUR_ID','IS_INBOUND','ORIG_DEP_HR','DEST_ARR_HR','TAZ','TAZ_D'),
                         new=c('hh_id','person_id','tour_id','inbound','depart_hour','arrival_hour','trip_orig_taz','trip_dest_taz'))
   # Start_hour and end_hour
-  TripsData_l = TripsData_l[,`:=`(depart_hour=depart_hour -1, arrival_hour =arrival_hour-1)]
+  TripsData_l$depart_hour = ifelse(TripsData_l$depart_hour==24,TripsData_l$depart_hour-1,TripsData_l$depart_hour)
+  TripsData_l$arrival_hour = ifelse(TripsData_l$arrival_hour==24,TripsData_l$arrival_hour-1,TripsData_l$arrival_hour)
   # Trip mode
   TripsData_l$trip_mode_cat = 0
   TripsData_l$trip_mode_cat[which(TripsData_l$TRIPMODE %in% c(1,2))] = 1
