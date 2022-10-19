@@ -31,6 +31,8 @@ gen('3 - Tour_Frequency')
 
 gen('4 - Tour_Dest_Choice')
 
+gen('4a - Workplace_Location')
+
 gen('5 - Tour_Mode_Choice')
 
 gen('6 - Tour_TOD_Choice')

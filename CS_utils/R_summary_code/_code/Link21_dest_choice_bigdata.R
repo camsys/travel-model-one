@@ -16,12 +16,15 @@ BigData_wt <- function(go_down,dt_trips, dt_tours, scenario, nm_set, nm_model, w
   county_workplace <- dt_per[,.(`Workplace Location`=sum(WT*worker,na.rm = TRUE)),.(CNTY_O,CNTY_D)]
   county_work_tour <- dt_tours[,.(`Work Tours`=sum(WT*worktour,na.rm = TRUE)),.(CNTY_O,CNTY_D)]  
   county_tot_trips <- dt_trips[,.(`Total Trips`=sum(WT,na.rm = TRUE)),.(CNTY_O,CNTY_D)]
+  county_trn_trips <- dt_trips[,.(Total=sum(WT*trn,na.rm = TRUE),WT=sum(WT*trn_walk,na.rm = TRUE),
+                                  PNR=sum(WT*trn_pnr,na.rm = TRUE), KNR=sum(WT*trn_knr,na.rm = TRUE)), .(CNTY_O,CNTY_D)]
   
   sd_tot_tour <- dt_tours[,.(`Total Tours`=sum(WT,na.rm = TRUE)),.(SD_O,SD_D)]
   sd_workplace <- dt_per[,.(`Workplace Location`=sum(WT*worker,na.rm = TRUE)),.(SD_O,SD_D)]
   sd_work_tour <- dt_tours[,.(`Work Tours`=sum(WT*worktour,na.rm = TRUE)),.(SD_O,SD_D)] 
   sd_tot_trips <- dt_trips[,.(`Total Trips`=sum(WT,na.rm = TRUE)),.(SD_O,SD_D)]
-  
+  sd_trn_trips <- dt_trips[,.(Total=sum(WT*trn,na.rm = TRUE),WT=sum(WT*trn_walk,na.rm = TRUE),
+                                  PNR=sum(WT*trn_pnr,na.rm = TRUE), KNR=sum(WT*trn_knr,na.rm = TRUE)), .(SD_O,SD_D)]
     
   if (go_down) {
     setwd("Survey_Populated")
@@ -41,7 +44,9 @@ BigData_wt <- function(go_down,dt_trips, dt_tours, scenario, nm_set, nm_model, w
   writeData(wb, sheet = sheetname, sd_workplace,startRow = 2, startCol = 21, colNames = T)
   writeData(wb, sheet = sheetname, sd_work_tour,startRow = 2, startCol = 25, colNames = T)
   writeData(wb, sheet = sheetname, sd_tot_trips,startRow = 2, startCol = 29, colNames = T)
-    
+  writeData(wb, sheet = sheetname, county_trn_trips,startRow = 2, startCol = 34, colNames = T)  
+  writeData(wb, sheet = sheetname, sd_trn_trips,startRow = 2, startCol = 43, colNames = T)
+  
   saveWorkbook(wb,outname,overwrite = T)
   
 }
@@ -70,8 +75,13 @@ BigData_once <- function(go_down, wbname, write2sheet, delimiter, scenario, name
   dt_tours$worktour=ifelse(dt_tours$tour_purp=='Work', 1, 0)
   
   #trip data
-  dt_trips <- TripsData[,.(hh_id,person_id,tour_id,stop_id,trip_purp,trip_orig_taz,trip_dest_taz)]
+  dt_trips <- TripsData[,.(hh_id,person_id,tour_id,stop_id,trip_purp,trip_mode_cat,trip_orig_taz,trip_dest_taz)]
   dt_trips <- merge(dt_trips, dt_person, by=c('hh_id','person_id'), all.x=T)
+  #transit trips
+  dt_trips$trn_walk=ifelse(dt_trips$trip_mode_cat==4,1,0)
+  dt_trips$trn_pnr=ifelse(dt_trips$trip_mode_cat==5,1,0)
+  dt_trips$trn_knr=ifelse(dt_trips$trip_mode_cat==6,1,0)
+  dt_trips$trn = dt_trips$trn_walk+dt_trips$trn_pnr+dt_trips$trn_knr
   # Match zones to MPOs:
   dt_trips = merge(dt_trips, zoneMPO, by.x = 'TAZ', by.y='TAZ', all.x=T)
   dt_trips = merge(dt_trips, zoneMPO, by.x = 'trip_orig_taz', by.y = 'TAZ', all.x = TRUE, all.y = FALSE, suffixes = c('','_O'))
