@@ -61,6 +61,7 @@ source('_code//Link21_stop_dest_choice.R')
 source('_code//Link21_trip_mode_choice.R')
 source('_code//Link21_trip_tod_choice.R')
 source('_code//Link21_dest_choice_bigdata.R')
+source('_code//Link21_workplace_location.R')
 
 setwd(paste(main_dir, '..', sep = delimiter))
 #############################################################
@@ -162,6 +163,9 @@ Tour_Freq_Choice('3 - Tour_Frequency')
 
 # Run Tour_Dest_Choice:
 Tour_Dest_Choice('4 - Tour_Dest_Choice')
+
+# Run Workplace Location:
+Workplace_Location('4a - Workplace_Location')
 
 # Run Tour_Mode_Choice:
 Tour_Mode_Choice('5 - Tour_Mode_Choice')
