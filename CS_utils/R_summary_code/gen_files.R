@@ -6,7 +6,8 @@ inputD <- config::get()$gen_file$inputD
 outputRootD <- config::get()$main_dir
 
 gen <- function(nm) {
-  outputD = paste(outputRootD,nm,'Survey_Populated', sep = '//')
+  outputD = paste(outputRootD,nm, sep = '//')
+  outputD_survey = paste(outputD,'Survey_Populated', sep = '//')
   
   in_name = paste(nm, 'xlsx', sep = '.')
   out_name = nm
@@ -14,7 +15,8 @@ gen <- function(nm) {
   setwd(inputD)
   wb <- loadWorkbook(in_name)
   if (!dir.exists(outputD)) {dir.create(outputD)}
-  setwd(outputD)
+  if (!dir.exists(outputD_survey)) {dir.create(outputD_survey)}
+  setwd(outputD_survey)
   for (i in 1:length(subs)) {
     now_name = paste(paste(out_name, subs[i], sep="_"),'xlsx', sep = '.')
     saveWorkbook(wb,now_name,overwrite = T)
@@ -28,6 +30,8 @@ gen('2 - CDAP')
 gen('3 - Tour_Frequency')
 
 gen('4 - Tour_Dest_Choice')
+
+gen('4a - Workplace_Location')
 
 gen('5 - Tour_Mode_Choice')
 
