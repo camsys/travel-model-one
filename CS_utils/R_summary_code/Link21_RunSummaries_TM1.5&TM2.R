@@ -128,7 +128,7 @@ skim_op_r = 'HWYSKMEA.OMX'
 ########## ##################################################
 #############################################################
 survey_l = FALSE
-skim_left = "csv"
+skim_left = "csv" #TODO: TM1.5 skims will also be in OMX
 name_model_l = run_config$left$name_model
 model_version_l = run_config$left$model_version
 
@@ -153,6 +153,7 @@ out_stops_l  = 'out_trip_data.csv'
 model_run_weight_l = get_model_weight(output_dir_l, out_stops_l)
 
 skim_dir_l = file.path(run_config$left$model_data_dir, '_pre_processed')
+# OMX
 skim_am_time_l = 'TimeSkimsDatabaseAM.csv'
 skim_am_dist_l = 'DistanceSkimsDatabaseAM.csv'
 skim_op_time_l = 'TimeSkimsDatabaseEA.csv'
