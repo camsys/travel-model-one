@@ -26,7 +26,7 @@ BigData_wt <- function(go_down,dt_trips, dt_tours, dt_person, scenario, nm_set, 
                                   PNR=sum(WT*trn_pnr,na.rm = TRUE), KNR=sum(WT*trn_knr,na.rm = TRUE)), .(SD_O,SD_D,dep_tod)]
   
   county_trn_trips <-county_trn_trips[,.(CNTY_O, CNTY_D, Total, WT, PNR, KNR, dep_tod)]
-  sd__trn_trips <-sd__trn_trips[,.(sd__O, sd__D, Total, WT, PNR, KNR, dep_tod)]
+  sd_trn_trips <- sd_trn_trips[,.(SD_O, SD_D, Total, WT, PNR, KNR, dep_tod)]
   
   if (go_down) {
     setwd("Survey_Populated")
@@ -80,7 +80,7 @@ BigData_once <- function(go_down, wbname, write2sheet, delimiter, scenario, name
   dt_tours$worktour=ifelse(dt_tours$tour_purp=='Work', 1, 0)
   
   #trip data
-  dt_trips <- TripsData[,.(hh_id,person_id,tour_id,stop_id,trip_purp,trip_mode_cat,trip_orig_taz,trip_dest_taz)]
+  dt_trips <- TripsData[,.(hh_id,person_id,tour_id,stop_id,trip_purp,trip_mode_cat,trip_orig_taz,trip_dest_taz,depart_hour)]
   dt_trips <- merge(dt_trips, dt_person[,c('hh_id','person_id','worker','TAZ','WT')], by=c('hh_id','person_id'), all.x=T)
   dt_trips$dep_tod = cut(dt_trips$depart_hour, breaks = c(0,5,9,14,18,23), labels = c('EA','AM','MD','PM','EV'))
   #transit trips
