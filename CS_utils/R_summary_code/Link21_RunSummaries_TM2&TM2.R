@@ -7,7 +7,7 @@ code_base_dir = dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(code_base_dir)
 
 main_config <- config::get()
-run_config <- main_config$survey_comp
+run_config <- main_config$TM2_comp
 preprocess_suffix <- main_config$preprocess_suffix
 
 delimiter = '//'
@@ -16,6 +16,7 @@ delimiter = '//'
 main_dir = main_config$main_dir
 
 # Set preprocessing parameters
+preprocess_l = as.logical(run_config$preprocess_l)
 preprocess_r = as.logical(run_config$preprocess_r)
 output_iteration = run_config$output_iteration
 
@@ -61,9 +62,8 @@ source('_code//Link21_stop_dest_choice.R')
 source('_code//Link21_trip_mode_choice.R')
 source('_code//Link21_trip_tod_choice.R')
 source('_code//Link21_dest_choice_bigdata.R')
-source('_code//Link21_workplace_location.R')
-
 setwd(paste(main_dir, '..', sep = delimiter))
+
 #############################################################
 
 #############################################################
@@ -79,19 +79,27 @@ setwd(paste(main_dir, '..', sep = delimiter))
 # To address this, a new separate script were written to process a combined trip and tour file.
 # Note that for each scenario this only needs to be done once!
 
-model_data_dir= main_config$TM2_data_dir
 
 #### Only (manually) run once! ####
+if (preprocess_l) {
+    model_data_dir=run_config$left$model_data_dir
+    setwd(code_base_dir)
+    source('_code//TM2_Model_Files_PreProcessing.R')
+}
+
 if (preprocess_r) {
-  setwd(code_base_dir)
-  source('_code//TM2_Model_Files_PreProcessing.R')
-}##############################################################################################################################
+    model_data_dir=main_config$TM2_data_dir
+    setwd(code_base_dir)
+    source('_code//TM2_Model_Files_PreProcessing.R')
+}
+##############################################################################################################################
 
 # These correspond to the inputs of tables on the right. These fields should always be filled.
 name_model_r = run_config$right$name_model
-
+survey_r =FALSE
 
 model_version_r = run_config$right$model_version
+model_data_dir= main_config$TM2_data_dir
 
 
 input_dir_r = file.path(model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
@@ -120,27 +128,42 @@ skim_op_r = 'HWYSKMEA.OMX'
 ########   ##################################################
 ########## ##################################################
 #############################################################
-survey_l = T
-skim_left = "csv"
-
-# These correspond to the inputs of tables on the left These fields should be filled when skip_l = FALSE.
+survey_l = FALSE
+skim_left = "omx" 
 name_model_l = run_config$left$name_model
-output_dir_l = run_config$left$output_dir
-out_person_l = 'Person.csv'
-out_hh_l = 'household.csv'
-out_tours_l = 'tours.csv'
-out_stops_l = 'trips.csv'
-zone_MPO_l = 'in_taz.csv'
+model_version_l = run_config$left$model_version
+
+if (preprocess_l) {
+    input_dir_l = file.path(run_config$left$model_data_dir, paste('_pre_processed', preprocess_suffix, sep='_'))
+    output_dir_l = file.path(run_config$left$model_data_dir,paste('_pre_processed', preprocess_suffix, sep='_'))
+} else {
+    input_dir_l = file.path(run_config$left$model_data_dir, '_pre_processed')
+    output_dir_l = file.path(run_config$left$model_data_dir, '_pre_processed')
+}
 
 
-# Skims - use TM1.5 skims for now
-# survey was processed by MTC using TM1.5 TAZ system so skims are different.
-skim_dir_l = run_config$left$skim_dir
+in_person_l = 'in_person.csv'
+in_hh_l = 'in_hh.csv'
+in_MPO_l = 'in_taz.csv'
 
-skim_am_time_l = 'TimeSkimsDatabaseAM.csv'
-skim_am_dist_l = 'DistanceSkimsDatabaseAM.csv'
-skim_op_time_l = 'TimeSkimsDatabaseEA.csv'
-skim_op_dist_l = 'DistanceSkimsDatabaseEA.csv'
+out_person_l = 'out_person_data.csv'
+out_hh_l     = "out_hh_data.csv"
+out_tours_l  = 'out_tour_data.csv'
+out_stops_l  = 'out_trip_data.csv'
+
+model_run_weight_l = get_model_weight(output_dir_l, out_stops_l)
+
+# SKIMS -- update to fit TM2 files
+# skim_dir_l = file.path(run_config$left$model_data_dir, '_pre_processed')
+# skim_am_time_l = 'TimeSkimsDatabaseAM.csv'
+# skim_am_dist_l = 'DistanceSkimsDatabaseAM.csv'
+# skim_op_time_l = 'TimeSkimsDatabaseEA.csv'
+# skim_op_dist_l = 'DistanceSkimsDatabaseEA.csv'
+
+skim_dir_l = file.path(run_config$left$model_data_dir, 'skims')
+skim_am_l = 'HWYSKMAM.OMX'
+skim_op_l = 'HWYSKMEA.OMX'
+
 
 #############################################################
 ######################## READ ###############################

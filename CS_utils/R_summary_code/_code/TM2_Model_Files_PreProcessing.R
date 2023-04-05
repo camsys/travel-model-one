@@ -31,7 +31,7 @@ jot_trip <- fread(paste("main/jointTripData_",output_iteration,".csv",sep=''))
 
 # rename a few input/output field names to be consistent with the ActivitySim model convention
 names(in_person)[1:4] <- c("household_id", "person_id", "age", "sex")
-names(in_hh) <- c("household_id", "TAZ", "income", "num_workers","veh", "hhsize", "HHT", "UNITTYPE", "HINCCAT")
+names(in_hh) <- c("household_id", "TAZ", "hhsize", "UNITTYPE", "income", "num_workers", "HHT", "veh")
 
 setnames(in_pdata, old=c("person_num","sampleRate"), new=c("PNUM", "sample_rate"))
 setnames(in_hdata, old=c("taz","size","sampleRate"), new=c("TAZ", "hhsize","sample_rate"))

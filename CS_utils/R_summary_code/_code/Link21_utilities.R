@@ -350,10 +350,10 @@ read_files <- function() {
   # always read right data - will not be survey data
   # right side skim
   setwd(skim_dir_r)
-  Dist_AM_r <- read_omx(skim_am_r, name ='DISTDA')
-  Time_AM_r <- read_omx(skim_am_r, name ='TIMEDA')
-  Dist_OP_r <- read_omx(skim_op_r, name ='DISTDA')
-  Time_OP_r <- read_omx(skim_op_r, name ='TIMEDA')
+  Dist_AM_r <- read_omx(skim_am_r, name ='DISTDAH')
+  Time_AM_r <- read_omx(skim_am_r, name ='TIMEDAH')
+  Dist_OP_r <- read_omx(skim_op_r, name ='DISTDAH')
+  Time_OP_r <- read_omx(skim_op_r, name ='TIMEDAH')
   temp_rt = skim_process_omx(Dist_AM_r, Time_AM_r, Dist_OP_r, Time_OP_r)
   Dist_AM_r <<- as.data.table(temp_rt[1])
   Time_AM_r <<- as.data.table(temp_rt[2])
@@ -389,10 +389,10 @@ read_files <- function() {
     # left side skims size may be different from the right side    
   	setwd(skim_dir_l)
 	  if (skim_left=="omx"){
-	    Dist_AM_l <- read_omx(skim_am_r, name ='DISTDA')
-      Time_AM_l <- read_omx(skim_am_r, name ='TIMEDA')
-      Dist_OP_l <- read_omx(skim_op_r, name ='DISTDA')
-      Time_OP_l <- read_omx(skim_op_r, name ='TIMEDA')
+	    Dist_AM_l <- read_omx(skim_am_r, name ='DISTDAH')
+      Time_AM_l <- read_omx(skim_am_r, name ='TIMEDAH')
+      Dist_OP_l <- read_omx(skim_op_r, name ='DISTDAH')
+      Time_OP_l <- read_omx(skim_op_r, name ='TIMEDAH')
       temp_rt = skim_process_omx(Dist_AM_l, Time_AM_l, Dist_OP_l, Time_OP_l)
       Dist_AM_l <<- as.data.table(temp_rt[1])
       Time_AM_l <<- as.data.table(temp_rt[2])

@@ -1,11 +1,11 @@
 # T/F values defined in this file will need to be converted as Booleans with as.logical()
 default:
-    main_dir: 'C://MTC_tmpy//TM2//Link21_Reports' # output folder of reports; also where gen_file populates templates
-    TM2_data_dir: 'C://MTC_tmpy//TM2//calibration//'
-    preprocess_suffix: 'Skim_Test' # useful in case one wants to save out results of different run versions under the same project run folder
+    main_dir: 'C://MTC_tmpy//TM2//calibration_3332//reports//040523_1' # output folder of reports; also where gen_file populates templates
+    TM2_data_dir: 'C://MTC_tmpy//TM2//calibration_3332'
+    preprocess_suffix: '' # useful in case one wants to save out results of different run versions under the same project run folder
         
     gen_file:
-        inputD: 'C://Users//xchang//Downloads//templates'
+        inputD: 'C://MTC_tmpy//R_summaries_templates'
 
     survey_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up
@@ -22,6 +22,23 @@ default:
             model_version: 'TM2'
             name_model: 'Link21'
     
+    TM2_comp: # compare to other run, i.e. baseline
+        output_iteration: 3 # determines which CT-RAMP output files to pick up
+        preprocess_l: T # preprocess the left hand side, TM2 baseline
+        preprocess_r: T # preprocess the right hand side, TM2
+        skip_l: F
+        scenario: 'TM2_baseline_vs_040523_1'
+        # left side: TM2 baseline parameters
+        left:
+            model_data_dir: 'C://MTC_tmpy//TM2//calibration_3332_0302feedback_4iter'
+                                #contains landuse, main, popsyn, skims folders (i.e. calibration folder)
+            name_model: '030223_feedback_TM2'
+            model_version: 'TM2'
+        # right side: TM2 parameters
+        right:
+            name_model: '040523_test'
+            model_version: 'TM2'
+
     TM1.5_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up
         #output_iteration_l
