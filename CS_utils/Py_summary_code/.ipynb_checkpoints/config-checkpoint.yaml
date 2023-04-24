@@ -1,0 +1,42 @@
+
+#specify the configuration here
+
+# project directory
+model_dir : C:\Users\vyadav\Cambridge Systematics\PROJ 210071 BART Link21 TDLU Modeling - Documents\Task 2 - Model Dev\2.3 - Model Construction\Performance Metrics\Model Outputs\TM2_01302022
+
+# directory to stoe the outputs
+summary_dir : C:\Users\vyadav\Cambridge Systematics\PROJ 210071 BART Link21 TDLU Modeling - Documents\Task 2 - Model Dev\2.3 - Model Construction\Performance Metrics\Model Outputs\TM2_01302022\summaries
+
+# precision level in decimal places
+precision : 6
+
+# crosswalks
+cwks : cwks
+
+# Specify the iteration number to summarise
+iteration : 1
+
+# time periods
+periods : ['am', 'md', 'pm', 'ev', 'ea']
+
+# Access and Egress
+access_egress_modes : ['_WALK_TRN_WALK', '_KNR_TRN_WLK', '_PNR_TRN_WLK', '_WLK_TRN_PNR', '_WLK_TRN_KNR']
+
+# matrix core used for B1 Enhance connectivity
+connectivity_mat_core : TIMEDAM
+
+# mapping for modes
+mode_mapping: 
+    1: Auto_SOV
+    2: Auto_2Person
+    3: Auto_3+Person
+    4: Walk
+    5: Bike
+    6: WALK_TRANSIT
+    7: PNR_TRANSIT
+    8: KNR_TRANSIT
+    9: RIDE_HAIL
+
+#job accessibility
+accessibility_thresholds : [0, 15, 30, 45, 60]
+

@@ -1,0 +1,163 @@
+
+#specify the configuration here
+
+#concept ID
+concept_id : 'BaseYear2015'
+
+# project directory
+model_dir : C:\VY-Projects\Link21\BaseYear2015
+
+#CT-RAMP outputs directory
+ctramp_dir : C:\VY-Projects\Link21\BaseYear2015\CTRAMP
+
+# directory to store the outputs
+summary_dir : C:\VY-Projects\Link21\BaseYear2015
+
+# best path skim directory
+best_path_skim_dir : C:\VY-Projects\Link21\BaseYear2015\Best_Single_Path
+# WLK_TRN_WLK cores - ['BOARDS', 'DDIST', 'DTIME', 'FARE', 'IVT', 'IVTCOM', 'IVTEXP', 'IVTFRY', 'IVTHVY', 'IVTLOC', 'IVTLRT', 
+# 'IWAIT', 'PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'WACC', 'WAIT', 'WAUX', 'WEGR', 'XWAIT'],
+
+# KNR_TRN_WLK cores - ['BOARDS', 'DDIST', 'DTIME', 'FARE', 'IVT', 'IVTCOM', 'IVTEXP', 'IVTFRY', 'IVTHVY', 'IVTLOC', 'IVTLRT', 
+#'IWAIT', 'PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'WACC', 'WAIT', 'WAUX', 'WEGR', 'XWAIT']
+
+# PNR_TRN_WLK cores - ['BOARDS', 'DDIST', 'DTIME', 'FARE', 'IVT', 'IVTCOM', 'IVTEXP', 'IVTFRY', 'IVTHVY', 'IVTLOC', 'IVTLRT', 
+# 'IWAIT', 'PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'WACC', 'WAIT', 'WAUX', 'WEGR', 'XWAIT']
+
+# WLK_TRN_PNR cores - ['BOARDS', 'DDIST', 'DTIME', 'FARE', 'IVT', 'IVTCOM', 'IVTEXP', 'IVTFRY', 'IVTHVY', 'IVTLOC', 'IVTLRT', 
+#'IWAIT', 'PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'WACC', 'WAIT', 'WAUX', 'WEGR', 'XWAIT']
+
+# WLK_TRN_KNR cores - ['BOARDS', 'DDIST', 'DTIME', 'FARE', 'IVT', 'IVTCOM', 'IVTEXP', 'IVTFRY', 'IVTHVY', 'IVTLOC', 'IVTLRT', 
+# 'IWAIT', 'PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'WACC', 'WAIT', 'WAUX', 'WEGR', 'XWAIT']
+
+# precision level in decimal places
+precision : 6
+
+# crosswalks
+common_dir : C:\VY-Projects\Link21\notebooks\common_data
+
+# Specify the iteration number to summarise
+iteration : 1
+
+# time periods
+periods : ['am', 'md', 'pm', 'ev', 'ea']
+
+# Access and Egress
+access_egress_modes : ['WLK_TRN_WLK', 'KNR_TRN_WLK', 'PNR_TRN_WLK', 'WLK_TRN_PNR', 'WLK_TRN_KNR']
+
+# matrix core used for B1 Enhance connectivity
+connectivity_mat_core : ['IVTCOM', 'IVTHVY', 'PIVTCOM', 'PIVTHVY']
+
+# landuse data
+zone_file : inputs\landuse\tazData.csv
+
+
+# mapping for modes
+mode_mapping: 
+    1: Auto_SOV
+    2: Auto_2Person
+    3: Auto_3+Person
+    4: Walk
+    5: Bike
+    6: WALK_TRANSIT
+    7: PNR_TRANSIT
+    8: KNR_TRANSIT
+    9: RIDE_HAIL
+
+#job accessibility
+accessibility_thresholds : [30, 45, 60, 90]
+
+purpose_mapping:
+    work_very high: work   
+    shopping: shopping            
+    othdiscr: othdiscr          
+    school_grade: school       
+    work_high: work         
+    escort_kids: escort        
+    othmaint: othmaint           
+    work_med: work           
+    atwork_eat: social          
+    eatout: social             
+    work_low: work           
+    social: social             
+    university: school        
+    escort_no kids: escort   
+    school_high: school         
+    atwork_business: business    
+    atwork_maint: othmaint 
+    Home: home
+    work: work
+    Work: work
+    atwork: work
+    escort: escort
+    school: school
+    business: business     
+
+# these cores are used to calculate the total travel time in transit skims
+total_travel_time: ['IVT', 'DTIME', 'WACC', 'WAIT', 'WAUX', 'WEGR']
+
+# these cores are used to calculate the total perceived travel time in transit skims
+perceived_travel_time : ['PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'DTIME', 'WACC', 'WAIT', 'WAUX', 'WEGR']
+
+# These are mandatory columns in the same order for summary sheets
+final_columns: [  'Concept_ID',
+                    'Metric_ID',
+                    'Metric_name',
+                    'Submetric',
+                    'Description',
+                    'Population',
+                    'Period',
+                    'Geography',
+                    'Zone_ID',
+                    'Origin_zone',
+                    'Dest_zone',
+                    'Purpose',
+                    'Value',
+                    'Units',
+                    'Total_Increment',
+                    ]
+
+# time period defintions
+time_periods_mapping:
+    0: ev
+    1: ev
+    2: ev
+    3: ea
+    4: ea
+    5: ea
+    6: am
+    7: am
+    9: am
+    10: md
+    11: md
+    12: md
+    13: md
+    14: md
+    15: pm
+    16: pm
+    17: pm
+    18: pm
+    19: ev
+    20: ev
+    21: ev
+    22: ev
+    23: ev
+    
+# following helps in the nomenclature
+population: ['Whole Population', 'Priority Population']
+geography_zones: ['county', 'superdistrict', 'RDM', 'transbay']
+
+
+# core : [description, submetric, units, metric name]
+description_a1.2:
+    ivt: [in-vehicle travel time, A1.2, seconds, actual in vehicle travel time]
+    wait: [wait time, A1.3, seconds, actual wait time]
+    wacc : [walk access time, A1.4, seconds, actual walk access time]
+    wegr: [walk egress time, A1.4, seconds, actual walk egress time] 
+    dtime: [drive time, A1.5, seconds, actual drive time ]
+    xwait: [transfer time, A1.6, seconds, actual transfer time]
+    trip_time : [total trip time, A1.7, seconds, actual total trip time] 
+    
+    
+description_a1.1:
+    perc_tt: [perceived total travel time, A1.1, seconds, perceived travel travel time]
