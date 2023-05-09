@@ -67,16 +67,157 @@ def generate_transbayOD_pairs(transbay_od_omx, bridge_mapping, combine=True):
 # df.to_csv(os.path.join(cwks, "transbay_od.csv"), index = False)
 
 # function to convert to final trip roster
-def _merge_joint_and_indiv_trips(indiv_trips, joint_trips):
-    joint_trips = joint_trips[["hh_id", "tour_id", "num_participants", "trip_mode"]]
-    joint_trips = joint_trips.reindex(
-        joint_trips.index.repeat(joint_trips.num_participants)
-    ).reset_index(drop=True)
-    joint_trips = joint_trips.drop(columns=["num_participants"])
 
-    indiv_trips = indiv_trips[["hh_id", "tour_id", "trip_mode"]]
-    trips = pd.concat([joint_trips, indiv_trips], ignore_index=True).reset_index(
+def create_trip_roster(ctramp_dir,
+                        hh,
+                        pp_perc, 
+                        transbay_od, 
+                        geo_cwks, 
+                        link21_purp_mapping, 
+                        iteration
+                        ):
+
+    it_full = pd.read_csv(_join(ctramp_dir, 'main\\indivTripData_' + str(iteration) + '.csv'))
+    it_full['trip_type'] = 'INM'
+    jt_full = pd.read_csv(_join(ctramp_dir, 'main\\jointTripData_' + str(iteration) + '.csv'))
+    jt_full['trip_type'] = 'JNT'
+    
+    it_full['trips'] = 1/it_full.sampleRate
+    jt_full['trips'] = jt_full.num_participants/jt_full.sampleRate
+
+    out_tripdata = pd.concat([it_full,  jt_full], ignore_index=True).reset_index(
         drop=True
     )
 
+    out_tripdata = pd.merge(out_tripdata, transbay_od, left_on= ['orig_taz', 'dest_taz'], 
+                            right_on = ['transbay_o', 'transbay_d'], how = 'left')
+    out_tripdata['transbay_od'] = out_tripdata['transbay_od'].fillna(0)
+
+    out_tripdata = out_tripdata.drop(columns = ['transbay_o', 'transbay_d'])
+    #print(out_tripdata['transbay_od'].value_counts())
+
+    # add geographies to final tours
+    out_tripdata = pd.merge(out_tripdata, geo_cwks, left_on = ['orig_taz'], 
+                            right_on = ['taz'], how = 'left')
+    out_tripdata = out_tripdata.rename(columns = {'rdm_zones':'orig_rdm_zones', 
+                                                'super_district': 'orig_super_dist',
+                                                'county': 'orig_county'})
+    del out_tripdata['taz']
+
+    out_tripdata = pd.merge(out_tripdata, geo_cwks, left_on = ['dest_taz'], right_on = ['taz'], how = 'left')
+    out_tripdata = out_tripdata.rename(columns = {'rdm_zones':'dest_rdm_zones', 
+                                                'super_district': 'dest_super_dist',
+                                                'county': 'dest_county'})
+
+    del out_tripdata['taz']
+
+    out_tripdata = pd.merge(out_tripdata, hh, on = 'hh_id', how = 'left')
+
+    # add prioirty population
+    out_tripdata = pd.merge(out_tripdata, pp_perc, left_on = ['home_zone'], right_on = ['taz'], how = 'left')
+    print("NAs in PP Share:",  out_tripdata['pp_share'].isna().sum())
+    # out_tourdata['pp_share'] = out_tourdata['pp_share'].fillna(0)
+    del out_tripdata['taz']
+    
+    #add link21 purpose definitions
+    df = out_tripdata.copy()
+    df['new_dest_purp'] = df['dest_purpose']
+    df['new_orig_purp'] = df['orig_purpose']
+    
+    # changing the purpose categories for atwork purpose
+    df.loc[(df['tour_purpose'] == 'atwork_eat') & (df['dest_purpose'] == 'atwork'), 'new_dest_purp'] = 'eatout'
+    df.loc[(df['tour_purpose'] == 'atwork_eat') & (df['orig_purpose'] == 'atwork'), 'new_orig_purp'] = 'eatout'
+
+    df.loc[(df['tour_purpose'] == 'atwork_business') & (df['dest_purpose'] == 'atwork'), 'new_dest_purp'] = 'business'
+    df.loc[(df['tour_purpose'] == 'atwork_business') & (df['orig_purpose'] == 'atwork'), 'new_orig_purp'] = 'business'
+
+    df.loc[(df['tour_purpose'] == 'atwork_maint') & (df['dest_purpose'] == 'atwork'), 'new_dest_purp'] = 'othmaint'
+    df.loc[(df['tour_purpose'] == 'atwork_maint') & (df['orig_purpose'] == 'atwork'), 'new_orig_purp'] = 'othmaint'
+    
+    # adding new link21 trip purpose
+    df['link21_tour_purp'] = df['tour_purpose'].map(link21_purp_mapping)
+    df['link21_orig_purp'] = df['new_orig_purp'].map(link21_purp_mapping)
+    df['link21_dest_purp'] = df['new_dest_purp'].map(link21_purp_mapping)
+
+    df['link21_trip_purp'] = df['link21_dest_purp']
+    
+    # for last trip on tour
+    df1 = df.loc[(df['link21_dest_purp'] == 'home')]
+    conditions = [
+        df1['link21_tour_purp'].eq('work'),
+        df1['link21_tour_purp'].eq('school'),
+        ~df1['link21_tour_purp'].isin(['work','school'])
+    ]
+
+    choices = ['work', 'school', df1['link21_orig_purp']]
+    df1['link21_trip_purp'] = np.select(conditions, choices, default=0)
+    df2 = df.loc[(df['link21_dest_purp'] != 'home')]
+    df2['link21_trip_purp'] = df2['link21_dest_purp']
+    df = pd.concat([df1, df2], ignore_index=True)
+    
+    df1 = df.loc[df['dest_purpose'] == 'atwork']
+    conditions = [
+        df1['link21_tour_purp'].eq('business'),
+        ~df1['link21_tour_purp'].eq('business')
+    ]
+    choices = ['business', df1['link21_orig_purp']]
+    df1['link21_trip_purp'] = np.select(conditions, choices, default=0)
+    
+    df2 = df.loc[(df['dest_purpose'] != 'atwork')]
+    trips = pd.concat([df1, df2], ignore_index=True).reset_index(
+        drop=True
+        )
+
     return trips
+
+def skim_core_to_df(skim, core, cols =['orig', 'dest', 'rail_od']):
+    skim_df = pd.DataFrame(skim[core])
+    skim_df = pd.melt(skim_df.reset_index(), id_vars='index', value_vars=skim_df.columns)
+    skim_df['index'] = skim_df['index'] + 1
+    skim_df['variable'] = skim_df['variable'] + 1
+    skim_df.columns = cols
+
+    return skim_df
+
+def array2df(array, cols =['orig', 'dest', 'rail_od']):
+    df = pd.DataFrame(array)
+    df = pd.melt(df.reset_index(), id_vars='index', value_vars=df.columns)
+    df['index'] = df['index'] + 1
+    df['variable'] = df['variable'] + 1
+    df.columns = cols
+    
+    return df
+
+def create_rail_wacc_od_pairs(transit_demand_dir, transit_skims_dir, period, acc_egg_modes):
+    
+    #Creates the Rail OD eligible Files
+    for per in period:
+        print("Period: ",per)
+
+        rail_acc = omx.open_file(_join(transit_demand_dir, "rail_wacc_od_v9_trim_" + per.upper() + ".omx"),'w') 
+        for acc_egg in acc_egg_modes:
+            print("Access Egress Mode: ",acc_egg)
+            if acc_egg == 'WLK_TRN_WLK':
+                trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.upper() + ".omx"))
+                wlk_time = np.array(trn_skm['WACC']) + np.array(trn_skm['WEGR'])
+                
+            if acc_egg == 'KNR_TRN_WLK':
+                trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.upper() + ".omx"))
+                wlk_time = np.array(trn_skm['WEGR'])
+                
+            if acc_egg == 'PNR_TRN_WLK':
+                trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.upper() + ".omx"))
+                wlk_time = np.array(trn_skm['WEGR'])
+                
+            if acc_egg == 'WLK_TRN_PNR':
+                trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.upper() + ".omx"))
+                wlk_time = np.array(trn_skm['WACC'])
+                
+            if acc_egg == 'WLK_TRN_KNR':
+                trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.upper() + ".omx"))
+                wlk_time = np.array(trn_skm['WACC'])
+    
+            #rail_dmn = trn_dmn_acc * ivtrail
+            rail_acc[acc_egg] = wlk_time
+
+        rail_acc.close()

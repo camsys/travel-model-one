@@ -52,6 +52,10 @@ connectivity_mat_core : ['IVTCOM', 'IVTHVY', 'PIVTCOM', 'PIVTHVY']
 zone_file : inputs\landuse\tazData.csv
 
 
+#mapping for income group
+income_categories_bins : [0, 30000, 60000, 100000, 10000000000]    
+
+
 # mapping for modes
 mode_mapping: 
     1: Auto_SOV
@@ -92,6 +96,16 @@ purpose_mapping:
     escort: escort
     school: school
     business: business     
+
+commuting_purpose_mapping:
+    work: work
+    social: non-work
+    othmaint: non-work
+    school: non-work
+    othdiscr: non-work
+    shopping: non-work
+    escort: non-work
+    business: non-work 
 
 # these cores are used to calculate the total travel time in transit skims
 total_travel_time: ['IVT', 'DTIME', 'WACC', 'WAIT', 'WAUX', 'WEGR']
@@ -161,3 +175,13 @@ description_a1.2:
     
 description_a1.1:
     perc_tt: [perceived total travel time, A1.1, seconds, perceived travel travel time]
+
+
+transit_output_data: C:\VY-Projects\Link21\BaseYear2015\Validation package to Vivek\Run11\output_data_transit
+
+highway_output_data: C:\VY-Projects\Link21\BaseYear2015\Validation package to Vivek\Run11\output_data_Hwy
+
+walk_speed: 3
+
+distance_decay_parameter : 0.10 
+

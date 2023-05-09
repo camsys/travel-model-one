@@ -1,0 +1,19 @@
+Parameter,Value,Description,Orig_mode
+TOD,AM,"Values can be EA, AM, MD, PM, EV",
+Railinclusive,1,0: pull rail exclusive paths (rail only); 1: pull rail inclusive paths (rail only or rail+other transit mode),
+VOT,12.86,Value of time in $/hour,
+WIVTLOC,1,IVT weight for local bus,b
+WIVTEXP,1,IVT weight for express bus,x
+WIVTFRY,0.8,IVT weight for ferry,f
+WIVTLRT,0.9,IVT weight for light rail,l
+WIVTHVY,0.7,IVT weight for heavy rail,h
+WIVTCOM,0.7,IVT weight for commuter rail,r
+BPENLOC,10,Boarding penalty for local bus,
+BPENEXP,10,Boarding penalty for express bus,
+BPENFRY,2,Boarding penalty for ferry,
+BPENLRT,5,Boarding penalty for light rail,
+BPENHVY,5,Boarding penalty for heavy rail,
+BPENCOM,5,Boarding penalty for commuter rail,
+XPEN,5,Transfer penalty,
+WLK,1.5,Walk access/egress/transfer penalty,
+DRV,1,Drive access/egress penalty,

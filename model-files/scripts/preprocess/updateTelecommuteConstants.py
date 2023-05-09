@@ -210,9 +210,9 @@ if __name__ == '__main__':
         # recode tour_mode to auto, non-auto, no tour
         work_tours_df['simple_mode'] = 'unset'
         work_tours_df.loc[ work_tours_df.tour_mode==0,                                'simple_mode'] = 'no tour'
-        work_tours_df.loc[(work_tours_df.tour_mode>  0)&(work_tours_df.tour_mode<=6), 'simple_mode'] = 'auto'
-        work_tours_df.loc[(work_tours_df.tour_mode>=19),                              'simple_mode'] = 'auto' # tnc
-        work_tours_df.loc[(work_tours_df.tour_mode>= 7)&(work_tours_df.tour_mode<=18),'simple_mode'] = 'non-auto'
+        work_tours_df.loc[(work_tours_df.tour_mode>  0)&(work_tours_df.tour_mode<=3), 'simple_mode'] = 'auto'
+        work_tours_df.loc[(work_tours_df.tour_mode>=9),                              'simple_mode'] = 'auto' # tnc
+        work_tours_df.loc[(work_tours_df.tour_mode>= 4)&(work_tours_df.tour_mode<=8),'simple_mode'] = 'non-auto'
         print(work_tours_df.simple_mode.value_counts())
 
         # join to work place superdistricts
