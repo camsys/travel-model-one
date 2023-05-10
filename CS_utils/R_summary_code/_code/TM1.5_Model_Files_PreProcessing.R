@@ -2,15 +2,16 @@ library(plyr)
 library(data.table)
 # define input and output file directory
 #model_data_dir='E://_projects//Link21//2015_BaseY_IPA2015//'
-output_rdata_dir = file.path(model_data_dir, '_pre_processed')
+output_rdata_dir = paste(model_data_dir, '_pre_processed', sep=delimiter)
+if (!dir.exists(output_rdata_dir)) {dir.create(output_rdata_dir)}
 #  'E://_projects//Link21//2015_BaseY_IPA2015//_pre_processed//'
 
 setwd(model_data_dir)
 
 # read in input files
 ### person and households
-in_person <- fread("popsyn/personFile.2015.csv")
-in_hh <- fread("popsyn/hhFile.2015.csv")
+in_person <- fread("popsyn/personFile.csv")
+in_hh <- fread("popsyn/hhFile.csv")
 ### landuse/tazData
 in_taz <- fread("landuse/tazData.csv")
 
