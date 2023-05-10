@@ -9,7 +9,7 @@ default:
 
     survey_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up
-        model_year: 2015
+        model_year: '2015'
         preprocess_r: T # preprocess the right hand side, TM2
         skip_l: F
         scenario: 'CHTSvsLink21'
