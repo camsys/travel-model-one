@@ -18,6 +18,7 @@ main_dir = main_config$main_dir
 # Set preprocessing parameters
 preprocess_r = as.logical(run_config$preprocess_r)
 output_iteration = run_config$output_iteration
+model_run = run_config$model_year
 
 # If you are doing model validation against survey data, please
 # set skip_l = TRUE, otherwise, set it to FALSE.

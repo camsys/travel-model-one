@@ -9,8 +9,8 @@ setwd(model_data_dir)
 
 # read in input files
 ### person and households
-in_person <- fread("popsyn/personFile.2015.csv")
-in_hh <- fread("popsyn/hhFile.2015.csv")
+in_person <- fread(paste("popsyn/personFile.",model_year,".csv",sep=''))
+in_hh <- fread(paste("popsyn/hhFile.",model_year,".csv",sep=''))
 ### landuse/tazData
 in_taz <- fread("landuse/tazData.csv")
 

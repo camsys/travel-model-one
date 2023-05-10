@@ -1,14 +1,15 @@
 # T/F values defined in this file will need to be converted as Booleans with as.logical()
 default:
-    main_dir: 'C://MTC_tmpy//TM2_Run10//calibration_3332//reports//040923_BLvsRun10' # output folder of reports; also where gen_file populates templates
-    TM2_data_dir: 'C://MTC_tmpy//TM2_Run10//calibration_3332'
+    main_dir: 'C://MTC_tmpy//TM2_Run25//calibration_3332//042923_BLvsRun25' # output folder of reports; also where gen_file populates templates
+    TM2_data_dir: 'C://MTC_tmpy//TM2_Run25//calibration_3332'
     preprocess_suffix: '' # useful in case one wants to save out results of different run versions under the same project run folder
         
     gen_file:
-        inputD: 'C://MTC_tmpy//RSummaries_templates'
+        inputD: 'C://MTC_tmpy//R_templates'
 
     survey_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up
+        model_year: 2015
         preprocess_r: T # preprocess the right hand side, TM2
         skip_l: F
         scenario: 'CHTSvsLink21'
@@ -26,18 +27,20 @@ default:
         preprocess_l: T # preprocess the left hand side, TM2 baseline
         preprocess_r: T # preprocess the right hand side, TM2
         skip_l: F
-        scenario: 'TM2_baseline_vs_Run10'
+        scenario: 'TM2_baseline_vs_Run25'
         # left side: TM2 baseline parameters
         left:
             model_data_dir: 'C://MTC_tmpy//TM2_Base//calibration_3332'
             output_iteration: 3
             name_model: '030223_feedback_TM2'
             model_version: 'TM2'
+            model_year: '2015'
         # right side: TM2 parameters
         right:
-            name_model: 'Run10_IncreaseBARTtime'
-            output_iteration: 4
+            name_model: 'Run25_2050_SEDandNetwork'
+            output_iteration: 3
             model_version: 'TM2'
+            model_year: '2050'
 
     TM1.5_comp:
         output_iteration: 1 # determines which CT-RAMP output files to pick up

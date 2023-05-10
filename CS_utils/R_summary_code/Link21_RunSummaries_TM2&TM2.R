@@ -84,6 +84,7 @@ setwd(paste(main_dir, '..', sep = delimiter))
 if (preprocess_l) {
     model_data_dir=run_config$left$model_data_dir
     output_iteration = run_config$left$output_iteration
+    model_year = run_config$left$model_year
     setwd(code_base_dir)
     source('_code//TM2_Model_Files_PreProcessing.R')
 }
@@ -91,6 +92,7 @@ if (preprocess_l) {
 if (preprocess_r) {
     model_data_dir=main_config$TM2_data_dir
     output_iteration = run_config$right$output_iteration
+    model_year = run_config$right$model_year
     setwd(code_base_dir)
     source('_code//TM2_Model_Files_PreProcessing.R')
 }
