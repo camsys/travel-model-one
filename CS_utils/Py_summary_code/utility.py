@@ -170,6 +170,65 @@ def create_trip_roster(ctramp_dir,
 
     return trips
 
+
+
+def create_tour_roster(ctramp_dir,
+                        hh,
+                        pp_perc, 
+                        transbay_od, 
+                        geo_cwks,  
+                        iteration
+                        ):
+
+    it_full = pd.read_csv(_join(ctramp_dir, 'main\\indivTourData_' + str(iteration) + '.csv'))
+    it_full['trip_type'] = 'INM'
+    jt_full = pd.read_csv(_join(ctramp_dir, 'main\\jointTourData_' + str(iteration) + '.csv'))
+    jt_full['trip_type'] = 'JNT'
+    
+    jt_full['num_participants'] = jt_full['tour_participants'].str.count('\d')
+
+    it_full['tours'] = 1/it_full.sampleRate
+    jt_full['tours'] = jt_full.num_participants/jt_full.sampleRate
+
+    out_tourdata = pd.concat([it_full,  jt_full], ignore_index=True).reset_index(
+        drop=True
+    )
+
+    out_tourdata = pd.merge(out_tourdata, transbay_od, left_on= ['orig_taz', 'dest_taz'], 
+                            right_on = ['transbay_o', 'transbay_d'], how = 'left')
+    out_tourdata['transbay_od'] = out_tourdata['transbay_od'].fillna(0)
+
+    out_tourdata = out_tourdata.drop(columns = ['transbay_o', 'transbay_d'])
+    #print(out_tripdata['transbay_od'].value_counts())
+
+    # add geographies to final tours
+    out_tourdata = pd.merge(out_tourdata, geo_cwks, left_on = ['orig_taz'], 
+                            right_on = ['taz'], how = 'left')
+    out_tourdata = out_tourdata.rename(columns = {'rdm_zones':'orig_rdm_zones', 
+                                                'super_district': 'orig_super_dist',
+                                                'county': 'orig_county'})
+    del out_tourdata['taz']
+
+    out_tourdata = pd.merge(out_tourdata, geo_cwks, left_on = ['dest_taz'], right_on = ['taz'], how = 'left')
+    out_tourdata = out_tourdata.rename(columns = {'rdm_zones':'dest_rdm_zones', 
+                                                'super_district': 'dest_super_dist',
+                                                'county': 'dest_county'})
+
+    del out_tourdata['taz']
+
+    out_tourdata = pd.merge(out_tourdata, hh, on = 'hh_id', how = 'left')
+
+    # add prioirty population
+    out_tourdata = pd.merge(out_tourdata, pp_perc, left_on = ['home_zone'], right_on = ['taz'], how = 'left')
+    print("NAs in PP Share:",  out_tourdata['pp_share'].isna().sum())
+    # out_tourdata['pp_share'] = out_tourdata['pp_share'].fillna(0)
+    del out_tourdata['taz']
+
+    
+    
+    return out_tourdata
+
+
 def skim_core_to_df(skim, core, cols =['orig', 'dest', 'rail_od']):
     skim_df = pd.DataFrame(skim[core])
     skim_df = pd.melt(skim_df.reset_index(), id_vars='index', value_vars=skim_df.columns)
@@ -221,3 +280,53 @@ def create_rail_wacc_od_pairs(transit_demand_dir, transit_skims_dir, period, acc
             rail_acc[acc_egg] = wlk_time
 
         rail_acc.close()
+
+def create_rail_od_pairs(output_dir, transit_skims_dir, period, acc_egg_modes):
+    
+    #Creates the Rail OD eligible Files
+    for per in period:
+        print("Period: ",per)
+
+        rail_demand = omx.open_file(_join(output_dir, "rail_od_v9_trim_" + per.upper() + ".omx"),'w') 
+        for acc_egg in acc_egg_modes:
+            print("Access Egress Mode: ",acc_egg)
+            trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.lower() + ".omx"))
+            ivthvy = np.array(trn_skm['IVTHVY'])
+            ivtcom = np.array(trn_skm['IVTCOM'])
+            ivtrail = ivthvy + ivtcom
+            ivtrail[ivtrail > 0] = 1
+            #rail_dmn = trn_dmn_acc * ivtrail
+            rail_demand[acc_egg] = ivtrail
+
+        rail_demand.close()
+
+def create_rail_fare_od_pairs(preprocess_dir, transit_skims_dir, acc_egg_modes, time_periods):
+    
+    #Creates the Rail OD eligible Files
+    for per in time_periods:
+        print("Period: ",per)
+
+        rail_demand = omx.open_file(_join(preprocess_dir, "rail_fair_v9_trim_" + per.upper() + ".omx"),'w') 
+        for acc_egg in acc_egg_modes:
+            print("Access Egress Mode: ",acc_egg)
+            trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.upper() + ".omx"))
+            fares = np.array(trn_skm['FARE'])
+            rail_demand[acc_egg] = fares
+
+        rail_demand.close()
+
+def create_rail_crowding_od_pairs(transit_demand_dir, transit_skims_dir, period, acc_egg_modes):
+    
+    #Creates the Rail OD eligible Files
+    for per in period:
+        print("Period: ",per)
+
+        rail_demand = omx.open_file(_join(transit_demand_dir, "rail_crowding_od_v9_trim_" + per.upper() + ".omx"),'w') 
+        for acc_egg in acc_egg_modes:
+            print("Access Egress Mode: ",acc_egg)
+            trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.upper() + ".omx"))
+            crowd = np.array(trn_skm['CROWD']) * 1.62
+            #rail_dmn = trn_dmn_acc * ivtrail
+            rail_demand[acc_egg] = crowd
+
+        rail_demand.close()

@@ -2,16 +2,16 @@
 #specify the configuration here
 
 #concept ID
-concept_id : 'BaseYear2015'
+concept_id : BaseYear2050
 
 # project directory
-model_dir : C:\VY-Projects\Link21\BaseYear2015
+model_dir : C:\MTC_tmpy\TM2_Run03\tm2py\examples\Link21_3332
 
 #CT-RAMP outputs directory
-ctramp_dir : C:\VY-Projects\Link21\BaseYear2015\CTRAMP
+ctramp_dir : C:\MTC_tmpy\TM2_Run03\calibration_3332
 
 # directory to store the outputs
-summary_dir : C:\VY-Projects\Link21\BaseYear2015
+summary_dir : C:\MTC_tmpy\TM2_Run03\performance_measures
 
 # best path skim directory
 best_path_skim_dir : C:\VY-Projects\Link21\BaseYear2015\Best_Single_Path
@@ -34,10 +34,10 @@ best_path_skim_dir : C:\VY-Projects\Link21\BaseYear2015\Best_Single_Path
 precision : 6
 
 # crosswalks
-common_dir : C:\VY-Projects\Link21\notebooks\common_data
+common_dir : C:\MTC_tmpy\travel-model-one\CS_utils\Py_summary_code\common_data
 
 # Specify the iteration number to summarise
-iteration : 1
+iteration : 3
 
 # time periods
 periods : ['am', 'md', 'pm', 'ev', 'ea']
@@ -176,7 +176,7 @@ description_a1.2:
 description_a1.1:
     perc_tt: [perceived total travel time, A1.1, seconds, perceived travel travel time]
 
-
+# Update this to transit and highway validation folders
 transit_output_data: C:\VY-Projects\Link21\BaseYear2015\Validation package to Vivek\Run11\output_data_transit
 
 highway_output_data: C:\VY-Projects\Link21\BaseYear2015\Validation package to Vivek\Run11\output_data_Hwy
