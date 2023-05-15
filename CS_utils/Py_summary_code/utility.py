@@ -315,13 +315,13 @@ def create_rail_fare_od_pairs(preprocess_dir, transit_skims_dir, acc_egg_modes, 
 
         rail_demand.close()
 
-def create_rail_crowding_od_pairs(transit_demand_dir, transit_skims_dir, period, acc_egg_modes):
+def create_rail_crowding_od_pairs(preprocess_dir, transit_skims_dir, period, acc_egg_modes):
     
     #Creates the Rail OD eligible Files
     for per in period:
         print("Period: ",per)
 
-        rail_demand = omx.open_file(_join(transit_demand_dir, "rail_crowding_od_v9_trim_" + per.upper() + ".omx"),'w') 
+        rail_demand = omx.open_file(_join(preprocess_dir, "rail_crowding_od_v9_trim_" + per.upper() + ".omx"),'w') 
         for acc_egg in acc_egg_modes:
             print("Access Egress Mode: ",acc_egg)
             trn_skm = omx.open_file(_join(transit_skims_dir, "trnskm" + per.lower() +"_" + acc_egg.upper() + ".omx"))
@@ -330,3 +330,36 @@ def create_rail_crowding_od_pairs(transit_demand_dir, transit_skims_dir, period,
             rail_demand[acc_egg] = crowd
 
         rail_demand.close()
+
+
+def array2df(array, cols =['orig', 'dest', 'rail_od']):
+    df = pd.DataFrame(array)
+    df = pd.melt(df.reset_index(), id_vars='index', value_vars=df.columns)
+    df['index'] = df['index'] + 1
+    df['variable'] = df['variable'] + 1
+    df.columns = cols
+    
+    return df
+
+def weighted_average(df, value, weight):
+    val = df[value]
+    wt = df[weight]
+    return (val * wt).sum() / wt.sum()
+
+def rename_columns(df, old_cols, new_cols=['Origin_zone', 'Dest_zone', 'Value']):
+    """
+    Renames columns of a pandas dataframe using lists of old and new column names.
+
+    Args:
+    df (pandas.DataFrame): The dataframe to rename columns in.
+    old_cols (list): A list of old column names.
+    new_cols (list): A list of new column names.
+
+    Returns:
+    pandas.DataFrame: The renamed dataframe.
+    """
+
+    # Use pandas' rename method to rename columns
+    df = df.rename(columns=dict(zip(old_cols, new_cols)))
+
+    return df
