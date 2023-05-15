@@ -14,7 +14,8 @@ ctramp_dir : C:\MTC_tmpy\TM2_Run03\calibration_3332
 summary_dir : C:\MTC_tmpy\TM2_Run03\performance_measures
 
 # best path skim directory
-best_path_skim_dir : C:\VY-Projects\Link21\BaseYear2015\Best_Single_Path
+best_path_skim_dir : C:\MTC_tmpy\TM2_Run03\calibration_3332\SinglePath_TM2_Run03_Baseline
+best_path_skim_extension: _TM2_Run03_Baseline
 # WLK_TRN_WLK cores - ['BOARDS', 'DDIST', 'DTIME', 'FARE', 'IVT', 'IVTCOM', 'IVTEXP', 'IVTFRY', 'IVTHVY', 'IVTLOC', 'IVTLRT', 
 # 'IWAIT', 'PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'WACC', 'WAIT', 'WAUX', 'WEGR', 'XWAIT'],
 
@@ -55,6 +56,11 @@ zone_file : inputs\landuse\tazData.csv
 #mapping for income group
 income_categories_bins : [0, 30000, 60000, 100000, 10000000000]    
 
+# transit factor 
+annual_transit_factor : 321.8
+
+# Auto factor
+annual_auto_factor : 341.7
 
 # mapping for modes
 mode_mapping: 
@@ -111,7 +117,8 @@ commuting_purpose_mapping:
 total_travel_time: ['IVT', 'DTIME', 'WACC', 'WAIT', 'WAUX', 'WEGR']
 
 # these cores are used to calculate the total perceived travel time in transit skims
-perceived_travel_time : ['PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'DTIME', 'WACC', 'WAIT', 'WAUX', 'WEGR']
+#perceived_travel_time : ['PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'DTIME', 'WACC', 'WAIT', 'WAUX', 'WEGR']
+perceived_travel_time : ['PerceivedTime_BestPath']
 
 # These are mandatory columns in the same order for summary sheets
 final_columns: [  'Concept_ID',
@@ -164,17 +171,17 @@ geography_zones: ['county', 'superdistrict', 'RDM', 'transbay']
 
 # core : [description, submetric, units, metric name]
 description_a1.2:
-    ivt: [in-vehicle travel time, A1.2, seconds, actual in vehicle travel time]
-    wait: [wait time, A1.3, seconds, actual wait time]
-    wacc : [walk access time, A1.4, seconds, actual walk access time]
-    wegr: [walk egress time, A1.4, seconds, actual walk egress time] 
-    dtime: [drive time, A1.5, seconds, actual drive time ]
-    xwait: [transfer time, A1.6, seconds, actual transfer time]
-    trip_time : [total trip time, A1.7, seconds, actual total trip time] 
+    ivt: [in-vehicle travel time, A1.2, minutes, actual in vehicle travel time]
+    wait: [wait time, A1.3, minutes, actual wait time]
+    wacc : [walk access time, A1.4, minutes, actual walk access time]
+    wegr: [walk egress time, A1.4, minutes, actual walk egress time] 
+    dtime: [drive time, A1.5, minutes, actual drive time ]
+    xwait: [transfer time, A1.6, minutes, actual transfer time]
+    trip_time : [total trip time, A1.7, minutes, actual total trip time] 
     
     
 description_a1.1:
-    perc_tt: [perceived total travel time, A1.1, seconds, perceived travel travel time]
+    perc_tt: [perceived total travel time, A1.1, minutes, perceived travel travel time]
 
 # Update this to transit and highway validation folders
 transit_output_data: C:\VY-Projects\Link21\BaseYear2015\Validation package to Vivek\Run11\output_data_transit
@@ -185,3 +192,4 @@ walk_speed: 3
 
 distance_decay_parameter : 0.10 
 
+filename_extension : _preliminary_results

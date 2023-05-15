@@ -68,6 +68,17 @@ def generate_transbayOD_pairs(transbay_od_omx, bridge_mapping, combine=True):
 
 # function to convert to final trip roster
 
+def assign_income_categories(hh):
+    #income_categories_bins : [0, 30000, 60000, 100000, 10000000000]   
+
+    hh['income_bin'] = 1
+    hh.loc[((hh['income']<=30000)), 'income_bin'] = '<30k'
+    hh.loc[((hh['income']>30000) & (hh['income']<=60000)), 'income_bin'] = '30k_to_60k'
+    hh.loc[((hh['income']>60000) & (hh['income']<=100000)), 'income_bin'] = '60k_to_100k'
+    hh.loc[(hh['income']>100000), 'income_bin'] = '100k+'
+
+    return hh
+
 def create_trip_roster(ctramp_dir,
                         hh,
                         pp_perc, 
@@ -111,6 +122,7 @@ def create_trip_roster(ctramp_dir,
 
     del out_tripdata['taz']
 
+    hh = assign_income_categories(hh)
     out_tripdata = pd.merge(out_tripdata, hh, on = 'hh_id', how = 'left')
 
     # add prioirty population
@@ -167,6 +179,8 @@ def create_trip_roster(ctramp_dir,
     trips = pd.concat([df1, df2], ignore_index=True).reset_index(
         drop=True
         )
+    
+
 
     return trips
 
@@ -216,6 +230,7 @@ def create_tour_roster(ctramp_dir,
 
     del out_tourdata['taz']
 
+    hh = assign_income_categories(hh)
     out_tourdata = pd.merge(out_tourdata, hh, on = 'hh_id', how = 'left')
 
     # add prioirty population
