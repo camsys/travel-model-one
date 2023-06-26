@@ -15,18 +15,18 @@ BigData_wt <- function(go_down,dt_trips, dt_tours, dt_person, scenario, nm_set, 
   county_workplace <- dt_person[,.(`Workplace Location`=sum(WT,na.rm = TRUE)),.(CNTY_O,CNTY_D)]
   county_work_tour <- dt_tours[,.(`Work Tours`=sum(WT*worktour,na.rm = TRUE)),.(CNTY_O,CNTY_D)]  
   county_tot_trips <- dt_trips[,.(`Total Trips`=sum(WT,na.rm = TRUE)),.(CNTY_O,CNTY_D)]
-  county_trn_trips <- dt_trips[,.(Total=sum(WT*trn,na.rm = TRUE),WT=sum(WT*trn_walk,na.rm = TRUE),
+  county_trn_trips <- dt_trips[,.(`Total Trips`=sum(WT,na.rm = TRUE),`Total Transit`=sum(WT*trn,na.rm = TRUE),WT=sum(WT*trn_walk,na.rm = TRUE),
                                   PNR=sum(WT*trn_pnr,na.rm = TRUE), KNR=sum(WT*trn_knr,na.rm = TRUE)), .(CNTY_O,CNTY_D,dep_tod)]
   
   sd_tot_tour <- dt_tours[,.(`Total Tours`=sum(WT,na.rm = TRUE)),.(SD_O,SD_D)]
   sd_workplace <- dt_person[,.(`Workplace Location`=sum(WT,na.rm = TRUE)),.(SD_O,SD_D)]
   sd_work_tour <- dt_tours[,.(`Work Tours`=sum(WT*worktour,na.rm = TRUE)),.(SD_O,SD_D)] 
   sd_tot_trips <- dt_trips[,.(`Total Trips`=sum(WT,na.rm = TRUE)),.(SD_O,SD_D)]
-  sd_trn_trips <- dt_trips[,.(Total=sum(WT*trn,na.rm = TRUE),WT=sum(WT*trn_walk,na.rm = TRUE),
+  sd_trn_trips <- dt_trips[,.(`Total Trips`=sum(WT,na.rm = TRUE),`Total Transit`=sum(WT*trn,na.rm = TRUE),WT=sum(WT*trn_walk,na.rm = TRUE),
                                   PNR=sum(WT*trn_pnr,na.rm = TRUE), KNR=sum(WT*trn_knr,na.rm = TRUE)), .(SD_O,SD_D,dep_tod)]
   
-  county_trn_trips <-county_trn_trips[,.(CNTY_O, CNTY_D, Total, WT, PNR, KNR, dep_tod)]
-  sd_trn_trips <- sd_trn_trips[,.(SD_O, SD_D, Total, WT, PNR, KNR, dep_tod)]
+  county_trn_trips <-county_trn_trips[,.(CNTY_O, CNTY_D, `Total Trips`, `Total Transit`, WT, PNR, KNR, dep_tod)]
+  sd_trn_trips <- sd_trn_trips[,.(SD_O, SD_D, `Total Trips`, `Total Transit`, WT, PNR, KNR, dep_tod)]
   
   if (go_down) {
     setwd("Survey_Populated")
