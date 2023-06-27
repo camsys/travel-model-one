@@ -52,6 +52,8 @@ connectivity_mat_core : ['IVTCOM', 'IVTHVY', 'PIVTCOM', 'PIVTHVY']
 # landuse data
 zone_file : inputs\landuse\tazData.csv
 
+# link21 employment data
+employment_file : employments_link21_15categories.csv
 
 #mapping for income group
 income_categories_bins : [0, 30000, 60000, 100000, 10000000000]    
@@ -60,7 +62,7 @@ income_categories_bins : [0, 30000, 60000, 100000, 10000000000]
 annual_transit_factor : 321.8
 
 # Auto factor
-annual_auto_factor : 341.7
+annual_auto_factor : 354
 
 # mapping for modes
 mode_mapping: 
@@ -107,7 +109,7 @@ commuting_purpose_mapping:
     work: work
     social: non-work
     othmaint: non-work
-    school: non-work
+    school: school
     othdiscr: non-work
     shopping: non-work
     escort: non-work
@@ -121,21 +123,23 @@ total_travel_time: ['IVT', 'DTIME', 'WACC', 'WAIT', 'WAUX', 'WEGR']
 perceived_travel_time : ['PerceivedTime_BestPath']
 
 # These are mandatory columns in the same order for summary sheets
-final_columns: [  'Concept_ID',
-                    'Metric_ID',
-                    'Metric_name',
-                    'Submetric',
-                    'Description',
-                    'Population',
-                    'Period',
-                    'Geography',
-                    'Zone_ID',
-                    'Origin_zone',
-                    'Dest_zone',
-                    'Purpose',
-                    'Value',
-                    'Units',
-                    'Total_Increment',
+final_columns: ['Concept_ID',
+                'Metric_ID',
+                'Metric_name',
+                'Submetric',
+                'Description',
+                'Population',
+                'Period',
+                'Geography',
+                'Zone_ID',
+                'Origin_zone',
+                'Dest_zone',
+                'Purpose',
+                'Mode',
+                'Income',
+                'Value',
+                'Units',
+                'Total_Increment'
                     ]
 
 # time period defintions
@@ -174,10 +178,10 @@ description_a1.2:
     ivt: [in-vehicle travel time, A1.2, minutes, actual in vehicle travel time]
     wait: [wait time, A1.3, minutes, actual wait time]
     wacc : [walk access time, A1.4, minutes, actual walk access time]
-    wegr: [walk egress time, A1.4, minutes, actual walk egress time] 
-    dtime: [drive time, A1.5, minutes, actual drive time ]
-    xwait: [transfer time, A1.6, minutes, actual transfer time]
-    trip_time : [total trip time, A1.7, minutes, actual total trip time] 
+    wegr: [walk egress time, A1.5, minutes, actual walk egress time] 
+    dtime: [drive time, A1.6, minutes, actual drive time ]
+    xwait: [transfer time, A1.7, minutes, actual transfer time]
+    trip_time : [total trip time, A1.8, minutes, actual total trip time] 
     
     
 description_a1.1:

@@ -3,10 +3,58 @@ import os
 import openmatrix as omx
 import pandas as pd
 import numpy as np
+import itertools
 
 _join = os.path.join
 _dir = os.path.dirname
 _norm = os.path.normpath
+
+# functions
+def summarize_data(df, groupby_columns, summary_column):
+    # Replace missing values with 'All'
+    #df[groupby_columns] = df[groupby_columns].fillna('All')
+
+    # Calculate total Salary based on the specified grouping columns
+    summaries = df.groupby(groupby_columns)[summary_column].sum().reset_index().rename(
+        columns={summary_column:'Value'})
+    
+    return summaries
+
+def calculate_total(df, summary_column):
+    # Calculate total Salary across all rows
+    total_value = df[summary_column].sum()
+    
+    total_summary = pd.DataFrame({'Value': total_value}, index=[0])
+    return total_summary
+
+def generate_combinations(columns):
+    combinations = []
+    for r in range(1, len(columns) + 1):
+        combinations.extend(list(itertools.combinations(columns, r)))
+    return combinations
+
+def summarize_all_combinations(df, groupby_columns, summary_column):
+    if isinstance(groupby_columns, str):
+        groupby_columns = [groupby_columns]
+    combinations = generate_combinations(groupby_columns)
+    all_summaries = []
+    for combination in combinations:
+        summaries = summarize_data(df, list(combination), summary_column)
+        all_summaries.append(summaries)
+
+    # Combine all summaries into a single DataFrame
+    result_df = pd.concat(all_summaries)
+
+    # Calculate total salary separately
+    total_summary = calculate_total(df, summary_column)
+
+    # Append total summary to the result DataFrame
+    result_df = pd.concat([result_df, total_summary])
+    result_df = result_df.fillna('All')
+    
+    result_df = result_df.sort_values(groupby_columns)
+
+    return result_df
 
 #functions
 def convertMat2Df(df, mat_core):
