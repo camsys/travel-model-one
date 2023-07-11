@@ -106,7 +106,7 @@ def generate_transbayOD_pairs(transbay_od_omx, bridge_mapping, combine=True):
     return final_df
 
 #test transbay OD pair
-# df = r"C:\Users\vyadav\Cambridge Systematics\PROJ 210071 BART Link21 TDLU Modeling - Documents\Task 2 - Model Dev\2.3 - Model Construction\Performance Metrics\Model Outputs\TM2_09172022\TB OD pair\Transbayconnector_OD_highway_v02162023_v93_CS.omx"
+# df = r"Transbayconnector_OD_highway_v02162023_v93_CS.omx"
 # bridge_mapping = {'Bay Bridge' : 1,
 #                  'San Mateo': 10,
 #                  'Dumbarton' : 100}

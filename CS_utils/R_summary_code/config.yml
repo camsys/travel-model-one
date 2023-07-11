@@ -1,18 +1,18 @@
 # T/F values defined in this file will need to be converted as Booleans with as.logical()
 default:
-    main_dir: 'C://MTC_tmpy//TM2_2050Baseline_R2//calibration_3332//062323_2015Final_vs_2050Baseline' # output folder of reports; also where gen_file populates templates
-    TM2_data_dir: 'C://MTC_tmpy//TM2_2050Baseline_R2//calibration_3332'
+    main_dir: 'C://MTC_tmpy//TM2//calibration_3332//reports//070623_TM15vsTM2final' # output folder of reports; also where gen_file populates templates
+    TM2_data_dir: 'C://MTC_tmpy//TM2//calibration_3332//2015_calibration_FINAL'
     preprocess_suffix: '' # useful in case one wants to save out results of different run versions under the same project run folder
         
     gen_file:
-        inputD: 'C://MTC_tmpy//R_templates'
+        inputD: 'C://MTC_tmpy//R_summaries_templates'
 
     survey_comp:
-        output_iteration: 1 # determines which CT-RAMP output files to pick up
+        output_iteration: 3 # determines which CT-RAMP output files to pick up
         model_year: '2015'
         preprocess_r: T # preprocess the right hand side, TM2
         skip_l: F
-        scenario: 'CHTSvsLink21'
+        scenario: 'CHTSvsLink21_2015FINAL'
         # left side: survey parameters
         left:
             name_model: 'CHTS'
@@ -21,7 +21,7 @@ default:
         # right side: TM2 parameters
         right:
             model_version: 'TM2'
-            name_model: 'Link21'
+            name_model: 'Link21_062323_FINAL'
     
     TM2_comp: # compare to other run, i.e. baseline
         preprocess_l: T # preprocess the left hand side, TM2 baseline
@@ -43,20 +43,22 @@ default:
             model_year: '2050'
 
     TM1.5_comp:
-        output_iteration: 1 # determines which CT-RAMP output files to pick up
+        output_iteration: 3 # determines which CT-RAMP output files to pick up
         #output_iteration_l
         #output_iteration_r
-        preprocess_l: T # preprocess the left hand side, TM1.5
+        preprocess_l: F # preprocess the left hand side, TM1.5
         preprocess_r: T # preprocess the right hand side, TM2 (or TM1.5 if needed)
         skip_l: F
         scenario: 'TM1.5_test'
         # left side: TM1.5 parameters
         left:
-            model_data_dir: 'C://MTC_tmpy//TM2//Link21_Reports//TM1.5_results'
+            model_data_dir: 'C://MTC_tmpy//TM2//TM15_2015base'
             name_model: '2015_TM1.5'
             model_version: 'TM1.5'
+            model_year: '2015'
         # right side: TM2 parameters
         right:
-            name_model: 'Link21'
+            name_model: 'Link21_2015final'
             model_version: 'TM2'
+            model_year: '2015'
 

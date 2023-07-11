@@ -84,13 +84,15 @@ setwd(paste(main_dir, '..', sep = delimiter))
 if (preprocess_l) {
   model_data_dir=run_config$left$model_data_dir
   setwd(code_base_dir)
+  model_year = run_config$left$model_year
   source('_code//TM_Model_Files_PreProcessing.R')
 }
 
 if (preprocess_r) {
   model_data_dir=main_config$TM2_data_dir
   setwd(code_base_dir)
-  source('_code//TM_Model_Files_PreProcessing.R')
+  model_year = run_config$right$model_year
+  source('_code//TM2_Model_Files_PreProcessing.R')
 }
 ##############################################################################################################################
 
