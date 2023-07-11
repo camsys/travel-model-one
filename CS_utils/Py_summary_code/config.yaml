@@ -4,6 +4,9 @@
 #concept ID
 concept_id : BaseYear2050
 
+#model year 
+model_year: 2050
+
 # project directory
 model_dir : C:\MTC_tmpy\TM2_Run03\tm2py\examples\Link21_3332
 
@@ -152,6 +155,7 @@ time_periods_mapping:
     5: ea
     6: am
     7: am
+    8: am
     9: am
     10: md
     11: md
