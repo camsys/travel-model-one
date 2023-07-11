@@ -1,7 +1,7 @@
 # T/F values defined in this file will need to be converted as Booleans with as.logical()
 default:
-    main_dir: 'C://MTC_tmpy//TM2_Run25//calibration_3332//042923_BLvsRun25' # output folder of reports; also where gen_file populates templates
-    TM2_data_dir: 'C://MTC_tmpy//TM2_Run25//calibration_3332'
+    main_dir: 'C://MTC_tmpy//TM2_2050Baseline_R2//calibration_3332//062323_2015Final_vs_2050Baseline' # output folder of reports; also where gen_file populates templates
+    TM2_data_dir: 'C://MTC_tmpy//TM2_2050Baseline_R2//calibration_3332'
     preprocess_suffix: '' # useful in case one wants to save out results of different run versions under the same project run folder
         
     gen_file:
@@ -27,17 +27,17 @@ default:
         preprocess_l: T # preprocess the left hand side, TM2 baseline
         preprocess_r: T # preprocess the right hand side, TM2
         skip_l: F
-        scenario: 'TM2_baseline_vs_Run25'
+        scenario: 'TM2_2015Calibration_vs_2050Baseline_R2'
         # left side: TM2 baseline parameters
         left:
-            model_data_dir: 'C://MTC_tmpy//TM2_Base//calibration_3332'
+            model_data_dir: 'C://MTC_tmpy//TM2_2015_calibration_FINAL'
             output_iteration: 3
-            name_model: '030223_feedback_TM2'
+            name_model: '2015_calibration_final'
             model_version: 'TM2'
             model_year: '2015'
         # right side: TM2 parameters
         right:
-            name_model: 'Run25_2050_SEDandNetwork'
+            name_model: '2050Baseline_R2'
             output_iteration: 3
             model_version: 'TM2'
             model_year: '2050'
