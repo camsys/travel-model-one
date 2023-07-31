@@ -2,23 +2,23 @@
 #specify the configuration here
 
 #concept ID
-concept_id : BaseYear2050
+concept_id : Baseline2050
 
 #model year 
 model_year: 2050
 
 # project directory
-model_dir : C:\MTC_tmpy\TM2_Run03\tm2py\examples\Link21_3332
+model_dir : C:\MTC_tmpy\\TM2_2050R40_R2_Run1\tm2py\examples\Link21_3332
 
 #CT-RAMP outputs directory
-ctramp_dir : C:\MTC_tmpy\TM2_Run03\calibration_3332
+ctramp_dir : C:\MTC_tmpy\\TM2_2050R40_R2_Run1\calibration_3332
 
 # directory to store the outputs
-summary_dir : C:\MTC_tmpy\TM2_Run03\performance_measures
+summary_dir : C:\MTC_tmpy\\TM2_2050R40_R2_Run1\performance_measures
 
 # best path skim directory
-best_path_skim_dir : C:\MTC_tmpy\TM2_Run03\calibration_3332\SinglePath_TM2_Run03_Baseline
-best_path_skim_extension: _TM2_Run03_Baseline
+best_path_skim_dir : C:\MTC_tmpy\\TM2_2050R40_R2_Run1\calibration_3332\SinglePathTM2_2050R40_R2_Run1_omx_07282023
+best_path_skim_extension: ''
 # WLK_TRN_WLK cores - ['BOARDS', 'DDIST', 'DTIME', 'FARE', 'IVT', 'IVTCOM', 'IVTEXP', 'IVTFRY', 'IVTHVY', 'IVTLOC', 'IVTLRT', 
 # 'IWAIT', 'PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'WACC', 'WAIT', 'WAUX', 'WEGR', 'XWAIT'],
 
@@ -41,7 +41,7 @@ precision : 6
 common_dir : C:\MTC_tmpy\travel-model-one\CS_utils\Py_summary_code\common_data
 
 # Specify the iteration number to summarise
-iteration : 3
+iteration : 1
 
 # time periods
 periods : ['am', 'md', 'pm', 'ev', 'ea']
@@ -62,7 +62,7 @@ employment_file : employments_link21_15categories.csv
 income_categories_bins : [0, 30000, 60000, 100000, 10000000000]    
 
 # transit factor 
-annual_transit_factor : 321.8
+annual_transit_factor : 305.9
 
 # Auto factor
 annual_auto_factor : 354
@@ -194,7 +194,7 @@ description_a1.1:
 # Update this to transit and highway validation folders
 transit_output_data: C:\VY-Projects\Link21\BaseYear2015\Validation package to Vivek\Run11\output_data_transit
 
-highway_output_data: C:\VY-Projects\Link21\BaseYear2015\Validation package to Vivek\Run11\output_data_Hwy
+highway_output_data: C:\MTC_tmpy\TM2_2050Baseline_R2_Run3\calibration_3332\Shapefiles_with_assignment_results_2050_Baseline_R2_Run3\traffic\All links with model volume and speed_v07032023_CS.csv
 
 walk_speed: 3
 
