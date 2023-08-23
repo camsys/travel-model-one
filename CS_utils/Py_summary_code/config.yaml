@@ -63,7 +63,7 @@ employment_file : employments_link21_15categories.csv
 income_categories_bins : [0, 30000, 60000, 100000, 10000000000]    
 
 # transit factor 
-annual_transit_factor : 305.9
+annual_transit_factor : 297.4
 
 # Auto factor
 annual_auto_factor : 354
