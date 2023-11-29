@@ -1,0 +1,3333 @@
+taz,rdm_zones,super_district,county
+1,San Francisco_43,4,1
+2,San Francisco_37,3,1
+3,San Francisco_24,1,1
+4,San Francisco_24,1,1
+5,San Francisco_24,1,1
+6,San Francisco_24,1,1
+7,San Francisco_12,1,1
+8,San Francisco_11,1,1
+9,San Francisco_44,1,1
+10,San Francisco_15,1,1
+11,San Francisco_12,1,1
+12,San Francisco_12,1,1
+13,San Francisco_12,1,1
+14,San Francisco_03,1,1
+15,San Francisco_03,1,1
+16,San Francisco_03,1,1
+17,San Francisco_03,1,1
+18,San Francisco_01,1,1
+19,San Francisco_01,1,1
+20,San Francisco_01,1,1
+21,San Francisco_15,1,1
+22,San Francisco_15,1,1
+23,San Francisco_15,1,1
+24,San Francisco_12,1,1
+25,San Francisco_12,1,1
+26,San Francisco_11,1,1
+27,San Francisco_11,1,1
+28,San Francisco_11,1,1
+29,San Francisco_02,1,1
+30,San Francisco_02,1,1
+31,San Francisco_02,1,1
+32,San Francisco_24,1,1
+33,San Francisco_24,1,1
+34,San Francisco_24,1,1
+35,San Francisco_24,1,1
+36,San Francisco_24,1,1
+37,San Francisco_24,1,1
+38,San Francisco_12,1,1
+39,San Francisco_12,1,1
+40,San Francisco_02,1,1
+41,San Francisco_02,1,1
+42,San Francisco_01,1,1
+43,San Francisco_01,1,1
+44,San Francisco_12,1,1
+45,San Francisco_12,1,1
+46,San Francisco_12,1,1
+47,San Francisco_11,1,1
+48,San Francisco_11,1,1
+49,San Francisco_11,1,1
+50,San Francisco_11,1,1
+51,San Francisco_11,1,1
+52,San Francisco_11,1,1
+53,San Francisco_11,1,1
+54,San Francisco_11,1,1
+55,San Francisco_12,1,1
+56,San Francisco_12,1,1
+57,San Francisco_12,1,1
+58,San Francisco_12,1,1
+59,San Francisco_12,1,1
+60,San Francisco_14,1,1
+61,San Francisco_03,1,1
+62,San Francisco_13,1,1
+63,San Francisco_04,1,1
+64,San Francisco_13,1,1
+65,San Francisco_05,1,1
+66,San Francisco_05,1,1
+67,San Francisco_05,1,1
+68,San Francisco_05,1,1
+69,San Francisco_15,1,1
+70,San Francisco_11,1,1
+71,San Francisco_11,1,1
+72,San Francisco_03,1,1
+73,San Francisco_13,1,1
+74,San Francisco_13,1,1
+75,San Francisco_13,1,1
+76,San Francisco_02,1,1
+77,San Francisco_02,1,1
+78,San Francisco_01,1,1
+79,San Francisco_01,1,1
+80,San Francisco_05,1,1
+81,San Francisco_05,1,1
+82,San Francisco_14,1,1
+83,San Francisco_14,1,1
+84,San Francisco_04,1,1
+85,San Francisco_13,1,1
+86,San Francisco_04,1,1
+87,San Francisco_14,1,1
+88,San Francisco_05,1,1
+89,San Francisco_05,1,1
+90,San Francisco_05,1,1
+91,San Francisco_05,1,1
+92,San Francisco_25,2,1
+93,San Francisco_25,2,1
+94,San Francisco_25,2,1
+95,San Francisco_25,2,1
+96,San Francisco_10,2,1
+97,San Francisco_29,2,1
+98,San Francisco_29,2,1
+99,San Francisco_29,2,1
+100,San Francisco_29,2,1
+101,San Francisco_28,2,1
+102,San Francisco_28,2,1
+103,San Francisco_27,2,1
+104,San Francisco_27,2,1
+105,San Francisco_27,2,1
+106,San Francisco_27,2,1
+107,San Francisco_27,2,1
+108,San Francisco_27,2,1
+109,San Francisco_27,2,1
+110,San Francisco_27,2,1
+111,San Francisco_28,2,1
+112,San Francisco_28,2,1
+113,San Francisco_28,2,1
+114,San Francisco_28,2,1
+115,San Francisco_28,2,1
+116,San Francisco_27,2,1
+117,San Francisco_27,2,1
+118,San Francisco_27,2,1
+119,San Francisco_27,2,1
+120,San Francisco_27,2,1
+121,San Francisco_27,2,1
+122,San Francisco_27,2,1
+123,San Francisco_27,2,1
+124,San Francisco_28,2,1
+125,San Francisco_28,2,1
+126,San Francisco_28,2,1
+127,San Francisco_28,2,1
+128,San Francisco_28,2,1
+129,San Francisco_28,2,1
+130,San Francisco_28,2,1
+131,San Francisco_28,2,1
+132,San Francisco_29,2,1
+133,San Francisco_09,2,1
+134,San Francisco_26,2,1
+135,San Francisco_09,2,1
+136,San Francisco_09,2,1
+137,San Francisco_28,2,1
+138,San Francisco_10,2,1
+139,San Francisco_10,2,1
+140,San Francisco_10,2,1
+141,San Francisco_10,2,1
+142,San Francisco_09,2,1
+143,San Francisco_09,2,1
+144,San Francisco_09,2,1
+145,San Francisco_09,2,1
+146,San Francisco_09,2,1
+147,San Francisco_08,2,1
+148,San Francisco_08,2,1
+149,San Francisco_08,2,1
+150,San Francisco_08,2,1
+151,San Francisco_08,2,1
+152,San Francisco_08,2,1
+153,San Francisco_08,2,1
+154,San Francisco_08,2,1
+155,San Francisco_08,2,1
+156,San Francisco_08,2,1
+157,San Francisco_08,2,1
+158,San Francisco_10,2,1
+159,San Francisco_10,2,1
+160,San Francisco_10,2,1
+161,San Francisco_23,2,1
+162,San Francisco_10,2,1
+163,San Francisco_10,2,1
+164,San Francisco_10,2,1
+165,San Francisco_23,2,1
+166,San Francisco_23,2,1
+167,San Francisco_23,2,1
+168,San Francisco_23,2,1
+169,San Francisco_10,2,1
+170,San Francisco_10,2,1
+171,San Francisco_10,2,1
+172,San Francisco_10,2,1
+173,San Francisco_10,2,1
+174,San Francisco_10,2,1
+175,San Francisco_10,2,1
+176,San Francisco_10,2,1
+177,San Francisco_10,2,1
+178,San Francisco_10,2,1
+179,San Francisco_10,2,1
+180,San Francisco_10,2,1
+181,San Francisco_23,2,1
+182,San Francisco_23,2,1
+183,San Francisco_23,2,1
+184,San Francisco_23,2,1
+185,San Francisco_23,2,1
+186,San Francisco_10,2,1
+187,San Francisco_10,2,1
+188,San Francisco_10,2,1
+189,San Francisco_23,2,1
+190,San Francisco_23,2,1
+191,San Francisco_23,2,1
+192,San Francisco_23,2,1
+193,San Francisco_23,2,1
+194,San Francisco_23,2,1
+195,San Francisco_23,2,1
+196,San Francisco_09,2,1
+197,San Francisco_09,2,1
+198,San Francisco_09,2,1
+199,San Francisco_09,2,1
+200,San Francisco_09,2,1
+201,San Francisco_09,2,1
+202,San Francisco_09,2,1
+203,San Francisco_09,2,1
+204,San Francisco_09,2,1
+205,San Francisco_09,2,1
+206,San Francisco_09,2,1
+207,San Francisco_09,2,1
+208,San Francisco_23,2,1
+209,San Francisco_23,2,1
+210,San Francisco_23,2,1
+211,San Francisco_23,2,1
+212,San Francisco_08,2,1
+213,San Francisco_08,2,1
+214,San Francisco_08,2,1
+215,San Francisco_08,2,1
+216,San Francisco_08,2,1
+217,San Francisco_08,2,1
+218,San Francisco_28,2,1
+219,San Francisco_28,2,1
+220,San Francisco_28,2,1
+221,San Francisco_28,2,1
+222,San Francisco_28,2,1
+223,San Francisco_29,2,1
+224,San Francisco_29,2,1
+225,San Francisco_29,2,1
+226,San Francisco_08,2,1
+227,San Francisco_08,2,1
+228,San Francisco_08,2,1
+229,San Francisco_08,2,1
+230,San Francisco_08,2,1
+231,San Francisco_08,2,1
+232,San Francisco_08,2,1
+233,San Francisco_30,2,1
+234,San Francisco_26,2,1
+235,San Francisco_08,2,1
+236,San Francisco_08,2,1
+237,San Francisco_30,2,1
+238,San Francisco_23,2,1
+239,San Francisco_22,3,1
+240,San Francisco_21,3,1
+241,San Francisco_34,3,1
+242,San Francisco_39,3,1
+243,San Francisco_21,3,1
+244,San Francisco_21,3,1
+245,San Francisco_41,3,1
+246,San Francisco_34,3,1
+247,San Francisco_40,3,1
+248,San Francisco_07,3,1
+249,San Francisco_07,3,1
+250,San Francisco_07,3,1
+251,San Francisco_21,3,1
+252,San Francisco_21,3,1
+253,San Francisco_21,3,1
+254,San Francisco_21,3,1
+255,San Francisco_21,3,1
+256,San Francisco_21,3,1
+257,San Francisco_21,3,1
+258,San Francisco_20,3,1
+259,San Francisco_20,3,1
+260,San Francisco_20,3,1
+261,San Francisco_20,3,1
+262,San Francisco_20,3,1
+263,San Francisco_20,3,1
+264,San Francisco_20,3,1
+265,San Francisco_20,3,1
+266,San Francisco_20,3,1
+267,San Francisco_20,3,1
+268,San Francisco_20,3,1
+269,San Francisco_20,3,1
+270,San Francisco_34,3,1
+271,San Francisco_19,3,1
+272,San Francisco_38,3,1
+273,San Francisco_37,3,1
+274,San Francisco_37,3,1
+275,San Francisco_20,3,1
+276,San Francisco_20,3,1
+277,San Francisco_20,3,1
+278,San Francisco_21,3,1
+279,San Francisco_21,3,1
+280,San Francisco_21,3,1
+281,San Francisco_21,3,1
+282,San Francisco_21,3,1
+283,San Francisco_21,3,1
+284,San Francisco_21,3,1
+285,San Francisco_34,3,1
+286,San Francisco_34,3,1
+287,San Francisco_34,3,1
+288,San Francisco_34,3,1
+289,San Francisco_34,3,1
+290,San Francisco_34,3,1
+291,San Francisco_34,3,1
+292,San Francisco_34,3,1
+293,San Francisco_34,3,1
+294,San Francisco_34,3,1
+295,San Francisco_34,3,1
+296,San Francisco_39,3,1
+297,San Francisco_41,3,1
+298,San Francisco_40,3,1
+299,San Francisco_37,3,1
+300,San Francisco_34,3,1
+301,San Francisco_34,3,1
+302,San Francisco_17,3,1
+303,San Francisco_17,3,1
+304,San Francisco_19,3,1
+305,San Francisco_19,3,1
+306,San Francisco_18,3,1
+307,San Francisco_19,3,1
+308,San Francisco_19,3,1
+309,San Francisco_19,3,1
+310,San Francisco_19,3,1
+311,San Francisco_19,3,1
+312,San Francisco_19,3,1
+313,San Francisco_19,3,1
+314,San Francisco_19,3,1
+315,San Francisco_19,3,1
+316,San Francisco_38,3,1
+317,San Francisco_19,3,1
+318,San Francisco_38,3,1
+319,San Francisco_34,3,1
+320,San Francisco_35,3,1
+321,San Francisco_35,3,1
+322,San Francisco_38,3,1
+323,San Francisco_38,3,1
+324,San Francisco_35,3,1
+325,San Francisco_35,3,1
+326,San Francisco_38,3,1
+327,San Francisco_38,3,1
+328,San Francisco_38,3,1
+329,San Francisco_35,3,1
+330,San Francisco_35,3,1
+331,San Francisco_35,3,1
+332,San Francisco_35,3,1
+333,San Francisco_34,3,1
+334,San Francisco_34,3,1
+335,San Francisco_34,3,1
+336,San Francisco_34,3,1
+337,San Francisco_34,3,1
+338,San Francisco_34,3,1
+339,San Francisco_34,3,1
+340,San Francisco_42,3,1
+341,San Francisco_42,3,1
+342,San Francisco_42,3,1
+343,San Francisco_42,3,1
+344,San Francisco_42,3,1
+345,San Francisco_35,3,1
+346,San Francisco_35,3,1
+347,San Francisco_35,3,1
+348,San Francisco_35,3,1
+349,San Francisco_35,3,1
+350,San Francisco_35,3,1
+351,San Francisco_35,3,1
+352,San Francisco_35,3,1
+353,San Francisco_35,3,1
+354,San Francisco_35,3,1
+355,San Francisco_41,3,1
+356,San Francisco_34,3,1
+357,San Francisco_34,3,1
+358,San Francisco_34,3,1
+359,San Francisco_34,3,1
+360,San Francisco_34,3,1
+361,San Francisco_34,3,1
+362,San Francisco_39,3,1
+363,San Francisco_39,3,1
+364,San Francisco_39,3,1
+365,San Francisco_39,3,1
+366,San Francisco_39,3,1
+367,San Francisco_39,3,1
+368,San Francisco_39,3,1
+369,San Francisco_39,3,1
+370,San Francisco_41,3,1
+371,San Francisco_41,3,1
+372,San Francisco_41,3,1
+373,San Francisco_41,3,1
+374,San Francisco_41,3,1
+375,San Francisco_42,3,1
+376,San Francisco_42,3,1
+377,San Francisco_42,3,1
+378,San Francisco_42,3,1
+379,San Francisco_42,3,1
+380,San Francisco_42,3,1
+381,San Francisco_42,3,1
+382,San Francisco_42,3,1
+383,San Francisco_42,3,1
+384,San Francisco_40,3,1
+385,San Francisco_41,3,1
+386,San Francisco_40,3,1
+387,San Francisco_41,3,1
+388,San Francisco_41,3,1
+389,San Francisco_40,3,1
+390,San Francisco_40,3,1
+391,San Francisco_40,3,1
+392,San Francisco_40,3,1
+393,San Francisco_22,3,1
+394,San Francisco_22,3,1
+395,San Francisco_22,3,1
+396,San Francisco_22,3,1
+397,San Francisco_22,3,1
+398,San Francisco_22,3,1
+399,San Francisco_16,3,1
+400,San Francisco_16,3,1
+401,San Francisco_16,3,1
+402,San Francisco_22,3,1
+403,San Francisco_38,3,1
+404,San Francisco_38,3,1
+405,San Francisco_22,3,1
+406,San Francisco_22,3,1
+407,San Francisco_22,3,1
+408,San Francisco_18,3,1
+409,San Francisco_19,3,1
+410,San Francisco_19,3,1
+411,San Francisco_19,3,1
+412,San Francisco_38,3,1
+413,San Francisco_38,3,1
+414,San Francisco_35,3,1
+415,San Francisco_41,3,1
+416,San Francisco_41,3,1
+417,San Francisco_41,3,1
+418,San Francisco_41,3,1
+419,San Francisco_40,3,1
+420,San Francisco_40,3,1
+421,San Francisco_40,3,1
+422,San Francisco_38,3,1
+423,San Francisco_22,3,1
+424,San Francisco_22,3,1
+425,San Francisco_22,3,1
+426,San Francisco_18,3,1
+427,San Francisco_18,3,1
+428,San Francisco_39,3,1
+429,San Francisco_39,3,1
+430,San Francisco_39,3,1
+431,San Francisco_39,3,1
+432,San Francisco_42,3,1
+433,San Francisco_42,3,1
+434,San Francisco_42,3,1
+435,San Francisco_42,3,1
+436,San Francisco_42,3,1
+437,San Francisco_42,3,1
+438,San Francisco_38,3,1
+439,San Francisco_06,3,1
+440,San Francisco_07,3,1
+441,San Francisco_07,3,1
+442,San Francisco_06,3,1
+443,San Francisco_07,3,1
+444,San Francisco_07,3,1
+445,San Francisco_18,3,1
+446,San Francisco_18,3,1
+447,San Francisco_18,3,1
+448,San Francisco_36,3,1
+449,San Francisco_39,3,1
+450,San Francisco_36,3,1
+451,San Francisco_36,3,1
+452,San Francisco_16,3,1
+453,San Francisco_06,3,1
+454,San Francisco_06,3,1
+455,San Francisco_06,3,1
+456,San Francisco_06,3,1
+457,San Francisco_16,3,1
+458,San Francisco_16,3,1
+459,San Francisco_16,3,1
+460,San Francisco_19,3,1
+461,San Francisco_19,3,1
+462,San Francisco_17,3,1
+463,San Francisco_17,3,1
+464,San Francisco_17,3,1
+465,San Francisco_17,3,1
+466,San Francisco_17,3,1
+467,San Francisco_36,3,1
+468,San Francisco_36,3,1
+469,San Francisco_36,3,1
+470,San Francisco_36,3,1
+471,San Francisco_36,3,1
+472,San Francisco_36,3,1
+473,San Francisco_36,3,1
+474,San Francisco_37,3,1
+475,San Francisco_37,3,1
+476,San Francisco_37,3,1
+477,San Francisco_38,3,1
+478,San Francisco_38,3,1
+479,San Francisco_38,3,1
+480,San Francisco_38,3,1
+481,San Francisco_38,3,1
+482,San Francisco_40,3,1
+483,San Francisco_38,3,1
+484,San Francisco_38,3,1
+485,San Francisco_42,3,1
+486,San Francisco_42,3,1
+487,San Francisco_34,3,1
+488,San Francisco_34,3,1
+489,San Francisco_34,3,1
+490,San Francisco_16,3,1
+491,San Francisco_33,4,1
+492,San Francisco_43,4,1
+493,San Francisco_33,4,1
+494,San Francisco_33,4,1
+495,San Francisco_33,4,1
+496,San Francisco_33,4,1
+497,San Francisco_43,4,1
+498,San Francisco_43,4,1
+499,San Francisco_43,4,1
+500,San Francisco_43,4,1
+501,San Francisco_43,4,1
+502,San Francisco_43,4,1
+503,San Francisco_43,4,1
+504,San Francisco_32,4,1
+505,San Francisco_32,4,1
+506,San Francisco_32,4,1
+507,San Francisco_32,4,1
+508,San Francisco_32,4,1
+509,San Francisco_32,4,1
+510,San Francisco_32,4,1
+511,San Francisco_32,4,1
+512,San Francisco_32,4,1
+513,San Francisco_32,4,1
+514,San Francisco_32,4,1
+515,San Francisco_32,4,1
+516,San Francisco_32,4,1
+517,San Francisco_43,4,1
+518,San Francisco_43,4,1
+519,San Francisco_43,4,1
+520,San Francisco_43,4,1
+521,San Francisco_31,4,1
+522,San Francisco_31,4,1
+523,San Francisco_32,4,1
+524,San Francisco_32,4,1
+525,San Francisco_32,4,1
+526,San Francisco_32,4,1
+527,San Francisco_32,4,1
+528,San Francisco_32,4,1
+529,San Francisco_32,4,1
+530,San Francisco_31,4,1
+531,San Francisco_31,4,1
+532,San Francisco_31,4,1
+533,San Francisco_31,4,1
+534,San Francisco_31,4,1
+535,San Francisco_32,4,1
+536,San Francisco_32,4,1
+537,San Francisco_32,4,1
+538,San Francisco_32,4,1
+539,San Francisco_32,4,1
+540,San Francisco_32,4,1
+541,San Francisco_31,4,1
+542,San Francisco_31,4,1
+543,San Francisco_31,4,1
+544,San Francisco_31,4,1
+545,San Francisco_33,4,1
+546,San Francisco_33,4,1
+547,San Francisco_33,4,1
+548,San Francisco_33,4,1
+549,San Francisco_33,4,1
+550,San Francisco_33,4,1
+551,San Francisco_33,4,1
+552,San Francisco_43,4,1
+553,San Francisco_33,4,1
+554,San Francisco_33,4,1
+555,San Francisco_33,4,1
+556,San Francisco_33,4,1
+557,San Francisco_33,4,1
+558,San Francisco_33,4,1
+559,San Francisco_33,4,1
+560,San Francisco_33,4,1
+561,San Francisco_33,4,1
+562,San Francisco_33,4,1
+563,San Francisco_33,4,1
+564,San Francisco_33,4,1
+565,San Francisco_43,4,1
+566,San Francisco_43,4,1
+567,San Francisco_43,4,1
+568,San Francisco_43,4,1
+569,San Francisco_43,4,1
+570,San Francisco_43,4,1
+571,San Francisco_32,4,1
+572,San Francisco_32,4,1
+573,San Francisco_32,4,1
+574,San Francisco_32,4,1
+575,San Francisco_32,4,1
+576,San Francisco_32,4,1
+577,San Francisco_32,4,1
+578,San Francisco_32,4,1
+579,San Francisco_32,4,1
+580,San Francisco_32,4,1
+581,San Francisco_32,4,1
+582,San Francisco_32,4,1
+583,San Francisco_32,4,1
+584,San Francisco_32,4,1
+585,San Francisco_32,4,1
+586,San Francisco_32,4,1
+587,San Francisco_32,4,1
+588,San Francisco_32,4,1
+589,San Francisco_32,4,1
+590,San Francisco_43,4,1
+591,San Francisco_43,4,1
+592,San Francisco_43,4,1
+593,San Francisco_43,4,1
+594,San Francisco_31,4,1
+595,San Francisco_31,4,1
+596,San Francisco_43,4,1
+597,San Francisco_43,4,1
+598,San Francisco_43,4,1
+599,San Francisco_43,4,1
+600,San Francisco_43,4,1
+601,San Francisco_33,4,1
+602,San Francisco_33,4,1
+603,San Francisco_16,3,1
+604,San Francisco_16,3,1
+605,San Francisco_16,3,1
+606,San Francisco_16,3,1
+607,San Francisco_04,1,1
+608,San Francisco_04,1,1
+609,San Francisco_04,1,1
+610,San Francisco_04,1,1
+611,San Francisco_04,1,1
+612,San Francisco_04,1,1
+613,San Francisco_04,1,1
+614,San Francisco_04,1,1
+615,San Francisco_14,1,1
+616,San Mateo_05,5,2
+617,San Mateo_10,5,2
+618,San Mateo_11,5,2
+619,San Mateo_37,5,2
+620,San Mateo_37,5,2
+621,San Mateo_11,5,2
+622,San Mateo_12,5,2
+623,San Mateo_02,5,2
+624,San Mateo_02,5,2
+625,San Mateo_04,5,2
+626,San Mateo_04,5,2
+627,San Mateo_05,5,2
+628,San Mateo_05,5,2
+629,San Mateo_08,5,2
+630,San Mateo_05,5,2
+631,San Mateo_37,5,2
+632,San Mateo_37,5,2
+633,San Mateo_37,5,2
+634,San Mateo_37,5,2
+635,San Mateo_37,5,2
+636,San Mateo_37,5,2
+637,San Mateo_11,5,2
+638,San Mateo_11,5,2
+639,San Mateo_12,5,2
+640,San Mateo_12,5,2
+641,San Mateo_15,5,2
+642,San Mateo_15,5,2
+643,San Mateo_15,5,2
+644,San Mateo_04,5,2
+645,San Mateo_09,5,2
+646,San Mateo_13,5,2
+647,San Mateo_13,5,2
+648,San Mateo_12,5,2
+649,San Mateo_12,5,2
+650,San Mateo_12,5,2
+651,San Mateo_12,5,2
+652,San Mateo_10,5,2
+653,San Mateo_06,5,2
+654,San Mateo_13,5,2
+655,San Mateo_13,5,2
+656,San Mateo_13,5,2
+657,San Mateo_13,5,2
+658,San Mateo_15,5,2
+659,San Mateo_06,5,2
+660,San Mateo_06,5,2
+661,San Mateo_08,5,2
+662,San Mateo_08,5,2
+663,San Mateo_08,5,2
+664,San Mateo_02,5,2
+665,San Mateo_14,5,2
+666,San Mateo_04,5,2
+667,San Mateo_15,5,2
+668,San Mateo_15,5,2
+669,San Mateo_08,5,2
+670,San Mateo_08,5,2
+671,San Mateo_10,5,2
+672,San Mateo_15,5,2
+673,San Mateo_15,5,2
+674,San Mateo_14,5,2
+675,San Mateo_15,5,2
+676,San Mateo_15,5,2
+677,San Mateo_15,5,2
+678,San Mateo_05,5,2
+679,San Mateo_02,5,2
+680,San Mateo_07,5,2
+681,San Mateo_07,5,2
+682,San Mateo_15,5,2
+683,San Mateo_02,5,2
+684,San Mateo_02,5,2
+685,San Mateo_02,5,2
+686,San Mateo_01,5,2
+687,San Mateo_01,5,2
+688,San Mateo_01,5,2
+689,San Mateo_01,5,2
+690,San Mateo_01,5,2
+691,San Mateo_01,5,2
+692,San Mateo_01,5,2
+693,San Mateo_01,5,2
+694,San Mateo_03,5,2
+695,San Mateo_07,5,2
+696,San Mateo_07,5,2
+697,San Mateo_07,5,2
+698,San Mateo_07,5,2
+699,San Mateo_10,5,2
+700,San Mateo_04,5,2
+701,San Mateo_04,5,2
+702,San Mateo_04,5,2
+703,San Mateo_04,5,2
+704,San Mateo_04,5,2
+705,San Mateo_05,5,2
+706,San Mateo_05,5,2
+707,San Mateo_12,5,2
+708,San Mateo_13,5,2
+709,San Mateo_13,5,2
+710,San Mateo_12,5,2
+711,San Mateo_12,5,2
+712,San Mateo_15,5,2
+713,San Mateo_02,5,2
+714,San Mateo_02,5,2
+715,San Mateo_02,5,2
+716,San Mateo_01,5,2
+717,San Mateo_15,5,2
+718,San Mateo_15,5,2
+719,San Mateo_15,5,2
+720,San Mateo_03,5,2
+721,San Mateo_04,5,2
+722,San Mateo_03,5,2
+723,San Mateo_03,5,2
+724,San Mateo_13,5,2
+725,San Mateo_09,5,2
+726,San Mateo_02,5,2
+727,San Mateo_03,5,2
+728,San Mateo_06,5,2
+729,San Mateo_06,5,2
+730,San Mateo_08,5,2
+731,San Mateo_10,5,2
+732,San Mateo_12,5,2
+733,San Mateo_12,5,2
+734,San Mateo_02,5,2
+735,San Mateo_10,5,2
+736,San Mateo_10,5,2
+737,San Mateo_09,5,2
+738,San Mateo_16,6,2
+739,San Mateo_22,6,2
+740,San Mateo_22,6,2
+741,San Mateo_21,6,2
+742,San Mateo_18,6,2
+743,San Mateo_19,6,2
+744,San Mateo_19,6,2
+745,San Mateo_19,6,2
+746,San Mateo_19,6,2
+747,San Mateo_19,6,2
+748,San Mateo_19,6,2
+749,San Mateo_19,6,2
+750,San Mateo_23,6,2
+751,San Mateo_23,6,2
+752,San Mateo_16,6,2
+753,San Mateo_16,6,2
+754,San Mateo_18,6,2
+755,San Mateo_22,6,2
+756,San Mateo_19,6,2
+757,San Mateo_19,6,2
+758,San Mateo_19,6,2
+759,San Mateo_19,6,2
+760,San Mateo_36,6,2
+761,San Mateo_36,6,2
+762,San Mateo_36,6,2
+763,San Mateo_36,6,2
+764,San Mateo_24,6,2
+765,San Mateo_17,6,2
+766,San Mateo_17,6,2
+767,San Mateo_17,6,2
+768,San Mateo_17,6,2
+769,San Mateo_17,6,2
+770,San Mateo_17,6,2
+771,San Mateo_24,6,2
+772,San Mateo_24,6,2
+773,San Mateo_24,6,2
+774,San Mateo_17,6,2
+775,San Mateo_17,6,2
+776,San Mateo_18,6,2
+777,San Mateo_18,6,2
+778,San Mateo_18,6,2
+779,San Mateo_18,6,2
+780,San Mateo_18,6,2
+781,San Mateo_18,6,2
+782,San Mateo_24,6,2
+783,San Mateo_18,6,2
+784,San Mateo_18,6,2
+785,San Mateo_18,6,2
+786,San Mateo_20,6,2
+787,San Mateo_18,6,2
+788,San Mateo_21,6,2
+789,San Mateo_21,6,2
+790,San Mateo_24,6,2
+791,San Mateo_24,6,2
+792,San Mateo_16,6,2
+793,San Mateo_17,6,2
+794,San Mateo_20,6,2
+795,San Mateo_21,6,2
+796,San Mateo_21,6,2
+797,San Mateo_21,6,2
+798,San Mateo_17,6,2
+799,San Mateo_17,6,2
+800,San Mateo_17,6,2
+801,San Mateo_17,6,2
+802,San Mateo_17,6,2
+803,San Mateo_17,6,2
+804,San Mateo_17,6,2
+805,San Mateo_17,6,2
+806,San Mateo_21,6,2
+807,San Mateo_20,6,2
+808,San Mateo_20,6,2
+809,San Mateo_20,6,2
+810,San Mateo_20,6,2
+811,San Mateo_17,6,2
+812,San Mateo_17,6,2
+813,San Mateo_17,6,2
+814,San Mateo_19,6,2
+815,San Mateo_18,6,2
+816,San Mateo_19,6,2
+817,San Mateo_19,6,2
+818,San Mateo_19,6,2
+819,San Mateo_21,6,2
+820,San Mateo_21,6,2
+821,San Mateo_21,6,2
+822,San Mateo_21,6,2
+823,San Mateo_24,6,2
+824,San Mateo_16,6,2
+825,San Mateo_16,6,2
+826,San Mateo_18,6,2
+827,San Mateo_16,6,2
+828,San Mateo_16,6,2
+829,San Mateo_18,6,2
+830,San Mateo_18,6,2
+831,San Mateo_18,6,2
+832,San Mateo_18,6,2
+833,San Mateo_18,6,2
+834,San Mateo_20,6,2
+835,San Mateo_20,6,2
+836,San Mateo_28,7,2
+837,San Mateo_29,7,2
+838,San Mateo_30,7,2
+839,San Mateo_25,7,2
+840,San Mateo_31,7,2
+841,San Mateo_31,7,2
+842,San Mateo_31,7,2
+843,San Mateo_29,7,2
+844,San Mateo_30,7,2
+845,San Mateo_25,7,2
+846,San Mateo_33,7,2
+847,San Mateo_31,7,2
+848,San Mateo_30,7,2
+849,San Mateo_32,7,2
+850,San Mateo_32,7,2
+851,San Mateo_32,7,2
+852,San Mateo_35,7,2
+853,San Mateo_32,7,2
+854,San Mateo_34,7,2
+855,San Mateo_34,7,2
+856,San Mateo_35,7,2
+857,San Mateo_35,7,2
+858,San Mateo_30,7,2
+859,San Mateo_35,7,2
+860,San Mateo_30,7,2
+861,San Mateo_30,7,2
+862,San Mateo_30,7,2
+863,San Mateo_30,7,2
+864,San Mateo_30,7,2
+865,San Mateo_32,7,2
+866,San Mateo_32,7,2
+867,San Mateo_32,7,2
+868,San Mateo_33,7,2
+869,San Mateo_30,7,2
+870,San Mateo_30,7,2
+871,San Mateo_27,7,2
+872,San Mateo_31,7,2
+873,San Mateo_33,7,2
+874,San Mateo_33,7,2
+875,San Mateo_33,7,2
+876,San Mateo_28,7,2
+877,San Mateo_28,7,2
+878,San Mateo_28,7,2
+879,San Mateo_34,7,2
+880,San Mateo_28,7,2
+881,San Mateo_28,7,2
+882,San Mateo_28,7,2
+883,San Mateo_32,7,2
+884,San Mateo_32,7,2
+885,San Mateo_32,7,2
+886,San Mateo_25,7,2
+887,San Mateo_25,7,2
+888,San Mateo_33,7,2
+889,San Mateo_34,7,2
+890,San Mateo_34,7,2
+891,San Mateo_34,7,2
+892,San Mateo_34,7,2
+893,San Mateo_31,7,2
+894,San Mateo_31,7,2
+895,San Mateo_31,7,2
+896,San Mateo_33,7,2
+897,San Mateo_33,7,2
+898,San Mateo_28,7,2
+899,San Mateo_31,7,2
+900,San Mateo_26,7,2
+901,San Mateo_26,7,2
+902,San Mateo_27,7,2
+903,San Mateo_29,7,2
+904,San Mateo_31,7,2
+905,San Mateo_31,7,2
+906,San Mateo_31,7,2
+907,San Mateo_31,7,2
+908,San Mateo_31,7,2
+909,San Mateo_33,7,2
+910,San Mateo_31,7,2
+911,San Mateo_31,7,2
+912,San Mateo_33,7,2
+913,San Mateo_34,7,2
+914,San Mateo_31,7,2
+915,San Mateo_31,7,2
+916,San Mateo_31,7,2
+917,San Mateo_31,7,2
+918,Santa Clara_34,8,3
+919,Santa Clara_34,8,3
+920,Santa Clara_34,8,3
+921,Santa Clara_34,8,3
+922,Santa Clara_34,8,3
+923,Santa Clara_38,8,3
+924,Santa Clara_38,8,3
+925,Santa Clara_38,8,3
+926,Santa Clara_39,8,3
+927,Santa Clara_40,8,3
+928,Santa Clara_41,8,3
+929,Santa Clara_50,8,3
+930,Santa Clara_43,8,3
+931,Santa Clara_37,8,3
+932,Santa Clara_34,8,3
+933,Santa Clara_34,8,3
+934,Santa Clara_34,8,3
+935,Santa Clara_38,8,3
+936,Santa Clara_40,8,3
+937,Santa Clara_40,8,3
+938,Santa Clara_34,8,3
+939,Santa Clara_43,8,3
+940,Santa Clara_42,8,3
+941,Santa Clara_43,8,3
+942,Santa Clara_37,8,3
+943,Santa Clara_37,8,3
+944,Santa Clara_35,8,3
+945,Santa Clara_35,8,3
+946,Santa Clara_35,8,3
+947,Santa Clara_37,8,3
+948,Santa Clara_37,8,3
+949,Santa Clara_37,8,3
+950,Santa Clara_37,8,3
+951,Santa Clara_37,8,3
+952,Santa Clara_41,8,3
+953,Santa Clara_50,8,3
+954,Santa Clara_50,8,3
+955,Santa Clara_50,8,3
+956,Santa Clara_41,8,3
+957,Santa Clara_41,8,3
+958,Santa Clara_39,8,3
+959,Santa Clara_42,8,3
+960,Santa Clara_50,8,3
+961,Santa Clara_37,8,3
+962,Santa Clara_40,8,3
+963,Santa Clara_37,8,3
+964,Santa Clara_39,8,3
+965,Santa Clara_39,8,3
+966,Santa Clara_39,8,3
+967,Santa Clara_40,8,3
+968,Santa Clara_37,8,3
+969,Santa Clara_37,8,3
+970,Santa Clara_34,8,3
+971,Santa Clara_34,8,3
+972,Santa Clara_35,8,3
+973,Santa Clara_35,8,3
+974,Santa Clara_35,8,3
+975,Santa Clara_35,8,3
+976,Santa Clara_37,8,3
+977,Santa Clara_35,8,3
+978,Santa Clara_37,8,3
+979,Santa Clara_38,8,3
+980,Santa Clara_37,8,3
+981,Santa Clara_37,8,3
+982,Santa Clara_35,8,3
+983,Santa Clara_35,8,3
+984,Santa Clara_35,8,3
+985,Santa Clara_35,8,3
+986,Santa Clara_35,8,3
+987,Santa Clara_37,8,3
+988,Santa Clara_35,8,3
+989,Santa Clara_35,8,3
+990,Santa Clara_35,8,3
+991,Santa Clara_42,8,3
+992,Santa Clara_40,8,3
+993,Santa Clara_42,8,3
+994,Santa Clara_41,8,3
+995,Santa Clara_41,8,3
+996,Santa Clara_41,8,3
+997,Santa Clara_41,8,3
+998,Santa Clara_41,8,3
+999,Santa Clara_38,8,3
+1000,Santa Clara_42,8,3
+1001,Santa Clara_42,8,3
+1002,Santa Clara_41,8,3
+1003,Santa Clara_41,8,3
+1004,Santa Clara_41,8,3
+1005,Santa Clara_38,8,3
+1006,Santa Clara_40,8,3
+1007,Santa Clara_40,8,3
+1008,Santa Clara_40,8,3
+1009,Santa Clara_40,8,3
+1010,Santa Clara_39,8,3
+1011,Santa Clara_50,8,3
+1012,Santa Clara_50,8,3
+1013,Santa Clara_30,9,3
+1014,Santa Clara_31,9,3
+1015,Santa Clara_31,9,3
+1016,Santa Clara_31,9,3
+1017,Santa Clara_31,9,3
+1018,Santa Clara_31,9,3
+1019,Santa Clara_31,9,3
+1020,Santa Clara_31,9,3
+1021,Santa Clara_33,9,3
+1022,Santa Clara_36,9,3
+1023,Santa Clara_28,9,3
+1024,Santa Clara_28,9,3
+1025,Santa Clara_24,9,3
+1026,Santa Clara_30,9,3
+1027,Santa Clara_30,9,3
+1028,Santa Clara_30,9,3
+1029,Santa Clara_28,9,3
+1030,Santa Clara_32,9,3
+1031,Santa Clara_33,9,3
+1032,Santa Clara_31,9,3
+1033,Santa Clara_31,9,3
+1034,Santa Clara_31,9,3
+1035,Santa Clara_31,9,3
+1036,Santa Clara_30,9,3
+1037,Santa Clara_29,9,3
+1038,Santa Clara_28,9,3
+1039,Santa Clara_15,9,3
+1040,Santa Clara_24,9,3
+1041,Santa Clara_15,9,3
+1042,Santa Clara_33,9,3
+1043,Santa Clara_27,9,3
+1044,Santa Clara_14,9,3
+1045,Santa Clara_14,9,3
+1046,Santa Clara_14,9,3
+1047,Santa Clara_14,9,3
+1048,Santa Clara_25,9,3
+1049,Santa Clara_28,9,3
+1050,Santa Clara_15,9,3
+1051,Santa Clara_33,9,3
+1052,Santa Clara_14,9,3
+1053,Santa Clara_14,9,3
+1054,Santa Clara_14,9,3
+1055,Santa Clara_25,9,3
+1056,Santa Clara_27,9,3
+1057,Santa Clara_28,9,3
+1058,Santa Clara_25,9,3
+1059,Santa Clara_29,9,3
+1060,Santa Clara_24,9,3
+1061,Santa Clara_30,9,3
+1062,Santa Clara_24,9,3
+1063,Santa Clara_24,9,3
+1064,Santa Clara_30,9,3
+1065,Santa Clara_30,9,3
+1066,Santa Clara_33,9,3
+1067,Santa Clara_14,9,3
+1068,Santa Clara_14,9,3
+1069,Santa Clara_29,9,3
+1070,Santa Clara_14,9,3
+1071,Santa Clara_26,9,3
+1072,Santa Clara_26,9,3
+1073,Santa Clara_29,9,3
+1074,Santa Clara_30,9,3
+1075,Santa Clara_30,9,3
+1076,Santa Clara_30,9,3
+1077,Santa Clara_28,9,3
+1078,Santa Clara_32,9,3
+1079,Santa Clara_30,9,3
+1080,Santa Clara_32,9,3
+1081,Santa Clara_33,9,3
+1082,Santa Clara_29,9,3
+1083,Santa Clara_29,9,3
+1084,Santa Clara_31,9,3
+1085,Santa Clara_28,9,3
+1086,Santa Clara_28,9,3
+1087,Santa Clara_32,9,3
+1088,Santa Clara_29,9,3
+1089,Santa Clara_29,9,3
+1090,Santa Clara_32,9,3
+1091,Santa Clara_29,9,3
+1092,Santa Clara_32,9,3
+1093,Santa Clara_15,9,3
+1094,Santa Clara_26,9,3
+1095,Santa Clara_25,9,3
+1096,Santa Clara_29,9,3
+1097,Santa Clara_32,9,3
+1098,Santa Clara_32,9,3
+1099,Santa Clara_32,9,3
+1100,Santa Clara_32,9,3
+1101,Santa Clara_32,9,3
+1102,Santa Clara_30,9,3
+1103,Santa Clara_30,9,3
+1104,Santa Clara_30,9,3
+1105,Santa Clara_24,9,3
+1106,Santa Clara_33,9,3
+1107,Santa Clara_33,9,3
+1108,Santa Clara_31,9,3
+1109,Santa Clara_31,9,3
+1110,Santa Clara_27,9,3
+1111,Santa Clara_32,9,3
+1112,Santa Clara_15,9,3
+1113,Santa Clara_25,9,3
+1114,Santa Clara_29,9,3
+1115,Santa Clara_30,9,3
+1116,Santa Clara_29,9,3
+1117,Santa Clara_29,9,3
+1118,Santa Clara_29,9,3
+1119,Santa Clara_23,10,3
+1120,Santa Clara_23,10,3
+1121,Santa Clara_23,10,3
+1122,Santa Clara_23,10,3
+1123,Santa Clara_23,10,3
+1124,Santa Clara_23,10,3
+1125,Santa Clara_23,10,3
+1126,Santa Clara_23,10,3
+1127,Santa Clara_23,10,3
+1128,Santa Clara_23,10,3
+1129,Santa Clara_23,10,3
+1130,Santa Clara_23,10,3
+1131,Santa Clara_23,10,3
+1132,Santa Clara_23,10,3
+1133,Santa Clara_23,10,3
+1134,Santa Clara_23,10,3
+1135,Santa Clara_23,10,3
+1136,Santa Clara_23,10,3
+1137,Santa Clara_23,10,3
+1138,Santa Clara_23,10,3
+1139,Santa Clara_44,10,3
+1140,Santa Clara_23,10,3
+1141,Santa Clara_23,10,3
+1142,Santa Clara_23,10,3
+1143,Santa Clara_23,10,3
+1144,Santa Clara_23,10,3
+1145,Santa Clara_23,10,3
+1146,Santa Clara_23,10,3
+1147,Santa Clara_23,10,3
+1148,Santa Clara_23,10,3
+1149,Santa Clara_23,10,3
+1150,Santa Clara_23,10,3
+1151,Santa Clara_23,10,3
+1152,Santa Clara_23,10,3
+1153,Santa Clara_23,10,3
+1154,Santa Clara_23,10,3
+1155,Santa Clara_23,10,3
+1156,Santa Clara_23,10,3
+1157,Santa Clara_23,10,3
+1158,Santa Clara_23,10,3
+1159,Santa Clara_23,10,3
+1160,Santa Clara_23,10,3
+1161,Santa Clara_23,10,3
+1162,Santa Clara_23,10,3
+1163,Santa Clara_23,10,3
+1164,Santa Clara_23,10,3
+1165,Santa Clara_23,10,3
+1166,Santa Clara_23,10,3
+1167,Santa Clara_23,10,3
+1168,Santa Clara_23,10,3
+1169,Santa Clara_23,10,3
+1170,Santa Clara_23,10,3
+1171,Santa Clara_23,10,3
+1172,Santa Clara_23,10,3
+1173,Santa Clara_44,10,3
+1174,Santa Clara_23,10,3
+1175,Santa Clara_23,10,3
+1176,Santa Clara_23,10,3
+1177,Santa Clara_23,10,3
+1178,Santa Clara_23,10,3
+1179,Santa Clara_23,10,3
+1180,Santa Clara_23,10,3
+1181,Santa Clara_18,11,3
+1182,Santa Clara_18,11,3
+1183,Santa Clara_18,11,3
+1184,Santa Clara_18,11,3
+1185,Santa Clara_18,11,3
+1186,Santa Clara_18,11,3
+1187,Santa Clara_03,11,3
+1188,Santa Clara_02,11,3
+1189,Santa Clara_02,11,3
+1190,Santa Clara_07,11,3
+1191,Santa Clara_07,11,3
+1192,Santa Clara_17,11,3
+1193,Santa Clara_17,11,3
+1194,Santa Clara_09,11,3
+1195,Santa Clara_18,11,3
+1196,Santa Clara_18,11,3
+1197,Santa Clara_18,11,3
+1198,Santa Clara_06,11,3
+1199,Santa Clara_07,11,3
+1200,Santa Clara_07,11,3
+1201,Santa Clara_07,11,3
+1202,Santa Clara_08,11,3
+1203,Santa Clara_17,11,3
+1204,Santa Clara_17,11,3
+1205,Santa Clara_05,11,3
+1206,Santa Clara_02,11,3
+1207,Santa Clara_05,11,3
+1208,Santa Clara_17,11,3
+1209,Santa Clara_17,11,3
+1210,Santa Clara_17,11,3
+1211,Santa Clara_09,11,3
+1212,Santa Clara_09,11,3
+1213,Santa Clara_09,11,3
+1214,Santa Clara_16,11,3
+1215,Santa Clara_08,11,3
+1216,Santa Clara_09,11,3
+1217,Santa Clara_09,11,3
+1218,Santa Clara_01,11,3
+1219,Santa Clara_18,11,3
+1220,Santa Clara_18,11,3
+1221,Santa Clara_02,11,3
+1222,Santa Clara_04,11,3
+1223,Santa Clara_18,11,3
+1224,Santa Clara_01,11,3
+1225,Santa Clara_01,11,3
+1226,Santa Clara_01,11,3
+1227,Santa Clara_01,11,3
+1228,Santa Clara_03,11,3
+1229,Santa Clara_09,11,3
+1230,Santa Clara_08,11,3
+1231,Santa Clara_05,11,3
+1232,Santa Clara_03,11,3
+1233,Santa Clara_05,11,3
+1234,Santa Clara_02,11,3
+1235,Santa Clara_01,11,3
+1236,Santa Clara_04,11,3
+1237,Santa Clara_02,11,3
+1238,Santa Clara_02,11,3
+1239,Santa Clara_03,11,3
+1240,Santa Clara_02,11,3
+1241,Santa Clara_09,11,3
+1242,Santa Clara_17,11,3
+1243,Santa Clara_16,11,3
+1244,Santa Clara_08,11,3
+1245,Santa Clara_08,11,3
+1246,Santa Clara_08,11,3
+1247,Santa Clara_16,11,3
+1248,Santa Clara_08,11,3
+1249,Santa Clara_18,11,3
+1250,Santa Clara_06,11,3
+1251,Santa Clara_01,11,3
+1252,Santa Clara_02,11,3
+1253,Santa Clara_01,11,3
+1254,Santa Clara_01,11,3
+1255,Santa Clara_18,11,3
+1256,Santa Clara_18,11,3
+1257,Santa Clara_18,11,3
+1258,Santa Clara_18,11,3
+1259,Santa Clara_04,11,3
+1260,Santa Clara_01,11,3
+1261,Santa Clara_02,11,3
+1262,Santa Clara_02,11,3
+1263,Santa Clara_02,11,3
+1264,Santa Clara_02,11,3
+1265,Santa Clara_02,11,3
+1266,Santa Clara_02,11,3
+1267,Santa Clara_18,11,3
+1268,Santa Clara_18,11,3
+1269,Santa Clara_18,11,3
+1270,Santa Clara_05,11,3
+1271,Santa Clara_04,11,3
+1272,Santa Clara_04,11,3
+1273,Santa Clara_02,11,3
+1274,Santa Clara_02,11,3
+1275,Santa Clara_02,11,3
+1276,Santa Clara_02,11,3
+1277,Santa Clara_02,11,3
+1278,Santa Clara_03,11,3
+1279,Santa Clara_02,11,3
+1280,Santa Clara_02,11,3
+1281,Santa Clara_09,11,3
+1282,Santa Clara_08,11,3
+1283,Santa Clara_09,11,3
+1284,Santa Clara_04,11,3
+1285,Santa Clara_04,11,3
+1286,Santa Clara_04,11,3
+1287,Santa Clara_02,11,3
+1288,Santa Clara_03,11,3
+1289,Santa Clara_02,11,3
+1290,Santa Clara_02,11,3
+1291,Santa Clara_02,11,3
+1292,Santa Clara_02,11,3
+1293,Santa Clara_02,11,3
+1294,Santa Clara_02,11,3
+1295,Santa Clara_04,11,3
+1296,Santa Clara_06,11,3
+1297,Santa Clara_04,11,3
+1298,Santa Clara_18,11,3
+1299,Santa Clara_16,11,3
+1300,Santa Clara_16,11,3
+1301,Santa Clara_16,11,3
+1302,Santa Clara_18,11,3
+1303,Santa Clara_18,11,3
+1304,Santa Clara_16,11,3
+1305,Santa Clara_16,11,3
+1306,Santa Clara_18,11,3
+1307,Santa Clara_18,11,3
+1308,Santa Clara_01,11,3
+1309,Santa Clara_10,12,3
+1310,Santa Clara_10,12,3
+1311,Santa Clara_10,12,3
+1312,Santa Clara_10,12,3
+1313,Santa Clara_10,12,3
+1314,Santa Clara_10,12,3
+1315,Santa Clara_10,12,3
+1316,Santa Clara_10,12,3
+1317,Santa Clara_10,12,3
+1318,Santa Clara_10,12,3
+1319,Santa Clara_12,12,3
+1320,Santa Clara_13,12,3
+1321,Santa Clara_13,12,3
+1322,Santa Clara_13,12,3
+1323,Santa Clara_13,12,3
+1324,Santa Clara_13,12,3
+1325,Santa Clara_13,12,3
+1326,Santa Clara_13,12,3
+1327,Santa Clara_13,12,3
+1328,Santa Clara_13,12,3
+1329,Santa Clara_13,12,3
+1330,Santa Clara_13,12,3
+1331,Santa Clara_10,12,3
+1332,Santa Clara_10,12,3
+1333,Santa Clara_10,12,3
+1334,Santa Clara_10,12,3
+1335,Santa Clara_10,12,3
+1336,Santa Clara_10,12,3
+1337,Santa Clara_10,12,3
+1338,Santa Clara_10,12,3
+1339,Santa Clara_10,12,3
+1340,Santa Clara_10,12,3
+1341,Santa Clara_11,12,3
+1342,Santa Clara_11,12,3
+1343,Santa Clara_11,12,3
+1344,Santa Clara_11,12,3
+1345,Santa Clara_12,12,3
+1346,Santa Clara_12,12,3
+1347,Santa Clara_13,12,3
+1348,Santa Clara_13,12,3
+1349,Santa Clara_10,12,3
+1350,Santa Clara_10,12,3
+1351,Santa Clara_10,12,3
+1352,Santa Clara_10,12,3
+1353,Santa Clara_10,12,3
+1354,Santa Clara_10,12,3
+1355,Santa Clara_11,12,3
+1356,Santa Clara_11,12,3
+1357,Santa Clara_11,12,3
+1358,Santa Clara_11,12,3
+1359,Santa Clara_11,12,3
+1360,Santa Clara_12,12,3
+1361,Santa Clara_11,12,3
+1362,Santa Clara_11,12,3
+1363,Santa Clara_11,12,3
+1364,Santa Clara_11,12,3
+1365,Santa Clara_11,12,3
+1366,Santa Clara_11,12,3
+1367,Santa Clara_11,12,3
+1368,Santa Clara_13,12,3
+1369,Santa Clara_13,12,3
+1370,Santa Clara_12,12,3
+1371,Santa Clara_13,12,3
+1372,Santa Clara_13,12,3
+1373,Santa Clara_13,12,3
+1374,Santa Clara_13,12,3
+1375,Santa Clara_13,12,3
+1376,Santa Clara_12,12,3
+1377,Santa Clara_13,12,3
+1378,Santa Clara_11,12,3
+1379,Santa Clara_11,12,3
+1380,Santa Clara_11,12,3
+1381,Santa Clara_13,12,3
+1382,Santa Clara_12,12,3
+1383,Santa Clara_13,12,3
+1384,Santa Clara_13,12,3
+1385,Santa Clara_13,12,3
+1386,Santa Clara_11,12,3
+1387,Santa Clara_11,12,3
+1388,Santa Clara_11,12,3
+1389,Santa Clara_11,12,3
+1390,Santa Clara_11,12,3
+1391,Santa Clara_11,12,3
+1392,Santa Clara_11,12,3
+1393,Santa Clara_11,12,3
+1394,Santa Clara_13,12,3
+1395,Santa Clara_13,12,3
+1396,Santa Clara_12,12,3
+1397,Santa Clara_12,12,3
+1398,Santa Clara_12,12,3
+1399,Santa Clara_12,12,3
+1400,Santa Clara_12,12,3
+1401,Santa Clara_13,12,3
+1402,Santa Clara_12,12,3
+1403,Santa Clara_13,12,3
+1404,Santa Clara_12,12,3
+1405,Santa Clara_13,12,3
+1406,Santa Clara_12,12,3
+1407,Santa Clara_12,12,3
+1408,Santa Clara_12,12,3
+1409,Santa Clara_13,12,3
+1410,Santa Clara_13,12,3
+1411,Santa Clara_22,13,3
+1412,Santa Clara_20,13,3
+1413,Santa Clara_20,13,3
+1414,Santa Clara_20,13,3
+1415,Santa Clara_20,13,3
+1416,Santa Clara_20,13,3
+1417,Santa Clara_19,13,3
+1418,Santa Clara_20,13,3
+1419,Santa Clara_20,13,3
+1420,Santa Clara_20,13,3
+1421,Santa Clara_21,13,3
+1422,Santa Clara_21,13,3
+1423,Santa Clara_19,13,3
+1424,Santa Clara_19,13,3
+1425,Santa Clara_19,13,3
+1426,Santa Clara_21,13,3
+1427,Santa Clara_19,13,3
+1428,Santa Clara_19,13,3
+1429,Santa Clara_19,13,3
+1430,Santa Clara_19,13,3
+1431,Santa Clara_19,13,3
+1432,Santa Clara_21,13,3
+1433,Santa Clara_21,13,3
+1434,Santa Clara_19,13,3
+1435,Santa Clara_19,13,3
+1436,Santa Clara_21,13,3
+1437,Santa Clara_21,13,3
+1438,Santa Clara_21,13,3
+1439,Santa Clara_19,13,3
+1440,Santa Clara_19,13,3
+1441,Santa Clara_19,13,3
+1442,Santa Clara_22,13,3
+1443,Santa Clara_22,13,3
+1444,Santa Clara_22,13,3
+1445,Santa Clara_22,13,3
+1446,Santa Clara_22,13,3
+1447,Santa Clara_22,13,3
+1448,Santa Clara_22,13,3
+1449,Santa Clara_19,13,3
+1450,Santa Clara_19,13,3
+1451,Santa Clara_19,13,3
+1452,Santa Clara_19,13,3
+1453,Santa Clara_19,13,3
+1454,Santa Clara_19,13,3
+1455,Santa Clara_21,13,3
+1456,Santa Clara_21,13,3
+1457,Santa Clara_19,13,3
+1458,Santa Clara_19,13,3
+1459,Santa Clara_19,13,3
+1460,Santa Clara_19,13,3
+1461,Santa Clara_19,13,3
+1462,Santa Clara_19,13,3
+1463,Santa Clara_21,13,3
+1464,Santa Clara_19,13,3
+1465,Santa Clara_19,13,3
+1466,Santa Clara_21,13,3
+1467,Santa Clara_21,13,3
+1468,Santa Clara_21,13,3
+1469,Santa Clara_46,14,3
+1470,Santa Clara_48,14,3
+1471,Santa Clara_45,14,3
+1472,Santa Clara_46,14,3
+1473,Santa Clara_45,14,3
+1474,Santa Clara_46,14,3
+1475,Santa Clara_47,14,3
+1476,Santa Clara_48,14,3
+1477,Santa Clara_48,14,3
+1478,Santa Clara_48,14,3
+1479,Santa Clara_49,14,3
+1480,Santa Clara_46,14,3
+1481,Santa Clara_47,14,3
+1482,Santa Clara_48,14,3
+1483,Santa Clara_49,14,3
+1484,Santa Clara_46,14,3
+1485,Santa Clara_46,14,3
+1486,Santa Clara_46,14,3
+1487,Santa Clara_46,14,3
+1488,Santa Clara_46,14,3
+1489,Santa Clara_46,14,3
+1490,Santa Clara_46,14,3
+1491,Santa Clara_47,14,3
+1492,Santa Clara_46,14,3
+1493,Santa Clara_48,14,3
+1494,Santa Clara_48,14,3
+1495,Santa Clara_48,14,3
+1496,Santa Clara_48,14,3
+1497,Santa Clara_48,14,3
+1498,Santa Clara_49,14,3
+1499,Santa Clara_47,14,3
+1500,Santa Clara_46,14,3
+1501,Santa Clara_46,14,3
+1502,Santa Clara_48,14,3
+1503,Santa Clara_48,14,3
+1504,Santa Clara_46,14,3
+1505,Santa Clara_48,14,3
+1506,Santa Clara_48,14,3
+1507,Santa Clara_48,14,3
+1508,Santa Clara_48,14,3
+1509,Santa Clara_23,10,3
+1510,Santa Clara_23,10,3
+1511,Santa Clara_23,10,3
+1512,Santa Clara_23,10,3
+1513,Santa Clara_23,10,3
+1514,Santa Clara_23,10,3
+1515,Santa Clara_23,10,3
+1516,Santa Clara_27,9,3
+1517,Santa Clara_14,9,3
+1518,Santa Clara_01,11,3
+1519,Santa Clara_01,11,3
+1520,Santa Clara_04,11,3
+1521,Santa Clara_06,11,3
+1522,Santa Clara_04,11,3
+1523,Santa Clara_06,11,3
+1524,Santa Clara_06,11,3
+1525,Santa Clara_13,12,3
+1526,Santa Clara_06,11,3
+1527,Santa Clara_13,12,3
+1528,Santa Clara_13,12,3
+1529,Santa Clara_13,12,3
+1530,Alameda_23,18,4
+1531,Alameda_58,15,4
+1532,Alameda_59,15,4
+1533,Alameda_58,15,4
+1534,Alameda_58,15,4
+1535,Alameda_57,15,4
+1536,Alameda_57,15,4
+1537,Alameda_52,15,4
+1538,Alameda_52,15,4
+1539,Alameda_52,15,4
+1540,Alameda_56,15,4
+1541,Alameda_53,15,4
+1542,Alameda_58,15,4
+1543,Alameda_56,15,4
+1544,Alameda_55,15,4
+1545,Alameda_53,15,4
+1546,Alameda_55,15,4
+1547,Alameda_54,15,4
+1548,Alameda_54,15,4
+1549,Alameda_55,15,4
+1550,Alameda_55,15,4
+1551,Alameda_58,15,4
+1552,Alameda_58,15,4
+1553,Alameda_59,15,4
+1554,Alameda_59,15,4
+1555,Alameda_59,15,4
+1556,Alameda_57,15,4
+1557,Alameda_52,15,4
+1558,Alameda_52,15,4
+1559,Alameda_53,15,4
+1560,Alameda_54,15,4
+1561,Alameda_55,15,4
+1562,Alameda_55,15,4
+1563,Alameda_54,15,4
+1564,Alameda_59,15,4
+1565,Alameda_55,15,4
+1566,Alameda_59,15,4
+1567,Alameda_56,15,4
+1568,Alameda_57,15,4
+1569,Alameda_55,15,4
+1570,Alameda_59,15,4
+1571,Alameda_56,15,4
+1572,Alameda_55,15,4
+1573,Alameda_55,15,4
+1574,Alameda_58,15,4
+1575,Alameda_56,15,4
+1576,Alameda_53,15,4
+1577,Alameda_52,15,4
+1578,Alameda_52,15,4
+1579,Alameda_57,15,4
+1580,Alameda_55,15,4
+1581,Alameda_55,15,4
+1582,Alameda_56,15,4
+1583,Alameda_52,15,4
+1584,Alameda_57,15,4
+1585,Alameda_54,15,4
+1586,Alameda_58,15,4
+1587,Alameda_59,15,4
+1588,Alameda_55,15,4
+1589,Alameda_54,15,4
+1590,Alameda_57,15,4
+1591,Alameda_58,15,4
+1592,Alameda_52,15,4
+1593,Alameda_56,15,4
+1594,Alameda_56,15,4
+1595,Alameda_52,15,4
+1596,Alameda_54,15,4
+1597,Alameda_54,15,4
+1598,Alameda_59,15,4
+1599,Alameda_59,15,4
+1600,Alameda_58,15,4
+1601,Alameda_52,15,4
+1602,Alameda_55,15,4
+1603,Alameda_54,15,4
+1604,Alameda_58,15,4
+1605,Alameda_57,15,4
+1606,Alameda_58,15,4
+1607,Alameda_56,15,4
+1608,Alameda_56,15,4
+1609,Alameda_55,15,4
+1610,Alameda_59,15,4
+1611,Alameda_54,15,4
+1612,Alameda_53,15,4
+1613,Alameda_58,15,4
+1614,Alameda_58,15,4
+1615,Alameda_58,15,4
+1616,Alameda_59,15,4
+1617,Alameda_45,16,4
+1618,Alameda_45,16,4
+1619,Alameda_47,16,4
+1620,Alameda_48,16,4
+1621,Alameda_45,16,4
+1622,Alameda_45,16,4
+1623,Alameda_49,16,4
+1624,Alameda_50,16,4
+1625,Alameda_49,16,4
+1626,Alameda_49,16,4
+1627,Alameda_50,16,4
+1628,Alameda_51,16,4
+1629,Alameda_51,16,4
+1630,Alameda_45,16,4
+1631,Alameda_48,16,4
+1632,Alameda_50,16,4
+1633,Alameda_50,16,4
+1634,Alameda_50,16,4
+1635,Alameda_49,16,4
+1636,Alameda_49,16,4
+1637,Alameda_50,16,4
+1638,Alameda_50,16,4
+1639,Alameda_50,16,4
+1640,Alameda_51,16,4
+1641,Alameda_45,16,4
+1642,Alameda_45,16,4
+1643,Alameda_45,16,4
+1644,Alameda_45,16,4
+1645,Alameda_46,16,4
+1646,Alameda_45,16,4
+1647,Alameda_47,16,4
+1648,Alameda_45,16,4
+1649,Alameda_45,16,4
+1650,Alameda_45,16,4
+1651,Alameda_48,16,4
+1652,Alameda_45,16,4
+1653,Alameda_45,16,4
+1654,Alameda_46,16,4
+1655,Alameda_45,16,4
+1656,Alameda_49,16,4
+1657,Alameda_51,16,4
+1658,Alameda_48,16,4
+1659,Alameda_50,16,4
+1660,Alameda_45,16,4
+1661,Alameda_50,16,4
+1662,Alameda_47,16,4
+1663,Alameda_45,16,4
+1664,Alameda_49,16,4
+1665,Alameda_50,16,4
+1666,Alameda_46,16,4
+1667,Alameda_48,16,4
+1668,Alameda_48,16,4
+1669,Alameda_45,16,4
+1670,Alameda_45,16,4
+1671,Alameda_45,16,4
+1672,Alameda_45,16,4
+1673,Alameda_46,16,4
+1674,Alameda_46,16,4
+1675,Alameda_51,16,4
+1676,Alameda_50,16,4
+1677,Alameda_45,16,4
+1678,Alameda_47,16,4
+1679,Alameda_51,16,4
+1680,Alameda_45,16,4
+1681,Alameda_45,16,4
+1682,Alameda_49,16,4
+1683,Alameda_45,16,4
+1684,Alameda_45,16,4
+1685,Alameda_49,16,4
+1686,Alameda_49,16,4
+1687,Alameda_49,16,4
+1688,Alameda_49,16,4
+1689,Alameda_49,16,4
+1690,Alameda_49,16,4
+1691,Alameda_46,16,4
+1692,Alameda_45,16,4
+1693,Alameda_45,16,4
+1694,Alameda_48,16,4
+1695,Alameda_49,16,4
+1696,Alameda_49,16,4
+1697,Alameda_46,16,4
+1698,Alameda_46,16,4
+1699,Alameda_46,16,4
+1700,Alameda_49,16,4
+1701,Alameda_50,16,4
+1702,Alameda_50,16,4
+1703,Alameda_50,16,4
+1704,Alameda_50,16,4
+1705,Alameda_49,16,4
+1706,Alameda_50,16,4
+1707,Alameda_50,16,4
+1708,Alameda_45,16,4
+1709,Alameda_46,16,4
+1710,Alameda_45,16,4
+1711,Alameda_46,16,4
+1712,Alameda_45,16,4
+1713,Alameda_50,16,4
+1714,Alameda_49,16,4
+1715,Alameda_50,16,4
+1716,Alameda_50,16,4
+1717,Alameda_49,16,4
+1718,Alameda_50,16,4
+1719,Alameda_45,16,4
+1720,Alameda_45,16,4
+1721,Alameda_45,16,4
+1722,Alameda_50,16,4
+1723,Alameda_45,16,4
+1724,Alameda_46,16,4
+1725,Alameda_48,16,4
+1726,Alameda_48,16,4
+1727,Alameda_49,16,4
+1728,Alameda_47,16,4
+1729,Alameda_45,16,4
+1730,Alameda_48,16,4
+1731,Alameda_45,16,4
+1732,Alameda_50,16,4
+1733,Alameda_50,16,4
+1734,Alameda_50,16,4
+1735,Alameda_45,16,4
+1736,Alameda_45,16,4
+1737,Alameda_46,16,4
+1738,Alameda_46,16,4
+1739,Alameda_46,16,4
+1740,Alameda_48,16,4
+1741,Alameda_48,16,4
+1742,Alameda_48,16,4
+1743,Alameda_45,16,4
+1744,Alameda_51,16,4
+1745,Alameda_49,16,4
+1746,Alameda_45,16,4
+1747,Alameda_45,16,4
+1748,Alameda_45,16,4
+1749,Alameda_46,16,4
+1750,Alameda_46,16,4
+1751,Alameda_49,16,4
+1752,Alameda_48,16,4
+1753,Alameda_51,16,4
+1754,Alameda_51,16,4
+1755,Alameda_51,16,4
+1756,Alameda_51,16,4
+1757,Alameda_50,16,4
+1758,Alameda_34,17,4
+1759,Alameda_39,17,4
+1760,Alameda_38,17,4
+1761,Alameda_60,17,4
+1762,Alameda_61,17,4
+1763,Alameda_61,17,4
+1764,Alameda_61,17,4
+1765,Alameda_36,17,4
+1766,Alameda_61,17,4
+1767,Alameda_36,17,4
+1768,Alameda_38,17,4
+1769,Alameda_38,17,4
+1770,Alameda_39,17,4
+1771,Alameda_38,17,4
+1772,Alameda_41,17,4
+1773,Alameda_60,17,4
+1774,Alameda_42,17,4
+1775,Alameda_44,17,4
+1776,Alameda_44,17,4
+1777,Alameda_42,17,4
+1778,Alameda_43,17,4
+1779,Alameda_60,17,4
+1780,Alameda_43,17,4
+1781,Alameda_44,17,4
+1782,Alameda_36,17,4
+1783,Alameda_33,17,4
+1784,Alameda_33,17,4
+1785,Alameda_36,17,4
+1786,Alameda_34,17,4
+1787,Alameda_39,17,4
+1788,Alameda_39,17,4
+1789,Alameda_39,17,4
+1790,Alameda_35,17,4
+1791,Alameda_60,17,4
+1792,Alameda_60,17,4
+1793,Alameda_41,17,4
+1794,Alameda_38,17,4
+1795,Alameda_39,17,4
+1796,Alameda_42,17,4
+1797,Alameda_42,17,4
+1798,Alameda_44,17,4
+1799,Alameda_44,17,4
+1800,Alameda_42,17,4
+1801,Alameda_43,17,4
+1802,Alameda_60,17,4
+1803,Alameda_44,17,4
+1804,Alameda_36,17,4
+1805,Alameda_35,17,4
+1806,Alameda_33,17,4
+1807,Alameda_33,17,4
+1808,Alameda_33,17,4
+1809,Alameda_33,17,4
+1810,Alameda_34,17,4
+1811,Alameda_42,17,4
+1812,Alameda_35,17,4
+1813,Alameda_39,17,4
+1814,Alameda_33,17,4
+1815,Alameda_39,17,4
+1816,Alameda_34,17,4
+1817,Alameda_37,17,4
+1818,Alameda_37,17,4
+1819,Alameda_34,17,4
+1820,Alameda_33,17,4
+1821,Alameda_41,17,4
+1822,Alameda_37,17,4
+1823,Alameda_33,17,4
+1824,Alameda_34,17,4
+1825,Alameda_34,17,4
+1826,Alameda_34,17,4
+1827,Alameda_39,17,4
+1828,Alameda_60,17,4
+1829,Alameda_41,17,4
+1830,Alameda_44,17,4
+1831,Alameda_44,17,4
+1832,Alameda_44,17,4
+1833,Alameda_33,17,4
+1834,Alameda_33,17,4
+1835,Alameda_33,17,4
+1836,Alameda_33,17,4
+1837,Alameda_34,17,4
+1838,Alameda_37,17,4
+1839,Alameda_42,17,4
+1840,Alameda_61,17,4
+1841,Alameda_41,17,4
+1842,Alameda_61,17,4
+1843,Alameda_37,17,4
+1844,Alameda_36,17,4
+1845,Alameda_43,17,4
+1846,Alameda_43,17,4
+1847,Alameda_43,17,4
+1848,Alameda_43,17,4
+1849,Alameda_34,17,4
+1850,Alameda_60,17,4
+1851,Alameda_60,17,4
+1852,Alameda_38,17,4
+1853,Alameda_44,17,4
+1854,Alameda_35,17,4
+1855,Alameda_35,17,4
+1856,Alameda_39,17,4
+1857,Alameda_37,17,4
+1858,Alameda_44,17,4
+1859,Alameda_44,17,4
+1860,Alameda_43,17,4
+1861,Alameda_38,17,4
+1862,Alameda_38,17,4
+1863,Alameda_43,17,4
+1864,Alameda_40,17,4
+1865,Alameda_40,17,4
+1866,Alameda_43,17,4
+1867,Alameda_38,17,4
+1868,Alameda_40,17,4
+1869,Alameda_41,17,4
+1870,Alameda_44,17,4
+1871,Alameda_43,17,4
+1872,Alameda_43,17,4
+1873,Alameda_44,17,4
+1874,Alameda_40,17,4
+1875,Alameda_33,17,4
+1876,Alameda_33,17,4
+1877,Alameda_33,17,4
+1878,Alameda_43,17,4
+1879,Alameda_43,17,4
+1880,Alameda_43,17,4
+1881,Alameda_40,17,4
+1882,Alameda_40,17,4
+1883,Alameda_40,17,4
+1884,Alameda_43,17,4
+1885,Alameda_39,17,4
+1886,Alameda_38,17,4
+1887,Alameda_35,17,4
+1888,Alameda_38,17,4
+1889,Alameda_36,17,4
+1890,Alameda_37,17,4
+1891,Alameda_40,17,4
+1892,Alameda_38,17,4
+1893,Alameda_42,17,4
+1894,Alameda_38,17,4
+1895,Alameda_60,17,4
+1896,Alameda_36,17,4
+1897,Alameda_36,17,4
+1898,Alameda_61,17,4
+1899,Alameda_61,17,4
+1900,Alameda_35,17,4
+1901,Alameda_41,17,4
+1902,Alameda_42,17,4
+1903,Alameda_35,17,4
+1904,Alameda_35,17,4
+1905,Alameda_33,17,4
+1906,Alameda_40,17,4
+1907,Alameda_42,17,4
+1908,Alameda_38,17,4
+1909,Alameda_41,17,4
+1910,Alameda_40,17,4
+1911,Alameda_44,17,4
+1912,Alameda_39,17,4
+1913,Alameda_39,17,4
+1914,Alameda_39,17,4
+1915,Alameda_35,17,4
+1916,Alameda_35,17,4
+1917,Alameda_34,17,4
+1918,Alameda_39,17,4
+1919,Alameda_33,17,4
+1920,Alameda_41,17,4
+1921,Alameda_41,17,4
+1922,Alameda_38,17,4
+1923,Alameda_35,17,4
+1924,Alameda_35,17,4
+1925,Alameda_33,17,4
+1926,Alameda_35,17,4
+1927,Alameda_35,17,4
+1928,Alameda_38,17,4
+1929,Alameda_36,17,4
+1930,Alameda_37,17,4
+1931,Alameda_37,17,4
+1932,Alameda_37,17,4
+1933,Alameda_44,17,4
+1934,Alameda_29,18,4
+1935,Alameda_30,18,4
+1936,Alameda_16,18,4
+1937,Alameda_17,18,4
+1938,Alameda_17,18,4
+1939,Alameda_24,18,4
+1940,Alameda_32,18,4
+1941,Alameda_17,18,4
+1942,Alameda_17,18,4
+1943,Alameda_17,18,4
+1944,Alameda_17,18,4
+1945,Alameda_17,18,4
+1946,Alameda_24,18,4
+1947,Alameda_24,18,4
+1948,Alameda_31,18,4
+1949,Alameda_32,18,4
+1950,Alameda_32,18,4
+1951,Alameda_32,18,4
+1952,Alameda_17,18,4
+1953,Alameda_27,18,4
+1954,Alameda_27,18,4
+1955,Alameda_27,18,4
+1956,Alameda_27,18,4
+1957,Alameda_28,18,4
+1958,Alameda_29,18,4
+1959,Alameda_29,18,4
+1960,Alameda_17,18,4
+1961,Alameda_27,18,4
+1962,Alameda_27,18,4
+1963,Alameda_24,18,4
+1964,Alameda_24,18,4
+1965,Alameda_24,18,4
+1966,Alameda_32,18,4
+1967,Alameda_32,18,4
+1968,Alameda_31,18,4
+1969,Alameda_27,18,4
+1970,Alameda_13,18,4
+1971,Alameda_32,18,4
+1972,Alameda_27,18,4
+1973,Alameda_13,18,4
+1974,Alameda_13,18,4
+1975,Alameda_18,18,4
+1976,Alameda_20,18,4
+1977,Alameda_15,18,4
+1978,Alameda_21,18,4
+1979,Alameda_14,18,4
+1980,Alameda_14,18,4
+1981,Alameda_27,18,4
+1982,Alameda_23,18,4
+1983,Alameda_28,18,4
+1984,Alameda_27,18,4
+1985,Alameda_25,18,4
+1986,Alameda_27,18,4
+1987,Alameda_28,18,4
+1988,Alameda_31,18,4
+1989,Alameda_32,18,4
+1990,Alameda_32,18,4
+1991,Alameda_32,18,4
+1992,Alameda_32,18,4
+1993,Alameda_32,18,4
+1994,Alameda_16,18,4
+1995,Alameda_23,18,4
+1996,Alameda_23,18,4
+1997,Alameda_14,18,4
+1998,Alameda_23,18,4
+1999,Alameda_23,18,4
+2000,Alameda_23,18,4
+2001,Alameda_23,18,4
+2002,Alameda_23,18,4
+2003,Alameda_17,18,4
+2004,Alameda_16,18,4
+2005,Alameda_16,18,4
+2006,Alameda_15,18,4
+2007,Alameda_16,18,4
+2008,Alameda_13,18,4
+2009,Alameda_15,18,4
+2010,Alameda_28,18,4
+2011,Alameda_24,18,4
+2012,Alameda_24,18,4
+2013,Alameda_31,18,4
+2014,Alameda_24,18,4
+2015,Alameda_32,18,4
+2016,Alameda_32,18,4
+2017,Alameda_23,18,4
+2018,Alameda_23,18,4
+2019,Alameda_32,18,4
+2020,Alameda_15,18,4
+2021,Alameda_14,18,4
+2022,Alameda_27,18,4
+2023,Alameda_27,18,4
+2024,Alameda_23,18,4
+2025,Alameda_23,18,4
+2026,Alameda_23,18,4
+2027,Alameda_24,18,4
+2028,Alameda_24,18,4
+2029,Alameda_24,18,4
+2030,Alameda_24,18,4
+2031,Alameda_24,18,4
+2032,Alameda_24,18,4
+2033,Alameda_24,18,4
+2034,Alameda_24,18,4
+2035,Alameda_17,18,4
+2036,Alameda_13,18,4
+2037,Alameda_16,18,4
+2038,Alameda_15,18,4
+2039,Alameda_16,18,4
+2040,Alameda_16,18,4
+2041,Alameda_13,18,4
+2042,Alameda_31,18,4
+2043,Alameda_30,18,4
+2044,Alameda_26,18,4
+2045,Alameda_24,18,4
+2046,Alameda_31,18,4
+2047,Alameda_24,18,4
+2048,Alameda_26,18,4
+2049,Alameda_31,18,4
+2050,Alameda_31,18,4
+2051,Alameda_30,18,4
+2052,Alameda_27,18,4
+2053,Alameda_24,18,4
+2054,Alameda_24,18,4
+2055,Alameda_24,18,4
+2056,Alameda_24,18,4
+2057,Alameda_24,18,4
+2058,Alameda_24,18,4
+2059,Alameda_32,18,4
+2060,Alameda_27,18,4
+2061,Alameda_14,18,4
+2062,Alameda_14,18,4
+2063,Alameda_15,18,4
+2064,Alameda_32,18,4
+2065,Alameda_25,18,4
+2066,Alameda_25,18,4
+2067,Alameda_19,18,4
+2068,Alameda_14,18,4
+2069,Alameda_31,18,4
+2070,Alameda_31,18,4
+2071,Alameda_32,18,4
+2072,Alameda_31,18,4
+2073,Alameda_31,18,4
+2074,Alameda_31,18,4
+2075,Alameda_32,18,4
+2076,Alameda_17,18,4
+2077,Alameda_27,18,4
+2078,Alameda_15,18,4
+2079,Alameda_15,18,4
+2080,Alameda_15,18,4
+2081,Alameda_32,18,4
+2082,Alameda_32,18,4
+2083,Alameda_32,18,4
+2084,Alameda_32,18,4
+2085,Alameda_32,18,4
+2086,Alameda_32,18,4
+2087,Alameda_31,18,4
+2088,Alameda_28,18,4
+2089,Alameda_20,18,4
+2090,Alameda_18,18,4
+2091,Alameda_27,18,4
+2092,Alameda_32,18,4
+2093,Alameda_17,18,4
+2094,Alameda_32,18,4
+2095,Alameda_17,18,4
+2096,Alameda_31,18,4
+2097,Alameda_31,18,4
+2098,Alameda_25,18,4
+2099,Alameda_17,18,4
+2100,Alameda_13,18,4
+2101,Alameda_13,18,4
+2102,Alameda_21,18,4
+2103,Alameda_18,18,4
+2104,Alameda_32,18,4
+2105,Alameda_26,18,4
+2106,Alameda_16,18,4
+2107,Alameda_28,18,4
+2108,Alameda_28,18,4
+2109,Alameda_28,18,4
+2110,Alameda_32,18,4
+2111,Alameda_14,18,4
+2112,Alameda_14,18,4
+2113,Alameda_17,18,4
+2114,Alameda_17,18,4
+2115,Alameda_14,18,4
+2116,Alameda_27,18,4
+2117,Alameda_27,18,4
+2118,Alameda_28,18,4
+2119,Alameda_22,18,4
+2120,Alameda_21,18,4
+2121,Alameda_15,18,4
+2122,Alameda_15,18,4
+2123,Alameda_17,18,4
+2124,Alameda_23,18,4
+2125,Alameda_20,18,4
+2126,Alameda_21,18,4
+2127,Alameda_27,18,4
+2128,Alameda_27,18,4
+2129,Alameda_28,18,4
+2130,Alameda_28,18,4
+2131,Alameda_28,18,4
+2132,Alameda_27,18,4
+2133,Alameda_23,18,4
+2134,Alameda_27,18,4
+2135,Alameda_27,18,4
+2136,Alameda_27,18,4
+2137,Alameda_17,18,4
+2138,Alameda_17,18,4
+2139,Alameda_25,18,4
+2140,Alameda_16,18,4
+2141,Alameda_18,18,4
+2142,Alameda_17,18,4
+2143,Alameda_23,18,4
+2144,Alameda_23,18,4
+2145,Alameda_23,18,4
+2146,Alameda_23,18,4
+2147,Alameda_17,18,4
+2148,Alameda_24,18,4
+2149,Alameda_23,18,4
+2150,Alameda_24,18,4
+2151,Alameda_15,18,4
+2152,Alameda_32,18,4
+2153,Alameda_19,18,4
+2154,Alameda_16,18,4
+2155,Alameda_17,18,4
+2156,Alameda_24,18,4
+2157,Alameda_24,18,4
+2158,Alameda_24,18,4
+2159,Alameda_24,18,4
+2160,Alameda_13,18,4
+2161,Alameda_13,18,4
+2162,Alameda_16,18,4
+2163,Alameda_16,18,4
+2164,Alameda_16,18,4
+2165,Alameda_16,18,4
+2166,Alameda_18,18,4
+2167,Alameda_18,18,4
+2168,Alameda_18,18,4
+2169,Alameda_18,18,4
+2170,Alameda_18,18,4
+2171,Alameda_16,18,4
+2172,Alameda_16,18,4
+2173,Alameda_26,18,4
+2174,Alameda_31,18,4
+2175,Alameda_31,18,4
+2176,Alameda_24,18,4
+2177,Alameda_31,18,4
+2178,Alameda_24,18,4
+2179,Alameda_24,18,4
+2180,Alameda_17,18,4
+2181,Alameda_23,18,4
+2182,Alameda_18,18,4
+2183,Alameda_23,18,4
+2184,Alameda_23,18,4
+2185,Alameda_23,18,4
+2186,Alameda_25,18,4
+2187,Alameda_24,18,4
+2188,Alameda_24,18,4
+2189,Alameda_30,18,4
+2190,Alameda_30,18,4
+2191,Alameda_24,18,4
+2192,Alameda_24,18,4
+2193,Alameda_24,18,4
+2194,Alameda_24,18,4
+2195,Alameda_24,18,4
+2196,Alameda_24,18,4
+2197,Alameda_28,18,4
+2198,Alameda_24,18,4
+2199,Alameda_26,18,4
+2200,Alameda_24,18,4
+2201,Alameda_26,18,4
+2202,Alameda_25,18,4
+2203,Alameda_26,18,4
+2204,Alameda_31,18,4
+2205,Alameda_31,18,4
+2206,Alameda_26,18,4
+2207,Alameda_31,18,4
+2208,Alameda_31,18,4
+2209,Alameda_31,18,4
+2210,Alameda_20,18,4
+2211,Alameda_32,18,4
+2212,Alameda_31,18,4
+2213,Alameda_17,18,4
+2214,Alameda_31,18,4
+2215,Alameda_32,18,4
+2216,Alameda_22,18,4
+2217,Alameda_31,18,4
+2218,Alameda_31,18,4
+2219,Alameda_31,18,4
+2220,Alameda_32,18,4
+2221,Alameda_31,18,4
+2222,Alameda_31,18,4
+2223,Alameda_31,18,4
+2224,Alameda_23,18,4
+2225,Alameda_23,18,4
+2226,Alameda_19,18,4
+2227,Alameda_32,18,4
+2228,Alameda_23,18,4
+2229,Alameda_17,18,4
+2230,Alameda_28,18,4
+2231,Alameda_17,18,4
+2232,Alameda_31,18,4
+2233,Alameda_18,18,4
+2234,Alameda_25,18,4
+2235,Alameda_15,18,4
+2236,Alameda_17,18,4
+2237,Alameda_30,18,4
+2238,Alameda_17,18,4
+2239,Alameda_17,18,4
+2240,Alameda_32,18,4
+2241,Alameda_27,18,4
+2242,Alameda_27,18,4
+2243,Alameda_27,18,4
+2244,Alameda_32,18,4
+2245,Alameda_23,18,4
+2246,Alameda_23,18,4
+2247,Alameda_23,18,4
+2248,Alameda_25,18,4
+2249,Alameda_23,18,4
+2250,Alameda_23,18,4
+2251,Alameda_23,18,4
+2252,Alameda_17,18,4
+2253,Alameda_17,18,4
+2254,Alameda_24,18,4
+2255,Alameda_25,18,4
+2256,Alameda_17,18,4
+2257,Alameda_17,18,4
+2258,Alameda_25,18,4
+2259,Alameda_17,18,4
+2260,Alameda_25,18,4
+2261,Alameda_25,18,4
+2262,Alameda_25,18,4
+2263,Alameda_24,18,4
+2264,Alameda_24,18,4
+2265,Alameda_24,18,4
+2266,Alameda_24,18,4
+2267,Alameda_24,18,4
+2268,Alameda_24,18,4
+2269,Alameda_24,18,4
+2270,Alameda_24,18,4
+2271,Alameda_24,18,4
+2272,Alameda_31,18,4
+2273,Alameda_25,18,4
+2274,Alameda_17,18,4
+2275,Alameda_17,18,4
+2276,Alameda_21,18,4
+2277,Alameda_19,18,4
+2278,Alameda_18,18,4
+2279,Alameda_14,18,4
+2280,Alameda_14,18,4
+2281,Alameda_24,18,4
+2282,Alameda_25,18,4
+2283,Alameda_09,19,4
+2284,Alameda_02,19,4
+2285,Alameda_02,19,4
+2286,Alameda_02,19,4
+2287,Alameda_02,19,4
+2288,Alameda_02,19,4
+2289,Alameda_07,19,4
+2290,Alameda_02,19,4
+2291,Alameda_03,19,4
+2292,Alameda_03,19,4
+2293,Alameda_03,19,4
+2294,Alameda_03,19,4
+2295,Alameda_04,19,4
+2296,Alameda_11,19,4
+2297,Alameda_01,19,4
+2298,Alameda_06,19,4
+2299,Alameda_04,19,4
+2300,Alameda_12,19,4
+2301,Alameda_12,19,4
+2302,Alameda_12,19,4
+2303,Alameda_12,19,4
+2304,Alameda_02,19,4
+2305,Alameda_07,19,4
+2306,Alameda_07,19,4
+2307,Alameda_07,19,4
+2308,Alameda_07,19,4
+2309,Alameda_12,19,4
+2310,Alameda_11,19,4
+2311,Alameda_07,19,4
+2312,Alameda_11,19,4
+2313,Alameda_11,19,4
+2314,Alameda_12,19,4
+2315,Alameda_12,19,4
+2316,Alameda_12,19,4
+2317,Alameda_12,19,4
+2318,Alameda_08,19,4
+2319,Alameda_10,19,4
+2320,Alameda_10,19,4
+2321,Alameda_10,19,4
+2322,Alameda_11,19,4
+2323,Alameda_08,19,4
+2324,Alameda_08,19,4
+2325,Alameda_09,19,4
+2326,Alameda_10,19,4
+2327,Alameda_12,19,4
+2328,Alameda_12,19,4
+2329,Alameda_11,19,4
+2330,Alameda_11,19,4
+2331,Alameda_06,19,4
+2332,Alameda_12,19,4
+2333,Alameda_11,19,4
+2334,Alameda_02,19,4
+2335,Alameda_11,19,4
+2336,Alameda_11,19,4
+2337,Alameda_08,19,4
+2338,Alameda_08,19,4
+2339,Alameda_12,19,4
+2340,Alameda_06,19,4
+2341,Alameda_06,19,4
+2342,Alameda_09,19,4
+2343,Alameda_04,19,4
+2344,Alameda_04,19,4
+2345,Alameda_01,19,4
+2346,Alameda_10,19,4
+2347,Alameda_08,19,4
+2348,Alameda_02,19,4
+2349,Alameda_08,19,4
+2350,Alameda_09,19,4
+2351,Alameda_10,19,4
+2352,Alameda_10,19,4
+2353,Alameda_09,19,4
+2354,Alameda_03,19,4
+2355,Alameda_07,19,4
+2356,Alameda_11,19,4
+2357,Alameda_02,19,4
+2358,Alameda_02,19,4
+2359,Alameda_11,19,4
+2360,Alameda_02,19,4
+2361,Alameda_02,19,4
+2362,Alameda_05,19,4
+2363,Alameda_05,19,4
+2364,Alameda_02,19,4
+2365,Alameda_02,19,4
+2366,Alameda_02,19,4
+2367,Alameda_02,19,4
+2368,Alameda_02,19,4
+2369,Alameda_02,19,4
+2370,Alameda_02,19,4
+2371,Alameda_05,19,4
+2372,Alameda_05,19,4
+2373,Alameda_03,19,4
+2374,Alameda_05,19,4
+2375,Alameda_04,19,4
+2376,Alameda_05,19,4
+2377,Alameda_05,19,4
+2378,Alameda_07,19,4
+2379,Alameda_07,19,4
+2380,Alameda_07,19,4
+2381,Alameda_03,19,4
+2382,Alameda_07,19,4
+2383,Alameda_06,19,4
+2384,Alameda_02,19,4
+2385,Alameda_07,19,4
+2386,Alameda_05,19,4
+2387,Alameda_09,19,4
+2388,Alameda_05,19,4
+2389,Alameda_11,19,4
+2390,Alameda_12,19,4
+2391,Alameda_11,19,4
+2392,Alameda_08,19,4
+2393,Alameda_08,19,4
+2394,Alameda_12,19,4
+2395,Alameda_07,19,4
+2396,Alameda_05,19,4
+2397,Alameda_05,19,4
+2398,Alameda_09,19,4
+2399,Alameda_03,19,4
+2400,Alameda_02,19,4
+2401,Alameda_03,19,4
+2402,Alameda_03,19,4
+2403,Alameda_05,19,4
+2404,Alameda_08,19,4
+2405,Alameda_12,19,4
+2406,Alameda_11,19,4
+2407,Alameda_01,19,4
+2408,Alameda_02,19,4
+2409,Alameda_02,19,4
+2410,Alameda_02,19,4
+2411,Alameda_01,19,4
+2412,Alameda_06,19,4
+2413,Alameda_06,19,4
+2414,Alameda_09,19,4
+2415,Alameda_03,19,4
+2416,Alameda_05,19,4
+2417,Alameda_05,19,4
+2418,Alameda_05,19,4
+2419,Alameda_06,19,4
+2420,Alameda_06,19,4
+2421,Alameda_06,19,4
+2422,Alameda_12,19,4
+2423,Alameda_04,19,4
+2424,Alameda_04,19,4
+2425,Alameda_04,19,4
+2426,Alameda_03,19,4
+2427,Alameda_08,19,4
+2428,Alameda_08,19,4
+2429,Alameda_08,19,4
+2430,Alameda_08,19,4
+2431,Alameda_08,19,4
+2432,Alameda_07,19,4
+2433,Alameda_11,19,4
+2434,Alameda_11,19,4
+2435,Alameda_11,19,4
+2436,Alameda_11,19,4
+2437,Alameda_11,19,4
+2438,Alameda_11,19,4
+2439,Alameda_11,19,4
+2440,Alameda_11,19,4
+2441,Alameda_10,19,4
+2442,Alameda_10,19,4
+2443,Alameda_10,19,4
+2444,Alameda_10,19,4
+2445,Alameda_27,18,4
+2446,Alameda_27,18,4
+2447,Alameda_27,18,4
+2448,Alameda_27,18,4
+2449,Alameda_27,18,4
+2450,Alameda_27,18,4
+2451,Alameda_27,18,4
+2452,Alameda_27,18,4
+2453,Alameda_20,18,4
+2454,Alameda_20,18,4
+2455,Alameda_21,18,4
+2456,Alameda_23,18,4
+2457,Alameda_23,18,4
+2458,Alameda_21,18,4
+2459,Alameda_23,18,4
+2460,Alameda_21,18,4
+2461,Alameda_21,18,4
+2462,Alameda_06,19,4
+2463,Alameda_06,19,4
+2464,Alameda_06,19,4
+2465,Alameda_01,19,4
+2466,Contra Costa_27,20,5
+2467,Contra Costa_25,20,5
+2468,Contra Costa_26,20,5
+2469,Contra Costa_33,20,5
+2470,Contra Costa_22,20,5
+2471,Contra Costa_22,20,5
+2472,Contra Costa_22,20,5
+2473,Contra Costa_22,20,5
+2474,Contra Costa_22,20,5
+2475,Contra Costa_22,20,5
+2476,Contra Costa_22,20,5
+2477,Contra Costa_23,20,5
+2478,Contra Costa_22,20,5
+2479,Contra Costa_22,20,5
+2480,Contra Costa_27,20,5
+2481,Contra Costa_23,20,5
+2482,Contra Costa_25,20,5
+2483,Contra Costa_27,20,5
+2484,Contra Costa_26,20,5
+2485,Contra Costa_24,20,5
+2486,Contra Costa_29,20,5
+2487,Contra Costa_30,20,5
+2488,Contra Costa_33,20,5
+2489,Contra Costa_22,20,5
+2490,Contra Costa_26,20,5
+2491,Contra Costa_26,20,5
+2492,Contra Costa_22,20,5
+2493,Contra Costa_22,20,5
+2494,Contra Costa_22,20,5
+2495,Contra Costa_22,20,5
+2496,Contra Costa_22,20,5
+2497,Contra Costa_23,20,5
+2498,Contra Costa_23,20,5
+2499,Contra Costa_23,20,5
+2500,Contra Costa_23,20,5
+2501,Contra Costa_29,20,5
+2502,Contra Costa_29,20,5
+2503,Contra Costa_29,20,5
+2504,Contra Costa_29,20,5
+2505,Contra Costa_28,20,5
+2506,Contra Costa_28,20,5
+2507,Contra Costa_23,20,5
+2508,Contra Costa_22,20,5
+2509,Contra Costa_24,20,5
+2510,Contra Costa_33,20,5
+2511,Contra Costa_22,20,5
+2512,Contra Costa_33,20,5
+2513,Contra Costa_28,20,5
+2514,Contra Costa_28,20,5
+2515,Contra Costa_30,20,5
+2516,Contra Costa_28,20,5
+2517,Contra Costa_28,20,5
+2518,Contra Costa_32,20,5
+2519,Contra Costa_29,20,5
+2520,Contra Costa_23,20,5
+2521,Contra Costa_25,20,5
+2522,Contra Costa_24,20,5
+2523,Contra Costa_26,20,5
+2524,Contra Costa_28,20,5
+2525,Contra Costa_28,20,5
+2526,Contra Costa_28,20,5
+2527,Contra Costa_28,20,5
+2528,Contra Costa_30,20,5
+2529,Contra Costa_30,20,5
+2530,Contra Costa_30,20,5
+2531,Contra Costa_32,20,5
+2532,Contra Costa_25,20,5
+2533,Contra Costa_22,20,5
+2534,Contra Costa_23,20,5
+2535,Contra Costa_23,20,5
+2536,Contra Costa_23,20,5
+2537,Contra Costa_23,20,5
+2538,Contra Costa_22,20,5
+2539,Contra Costa_22,20,5
+2540,Contra Costa_22,20,5
+2541,Contra Costa_33,20,5
+2542,Contra Costa_23,20,5
+2543,Contra Costa_23,20,5
+2544,Contra Costa_23,20,5
+2545,Contra Costa_23,20,5
+2546,Contra Costa_25,20,5
+2547,Contra Costa_25,20,5
+2548,Contra Costa_25,20,5
+2549,Contra Costa_25,20,5
+2550,Contra Costa_26,20,5
+2551,Contra Costa_25,20,5
+2552,Contra Costa_25,20,5
+2553,Contra Costa_25,20,5
+2554,Contra Costa_25,20,5
+2555,Contra Costa_25,20,5
+2556,Contra Costa_25,20,5
+2557,Contra Costa_26,20,5
+2558,Contra Costa_26,20,5
+2559,Contra Costa_26,20,5
+2560,Contra Costa_26,20,5
+2561,Contra Costa_26,20,5
+2562,Contra Costa_26,20,5
+2563,Contra Costa_26,20,5
+2564,Contra Costa_26,20,5
+2565,Contra Costa_26,20,5
+2566,Contra Costa_26,20,5
+2567,Contra Costa_26,20,5
+2568,Contra Costa_26,20,5
+2569,Contra Costa_26,20,5
+2570,Contra Costa_26,20,5
+2571,Contra Costa_26,20,5
+2572,Contra Costa_26,20,5
+2573,Contra Costa_29,20,5
+2574,Contra Costa_26,20,5
+2575,Contra Costa_26,20,5
+2576,Contra Costa_26,20,5
+2577,Contra Costa_26,20,5
+2578,Contra Costa_29,20,5
+2579,Contra Costa_29,20,5
+2580,Contra Costa_29,20,5
+2581,Contra Costa_22,20,5
+2582,Contra Costa_22,20,5
+2583,Contra Costa_22,20,5
+2584,Contra Costa_23,20,5
+2585,Contra Costa_32,20,5
+2586,Contra Costa_32,20,5
+2587,Contra Costa_29,20,5
+2588,Contra Costa_29,20,5
+2589,Contra Costa_25,20,5
+2590,Contra Costa_25,20,5
+2591,Contra Costa_25,20,5
+2592,Contra Costa_22,20,5
+2593,Contra Costa_22,20,5
+2594,Contra Costa_24,20,5
+2595,Contra Costa_24,20,5
+2596,Contra Costa_23,20,5
+2597,Contra Costa_33,20,5
+2598,Contra Costa_33,20,5
+2599,Contra Costa_33,20,5
+2600,Contra Costa_23,20,5
+2601,Contra Costa_23,20,5
+2602,Contra Costa_23,20,5
+2603,Contra Costa_23,20,5
+2604,Contra Costa_27,20,5
+2605,Contra Costa_27,20,5
+2606,Contra Costa_09,21,5
+2607,Contra Costa_09,21,5
+2608,Contra Costa_01,21,5
+2609,Contra Costa_08,21,5
+2610,Contra Costa_03,21,5
+2611,Contra Costa_03,21,5
+2612,Contra Costa_02,21,5
+2613,Contra Costa_02,21,5
+2614,Contra Costa_01,21,5
+2615,Contra Costa_31,21,5
+2616,Contra Costa_09,21,5
+2617,Contra Costa_08,21,5
+2618,Contra Costa_09,21,5
+2619,Contra Costa_01,21,5
+2620,Contra Costa_01,21,5
+2621,Contra Costa_09,21,5
+2622,Contra Costa_02,21,5
+2623,Contra Costa_02,21,5
+2624,Contra Costa_03,21,5
+2625,Contra Costa_03,21,5
+2626,Contra Costa_02,21,5
+2627,Contra Costa_03,21,5
+2628,Contra Costa_02,21,5
+2629,Contra Costa_02,21,5
+2630,Contra Costa_09,21,5
+2631,Contra Costa_16,21,5
+2632,Contra Costa_16,21,5
+2633,Contra Costa_08,21,5
+2634,Contra Costa_16,21,5
+2635,Contra Costa_16,21,5
+2636,Contra Costa_09,21,5
+2637,Contra Costa_09,21,5
+2638,Contra Costa_09,21,5
+2639,Contra Costa_31,21,5
+2640,Contra Costa_31,21,5
+2641,Contra Costa_01,21,5
+2642,Contra Costa_10,21,5
+2643,Contra Costa_01,21,5
+2644,Contra Costa_31,21,5
+2645,Contra Costa_31,21,5
+2646,Contra Costa_31,21,5
+2647,Contra Costa_09,21,5
+2648,Contra Costa_09,21,5
+2649,Contra Costa_09,21,5
+2650,Contra Costa_09,21,5
+2651,Contra Costa_02,21,5
+2652,Contra Costa_01,21,5
+2653,Contra Costa_01,21,5
+2654,Contra Costa_01,21,5
+2655,Contra Costa_02,21,5
+2656,Contra Costa_10,21,5
+2657,Contra Costa_10,21,5
+2658,Contra Costa_31,21,5
+2659,Contra Costa_09,21,5
+2660,Contra Costa_02,21,5
+2661,Contra Costa_09,21,5
+2662,Contra Costa_08,21,5
+2663,Contra Costa_09,21,5
+2664,Contra Costa_09,21,5
+2665,Contra Costa_08,21,5
+2666,Contra Costa_09,21,5
+2667,Contra Costa_09,21,5
+2668,Contra Costa_02,21,5
+2669,Contra Costa_02,21,5
+2670,Contra Costa_10,21,5
+2671,Contra Costa_10,21,5
+2672,Contra Costa_02,21,5
+2673,Contra Costa_02,21,5
+2674,Contra Costa_02,21,5
+2675,Contra Costa_01,21,5
+2676,Contra Costa_02,21,5
+2677,Contra Costa_02,21,5
+2678,Contra Costa_02,21,5
+2679,Contra Costa_02,21,5
+2680,Contra Costa_02,21,5
+2681,Contra Costa_31,21,5
+2682,Contra Costa_09,21,5
+2683,Contra Costa_31,21,5
+2684,Contra Costa_31,21,5
+2685,Contra Costa_02,21,5
+2686,Contra Costa_02,21,5
+2687,Contra Costa_02,21,5
+2688,Contra Costa_02,21,5
+2689,Contra Costa_02,21,5
+2690,Contra Costa_31,21,5
+2691,Contra Costa_31,21,5
+2692,Contra Costa_09,21,5
+2693,Contra Costa_09,21,5
+2694,Contra Costa_08,21,5
+2695,Contra Costa_01,21,5
+2696,Contra Costa_10,21,5
+2697,Contra Costa_10,21,5
+2698,Contra Costa_10,21,5
+2699,Contra Costa_10,21,5
+2700,Contra Costa_10,21,5
+2701,Contra Costa_02,21,5
+2702,Contra Costa_06,22,5
+2703,Contra Costa_06,22,5
+2704,Contra Costa_04,22,5
+2705,Contra Costa_04,22,5
+2706,Contra Costa_05,22,5
+2707,Contra Costa_06,22,5
+2708,Contra Costa_06,22,5
+2709,Contra Costa_05,22,5
+2710,Contra Costa_05,22,5
+2711,Contra Costa_06,22,5
+2712,Contra Costa_20,22,5
+2713,Contra Costa_07,22,5
+2714,Contra Costa_07,22,5
+2715,Contra Costa_20,22,5
+2716,Contra Costa_20,22,5
+2717,Contra Costa_20,22,5
+2718,Contra Costa_20,22,5
+2719,Contra Costa_21,22,5
+2720,Contra Costa_21,22,5
+2721,Contra Costa_04,22,5
+2722,Contra Costa_21,22,5
+2723,Contra Costa_21,22,5
+2724,Contra Costa_05,22,5
+2725,Contra Costa_05,22,5
+2726,Contra Costa_21,22,5
+2727,Contra Costa_06,22,5
+2728,Contra Costa_06,22,5
+2729,Contra Costa_06,22,5
+2730,Contra Costa_05,22,5
+2731,Contra Costa_05,22,5
+2732,Contra Costa_05,22,5
+2733,Contra Costa_06,22,5
+2734,Contra Costa_05,22,5
+2735,Contra Costa_06,22,5
+2736,Contra Costa_06,22,5
+2737,Contra Costa_05,22,5
+2738,Contra Costa_06,22,5
+2739,Contra Costa_07,22,5
+2740,Contra Costa_21,22,5
+2741,Contra Costa_21,22,5
+2742,Contra Costa_06,22,5
+2743,Contra Costa_06,22,5
+2744,Contra Costa_06,22,5
+2745,Contra Costa_05,22,5
+2746,Contra Costa_04,22,5
+2747,Contra Costa_04,22,5
+2748,Contra Costa_05,22,5
+2749,Contra Costa_06,22,5
+2750,Contra Costa_06,22,5
+2751,Contra Costa_06,22,5
+2752,Contra Costa_06,22,5
+2753,Contra Costa_05,22,5
+2754,Contra Costa_07,22,5
+2755,Contra Costa_07,22,5
+2756,Contra Costa_07,22,5
+2757,Contra Costa_07,22,5
+2758,Contra Costa_07,22,5
+2759,Contra Costa_07,22,5
+2760,Contra Costa_20,22,5
+2761,Contra Costa_20,22,5
+2762,Contra Costa_21,22,5
+2763,Contra Costa_21,22,5
+2764,Contra Costa_21,22,5
+2765,Contra Costa_19,23,5
+2766,Contra Costa_18,23,5
+2767,Contra Costa_18,23,5
+2768,Contra Costa_18,23,5
+2769,Contra Costa_18,23,5
+2770,Contra Costa_19,23,5
+2771,Contra Costa_17,23,5
+2772,Contra Costa_18,23,5
+2773,Contra Costa_18,23,5
+2774,Contra Costa_18,23,5
+2775,Contra Costa_19,23,5
+2776,Contra Costa_18,23,5
+2777,Contra Costa_19,23,5
+2778,Contra Costa_19,23,5
+2779,Contra Costa_19,23,5
+2780,Contra Costa_18,23,5
+2781,Contra Costa_18,23,5
+2782,Contra Costa_18,23,5
+2783,Contra Costa_18,23,5
+2784,Contra Costa_18,23,5
+2785,Contra Costa_18,23,5
+2786,Contra Costa_18,23,5
+2787,Contra Costa_18,23,5
+2788,Contra Costa_18,23,5
+2789,Contra Costa_18,23,5
+2790,Contra Costa_18,23,5
+2791,Contra Costa_18,23,5
+2792,Contra Costa_15,24,5
+2793,Contra Costa_14,24,5
+2794,Contra Costa_14,24,5
+2795,Contra Costa_14,24,5
+2796,Contra Costa_15,24,5
+2797,Contra Costa_13,24,5
+2798,Contra Costa_11,24,5
+2799,Contra Costa_15,24,5
+2800,Contra Costa_15,24,5
+2801,Contra Costa_15,24,5
+2802,Contra Costa_15,24,5
+2803,Contra Costa_14,24,5
+2804,Contra Costa_14,24,5
+2805,Contra Costa_14,24,5
+2806,Contra Costa_13,24,5
+2807,Contra Costa_13,24,5
+2808,Contra Costa_13,24,5
+2809,Contra Costa_13,24,5
+2810,Contra Costa_11,24,5
+2811,Contra Costa_15,24,5
+2812,Contra Costa_15,24,5
+2813,Contra Costa_15,24,5
+2814,Contra Costa_15,24,5
+2815,Contra Costa_15,24,5
+2816,Contra Costa_13,24,5
+2817,Contra Costa_15,24,5
+2818,Contra Costa_13,24,5
+2819,Contra Costa_11,24,5
+2820,Contra Costa_15,24,5
+2821,Contra Costa_13,24,5
+2822,Contra Costa_15,24,5
+2823,Contra Costa_15,24,5
+2824,Contra Costa_15,24,5
+2825,Contra Costa_15,24,5
+2826,Contra Costa_15,24,5
+2827,Contra Costa_15,24,5
+2828,Contra Costa_15,24,5
+2829,Contra Costa_15,24,5
+2830,Contra Costa_13,24,5
+2831,Contra Costa_15,24,5
+2832,Contra Costa_15,24,5
+2833,Contra Costa_14,24,5
+2834,Contra Costa_12,24,5
+2835,Contra Costa_15,24,5
+2836,Contra Costa_15,24,5
+2837,Contra Costa_15,24,5
+2838,Contra Costa_15,24,5
+2839,Contra Costa_15,24,5
+2840,Contra Costa_13,24,5
+2841,Contra Costa_11,24,5
+2842,Contra Costa_11,24,5
+2843,Contra Costa_11,24,5
+2844,Contra Costa_14,24,5
+2845,Contra Costa_14,24,5
+2846,Contra Costa_14,24,5
+2847,Contra Costa_15,24,5
+2848,Contra Costa_15,24,5
+2849,Contra Costa_15,24,5
+2850,Contra Costa_15,24,5
+2851,Contra Costa_15,24,5
+2852,Contra Costa_14,24,5
+2853,Contra Costa_15,24,5
+2854,Contra Costa_15,24,5
+2855,Contra Costa_12,24,5
+2856,Contra Costa_12,24,5
+2857,Contra Costa_12,24,5
+2858,Contra Costa_12,24,5
+2859,Contra Costa_12,24,5
+2860,Contra Costa_12,24,5
+2861,Contra Costa_13,24,5
+2862,Contra Costa_13,24,5
+2863,Contra Costa_13,24,5
+2864,Contra Costa_13,24,5
+2865,Contra Costa_13,24,5
+2866,Contra Costa_11,24,5
+2867,Contra Costa_14,24,5
+2868,Contra Costa_15,24,5
+2869,Contra Costa_11,24,5
+2870,Contra Costa_11,24,5
+2871,Contra Costa_11,24,5
+2872,Contra Costa_11,24,5
+2873,Contra Costa_15,24,5
+2874,Contra Costa_15,24,5
+2875,Contra Costa_12,24,5
+2876,Contra Costa_12,24,5
+2877,Contra Costa_13,24,5
+2878,Contra Costa_13,24,5
+2879,Contra Costa_15,24,5
+2880,Contra Costa_15,24,5
+2881,Contra Costa_15,24,5
+2882,Contra Costa_15,24,5
+2883,Contra Costa_15,24,5
+2884,Contra Costa_15,24,5
+2885,Contra Costa_15,24,5
+2886,Contra Costa_15,24,5
+2887,Contra Costa_15,24,5
+2888,Contra Costa_15,24,5
+2889,Contra Costa_15,24,5
+2890,Contra Costa_15,24,5
+2891,Contra Costa_15,24,5
+2892,Contra Costa_15,24,5
+2893,Contra Costa_15,24,5
+2894,Contra Costa_15,24,5
+2895,Contra Costa_15,24,5
+2896,Contra Costa_15,24,5
+2897,Contra Costa_15,24,5
+2898,Contra Costa_15,24,5
+2899,Solano_03,25,6
+2900,Solano_04,25,6
+2901,Solano_04,25,6
+2902,Solano_04,25,6
+2903,Solano_04,25,6
+2904,Solano_04,25,6
+2905,Solano_01,25,6
+2906,Solano_02,25,6
+2907,Solano_03,25,6
+2908,Solano_04,25,6
+2909,Solano_04,25,6
+2910,Solano_04,25,6
+2911,Solano_01,25,6
+2912,Solano_01,25,6
+2913,Solano_02,25,6
+2914,Solano_03,25,6
+2915,Solano_05,25,6
+2916,Solano_05,25,6
+2917,Solano_03,25,6
+2918,Solano_05,25,6
+2919,Solano_05,25,6
+2920,Solano_05,25,6
+2921,Solano_05,25,6
+2922,Solano_05,25,6
+2923,Solano_05,25,6
+2924,Solano_01,25,6
+2925,Solano_01,25,6
+2926,Solano_02,25,6
+2927,Solano_02,25,6
+2928,Solano_01,25,6
+2929,Solano_01,25,6
+2930,Solano_01,25,6
+2931,Solano_01,25,6
+2932,Solano_01,25,6
+2933,Solano_01,25,6
+2934,Solano_01,25,6
+2935,Solano_01,25,6
+2936,Solano_01,25,6
+2937,Solano_01,25,6
+2938,Solano_01,25,6
+2939,Solano_01,25,6
+2940,Solano_01,25,6
+2941,Solano_03,25,6
+2942,Solano_01,25,6
+2943,Solano_01,25,6
+2944,Solano_01,25,6
+2945,Solano_01,25,6
+2946,Solano_01,25,6
+2947,Solano_02,25,6
+2948,Solano_02,25,6
+2949,Solano_03,25,6
+2950,Solano_03,25,6
+2951,Solano_03,25,6
+2952,Solano_03,25,6
+2953,Solano_03,25,6
+2954,Solano_03,25,6
+2955,Solano_01,25,6
+2956,Solano_01,25,6
+2957,Solano_02,25,6
+2958,Solano_02,25,6
+2959,Solano_03,25,6
+2960,Solano_10,26,6
+2961,Solano_07,26,6
+2962,Solano_07,26,6
+2963,Solano_08,26,6
+2964,Solano_09,26,6
+2965,Solano_09,26,6
+2966,Solano_09,26,6
+2967,Solano_09,26,6
+2968,Solano_09,26,6
+2969,Solano_09,26,6
+2970,Solano_10,26,6
+2971,Solano_07,26,6
+2972,Solano_07,26,6
+2973,Solano_07,26,6
+2974,Solano_07,26,6
+2975,Solano_06,26,6
+2976,Solano_06,26,6
+2977,Solano_07,26,6
+2978,Solano_07,26,6
+2979,Solano_08,26,6
+2980,Solano_07,26,6
+2981,Solano_07,26,6
+2982,Solano_07,26,6
+2983,Solano_07,26,6
+2984,Solano_07,26,6
+2985,Solano_08,26,6
+2986,Solano_07,26,6
+2987,Solano_09,26,6
+2988,Solano_09,26,6
+2989,Solano_09,26,6
+2990,Solano_09,26,6
+2991,Solano_09,26,6
+2992,Solano_09,26,6
+2993,Solano_09,26,6
+2994,Solano_09,26,6
+2995,Solano_09,26,6
+2996,Solano_09,26,6
+2997,Solano_10,26,6
+2998,Solano_07,26,6
+2999,Solano_07,26,6
+3000,Solano_10,26,6
+3001,Solano_10,26,6
+3002,Solano_10,26,6
+3003,Solano_10,26,6
+3004,Solano_10,26,6
+3005,Solano_08,26,6
+3006,Solano_08,26,6
+3007,Solano_10,26,6
+3008,Solano_10,26,6
+3009,Solano_10,26,6
+3010,Solano_10,26,6
+3011,Solano_10,26,6
+3012,Solano_10,26,6
+3013,Solano_10,26,6
+3014,Solano_10,26,6
+3015,Solano_07,26,6
+3016,Solano_07,26,6
+3017,Solano_10,26,6
+3018,Solano_07,26,6
+3019,Solano_10,26,6
+3020,Solano_07,26,6
+3021,Solano_07,26,6
+3022,Solano_07,26,6
+3023,Solano_07,26,6
+3024,Solano_07,26,6
+3025,Solano_07,26,6
+3026,Solano_07,26,6
+3027,Solano_06,26,6
+3028,Solano_06,26,6
+3029,Solano_06,26,6
+3030,Solano_06,26,6
+3031,Solano_09,26,6
+3032,Solano_09,26,6
+3033,Solano_09,26,6
+3034,Solano_09,26,6
+3035,Solano_09,26,6
+3036,Solano_09,26,6
+3037,Solano_09,26,6
+3038,Solano_09,26,6
+3039,Solano_09,26,6
+3040,Solano_09,26,6
+3041,Solano_10,26,6
+3042,Solano_10,26,6
+3043,Solano_10,26,6
+3044,Solano_10,26,6
+3045,Solano_10,26,6
+3046,Solano_10,26,6
+3047,Napa_01,27,7
+3048,Napa_01,27,7
+3049,Napa_02,27,7
+3050,Napa_04,27,7
+3051,Napa_01,27,7
+3052,Napa_01,27,7
+3053,Napa_01,27,7
+3054,Napa_02,27,7
+3055,Napa_02,27,7
+3056,Napa_03,27,7
+3057,Napa_03,27,7
+3058,Napa_01,27,7
+3059,Napa_01,27,7
+3060,Napa_01,27,7
+3061,Napa_01,27,7
+3062,Napa_01,27,7
+3063,Napa_01,27,7
+3064,Napa_01,27,7
+3065,Napa_01,27,7
+3066,Napa_01,27,7
+3067,Napa_01,27,7
+3068,Napa_01,27,7
+3069,Napa_01,27,7
+3070,Napa_01,27,7
+3071,Napa_01,27,7
+3072,Napa_01,27,7
+3073,Napa_01,27,7
+3074,Napa_01,27,7
+3075,Napa_01,27,7
+3076,Napa_01,27,7
+3077,Napa_01,27,7
+3078,Napa_01,27,7
+3079,Napa_01,27,7
+3080,Napa_03,27,7
+3081,Napa_03,27,7
+3082,Napa_03,27,7
+3083,Napa_03,27,7
+3084,Napa_05,28,7
+3085,Napa_07,28,7
+3086,Napa_07,28,7
+3087,Napa_07,28,7
+3088,Napa_05,28,7
+3089,Napa_06,28,7
+3090,Napa_07,28,7
+3091,Napa_07,28,7
+3092,Napa_07,28,7
+3093,Napa_03,27,7
+3094,Napa_03,27,7
+3095,Napa_03,27,7
+3096,Napa_03,27,7
+3097,Napa_03,27,7
+3098,Napa_03,27,7
+3099,Napa_03,27,7
+3100,Napa_03,27,7
+3101,Napa_06,28,7
+3102,Napa_06,28,7
+3103,Napa_06,28,7
+3104,Sonoma_03,29,8
+3105,Sonoma_03,29,8
+3106,Sonoma_03,29,8
+3107,Sonoma_03,29,8
+3108,Sonoma_03,29,8
+3109,Sonoma_03,29,8
+3110,Sonoma_03,29,8
+3111,Sonoma_03,29,8
+3112,Sonoma_03,29,8
+3113,Sonoma_03,29,8
+3114,Sonoma_03,29,8
+3115,Sonoma_03,29,8
+3116,Sonoma_03,29,8
+3117,Sonoma_03,29,8
+3118,Sonoma_03,29,8
+3119,Sonoma_03,29,8
+3120,Sonoma_03,29,8
+3121,Sonoma_03,29,8
+3122,Sonoma_03,29,8
+3123,Sonoma_03,29,8
+3124,Sonoma_03,29,8
+3125,Sonoma_03,29,8
+3126,Sonoma_03,29,8
+3127,Sonoma_03,29,8
+3128,Sonoma_03,29,8
+3129,Sonoma_03,29,8
+3130,Sonoma_03,29,8
+3131,Sonoma_03,29,8
+3132,Sonoma_03,29,8
+3133,Sonoma_03,29,8
+3134,Sonoma_01,30,8
+3135,Sonoma_01,30,8
+3136,Sonoma_01,30,8
+3137,Sonoma_01,30,8
+3138,Sonoma_01,30,8
+3139,Sonoma_01,30,8
+3140,Sonoma_03,29,8
+3141,Sonoma_01,30,8
+3142,Sonoma_01,30,8
+3143,Sonoma_01,30,8
+3144,Sonoma_01,30,8
+3145,Sonoma_01,30,8
+3146,Sonoma_01,30,8
+3147,Sonoma_01,30,8
+3148,Sonoma_01,30,8
+3149,Sonoma_01,30,8
+3150,Sonoma_01,30,8
+3151,Sonoma_01,30,8
+3152,Sonoma_01,30,8
+3153,Sonoma_01,30,8
+3154,Sonoma_01,30,8
+3155,Sonoma_01,30,8
+3156,Sonoma_01,30,8
+3157,Sonoma_01,30,8
+3158,Sonoma_01,30,8
+3159,Sonoma_01,30,8
+3160,Sonoma_01,30,8
+3161,Sonoma_01,30,8
+3162,Sonoma_01,30,8
+3163,Sonoma_01,30,8
+3164,Sonoma_01,30,8
+3165,Sonoma_01,30,8
+3166,Sonoma_01,30,8
+3167,Sonoma_01,30,8
+3168,Sonoma_01,30,8
+3169,Sonoma_01,30,8
+3170,Sonoma_01,30,8
+3171,Sonoma_01,30,8
+3172,Sonoma_01,30,8
+3173,Sonoma_01,30,8
+3174,Sonoma_01,30,8
+3175,Sonoma_01,30,8
+3176,Sonoma_02,31,8
+3177,Sonoma_02,31,8
+3178,Sonoma_02,31,8
+3179,Sonoma_02,31,8
+3180,Sonoma_02,31,8
+3181,Sonoma_02,31,8
+3182,Sonoma_02,31,8
+3183,Sonoma_02,31,8
+3184,Sonoma_02,31,8
+3185,Sonoma_02,31,8
+3186,Sonoma_02,31,8
+3187,Sonoma_02,31,8
+3188,Sonoma_02,31,8
+3189,Sonoma_02,31,8
+3190,Sonoma_02,31,8
+3191,Sonoma_01,30,8
+3192,Sonoma_01,30,8
+3193,Sonoma_03,29,8
+3194,Sonoma_02,31,8
+3195,Sonoma_02,31,8
+3196,Sonoma_02,31,8
+3197,Sonoma_02,31,8
+3198,Sonoma_02,31,8
+3199,Sonoma_02,31,8
+3200,Sonoma_02,31,8
+3201,Sonoma_02,31,8
+3202,Sonoma_02,31,8
+3203,Sonoma_02,31,8
+3204,Sonoma_02,31,8
+3205,Sonoma_02,31,8
+3206,Sonoma_02,31,8
+3207,Sonoma_02,31,8
+3208,Sonoma_01,30,8
+3209,Sonoma_01,30,8
+3210,Sonoma_01,30,8
+3211,Sonoma_01,30,8
+3212,Sonoma_01,30,8
+3213,Sonoma_01,30,8
+3214,Sonoma_01,30,8
+3215,Sonoma_01,30,8
+3216,Sonoma_01,30,8
+3217,Sonoma_01,30,8
+3218,Sonoma_01,30,8
+3219,Sonoma_01,30,8
+3220,Sonoma_01,30,8
+3221,Sonoma_01,30,8
+3222,Sonoma_01,30,8
+3223,Sonoma_01,30,8
+3224,Sonoma_01,30,8
+3225,Sonoma_01,30,8
+3226,Sonoma_01,30,8
+3227,Sonoma_01,30,8
+3228,Sonoma_03,29,8
+3229,Sonoma_03,29,8
+3230,Sonoma_03,29,8
+3231,Sonoma_03,29,8
+3232,Sonoma_03,29,8
+3233,Sonoma_03,29,8
+3234,Sonoma_03,29,8
+3235,Sonoma_03,29,8
+3236,Sonoma_03,29,8
+3237,Sonoma_03,29,8
+3238,Sonoma_03,29,8
+3239,Sonoma_03,29,8
+3240,Sonoma_03,29,8
+3241,Sonoma_03,29,8
+3242,Sonoma_03,29,8
+3243,Sonoma_03,29,8
+3244,Sonoma_03,29,8
+3245,Sonoma_03,29,8
+3246,Sonoma_03,29,8
+3247,Sonoma_03,29,8
+3248,Sonoma_03,29,8
+3249,Sonoma_03,29,8
+3250,Sonoma_03,29,8
+3251,Sonoma_01,30,8
+3252,Sonoma_02,31,8
+3253,Marin_01,34,9
+3254,Marin_03,32,9
+3255,Marin_03,32,9
+3256,Marin_03,32,9
+3257,Marin_03,32,9
+3258,Marin_03,32,9
+3259,Marin_03,32,9
+3260,Marin_03,32,9
+3261,Marin_03,32,9
+3262,Marin_03,32,9
+3263,Marin_03,32,9
+3264,Marin_03,32,9
+3265,Marin_01,33,9
+3266,Marin_01,33,9
+3267,Marin_01,33,9
+3268,Marin_01,33,9
+3269,Marin_01,33,9
+3270,Marin_01,33,9
+3271,Marin_01,33,9
+3272,Marin_01,33,9
+3273,Marin_01,33,9
+3274,Marin_01,33,9
+3275,Marin_01,33,9
+3276,Marin_01,33,9
+3277,Marin_01,33,9
+3278,Marin_01,33,9
+3279,Marin_01,33,9
+3280,Marin_01,33,9
+3281,Marin_01,33,9
+3282,Marin_01,33,9
+3283,Marin_01,33,9
+3284,Marin_01,33,9
+3285,Marin_01,33,9
+3286,Marin_02,34,9
+3287,Marin_02,34,9
+3288,Marin_02,34,9
+3289,Marin_02,34,9
+3290,Marin_02,34,9
+3291,Marin_02,34,9
+3292,Marin_02,34,9
+3293,Marin_02,34,9
+3294,Marin_02,34,9
+3295,Marin_02,34,9
+3296,Marin_02,34,9
+3297,Marin_02,34,9
+3298,Marin_02,34,9
+3299,Marin_02,34,9
+3300,Marin_02,34,9
+3301,Marin_02,34,9
+3302,Marin_02,34,9
+3303,Marin_02,34,9
+3304,Marin_03,32,9
+3305,Marin_03,32,9
+3306,Marin_03,32,9
+3307,Marin_03,32,9
+3308,Marin_03,32,9
+3309,Marin_03,32,9
+3310,Marin_03,32,9
+3311,Marin_01,33,9
+3312,Marin_01,33,9
+3313,Marin_01,33,9
+3314,Marin_01,33,9
+3315,Marin_01,33,9
+3316,Marin_01,33,9
+3317,Marin_01,33,9
+3318,Marin_01,33,9
+3319,Marin_01,33,9
+3320,Marin_01,33,9
+3321,Marin_01,33,9
+3322,Marin_01,33,9
+3323,Marin_02,34,9
+3324,Marin_02,34,9
+3325,Marin_02,34,9
+3326,Marin_02,34,9
+3327,Marin_02,34,9
+3328,Marin_02,34,9
+3329,Marin_02,34,9
+3330,Marin_01,33,9
+3331,Marin_01,33,9
+3332,Marin_01,33,9
