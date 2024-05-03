@@ -2,23 +2,23 @@
 #specify the configuration here
 
 #concept ID
-concept_id : R40
+concept_id : 2050_MR40_R2_Run3
 
 #model year 
 model_year: 2050
 
 # project directory
-model_dir : C:\MTC_tmpy\TM2_2050R40_R2_Run1\tm2py\examples\Link21_3332
+model_dir : C:\MTC_tmpy\TM2_2050MR40_R2_Run3\tm2py\examples\Link21_3332
             
 
 #CT-RAMP outputs directory
-ctramp_dir : C:\MTC_tmpy\TM2_2050R40_R2_Run1\calibration_3332
+ctramp_dir : C:\MTC_tmpy\TM2_2050MR40_R2_Run3\calibration_3332
 
 # directory to store the outputs
-summary_dir : C:\MTC_tmpy\TM2_2050R40_R2_Run1\performance_measures
+summary_dir : C:\MTC_tmpy\TM2_2050MR40_R2_Run3\performance_measures
 
 # best path skim directory
-best_path_skim_dir : C:\MTC_tmpy\TM2_2050R40_R2_Run1\calibration_3332\SinglePathTM2_2050Baseline_R2_Run4_omx_07262023
+best_path_skim_dir : C:\MTC_tmpy\TM2_2050MR40_R2_Run3\calibration_3332\Singlepath_TM2_2050MR40_R2_Run3_04112024_omx
 best_path_skim_extension: ''
 # WLK_TRN_WLK cores - ['BOARDS', 'DDIST', 'DTIME', 'FARE', 'IVT', 'IVTCOM', 'IVTEXP', 'IVTFRY', 'IVTHVY', 'IVTLOC', 'IVTLRT', 
 # 'IWAIT', 'PIVTCOM', 'PIVTEXP', 'PIVTFRY', 'PIVTHVY', 'PIVTLOC', 'PIVTLRT', 'WACC', 'WAIT', 'WAUX', 'WEGR', 'XWAIT'],
@@ -39,7 +39,7 @@ best_path_skim_extension: ''
 precision : 6
 
 # crosswalks
-common_dir : C:\MTC_tmpy\travel-model-one\CS_utils\Py_summary_code\common_data
+common_dir : C:\MTC_tmpy\travel-model-one\CS_utils\Py_summary_code_121_Run3\common_data
 
 # Specify the iteration number to summarise
 iteration : 1
@@ -193,12 +193,12 @@ description_a1.1:
     perc_tt: [perceived total travel time, A1.1, minutes, perceived travel travel time]
 
 # Update this to transit and highway validation folders
-transit_output_data: C:\MTC_tmpy\TM2_2050R40_R2_Run1\calibration_3332\Shapefiles_with_assignment_results_2050_R40_R2_Run1\transit
+transit_output_data: C:\MTC_tmpy\TM2_2050MR40_R2_Run3\calibration_3332\Shapefiles_with_assignment_results_2050_R40_R2_Run1\transit
 
-highway_output_data: C:\MTC_tmpy\TM2_2050R40_R2_Run1\calibration_3332\Shapefiles_with_assignment_results_2050_R40_R2_Run1\traffic\All links with model volume and speed_v07032023_CS.csv
+highway_output_data: C:\MTC_tmpy\TM2_2050MR40_R2_Run3\calibration_3332\Shapefiles_with_assignment_results_2050_R40_R2_Run1\traffic\All links with model volume and speed_v07032023_CS.csv
 
 walk_speed: 3
 
 distance_decay_parameter : 0.10 
 
-filename_extension : _preliminary_results
+filename_extension : _draft_results
